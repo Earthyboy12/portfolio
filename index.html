@@ -134,6 +134,9 @@ html.motion .name .ch { display: inline-block; transform: translateY(105%); opac
 .alt-name { font-size: 20px; color: var(--accent); font-weight: 600; }
 .lede { margin-top: 16px; font-size: clamp(18px, 1.7vw, 22px); line-height: 1.55; max-width: 36em; color: #D9D7D1; }
 .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+.cv-dl:hover .arr { transform: translateY(3px); }
+.cv-meta { margin: 12px 0 0; color: var(--muted); font-size: 13px; }
+.cv-box { margin-top: 22px; }
 .btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 24px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--fg); font: 600 15px/1 var(--f-body); text-decoration: none; cursor: pointer; transition: background .25s, color .25s, border-color .25s; }
 .btn:hover { border-color: var(--fg); }
 .btn.solid { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
@@ -408,8 +411,10 @@ html.still *, html.still *::before, html.still *::after { animation: none !impor
         <p class="lede" data-i18n="lede">Lecturer in Pharmacology at Phramongkutklao College of Medicine, Bangkok, and resident in Preventive Medicine (Epidemiology). I study how medical students learn and are assessed, how outbreaks unfold in the field, and what snake venom does to the people it reaches.</p>
         <div class="cta">
           <a class="btn solid" href="#work"><span data-i18n="cta.papers">Explore my papers</span><span class="arr">↘</span></a>
+          <a class="btn cv-dl" href="cv/Sethapong-Lertsakulbunlue-CV.pdf?v=1.0" download="Sethapong-Lertsakulbunlue-CV-v1.0.pdf"><span data-i18n="cv.dl">Download CV</span><span class="arr">↓</span></a>
           <a class="btn" href="https://scholar.google.com/citations?user=pJlQxuMAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar <span class="arr">↗</span></a>
         </div>
+        <p class="cv-meta" data-cv-meta>PDF · Version 1.0 · Updated 2 Oct 2026</p>
       </div>
       <div class="portrait">
         <div class="frame"><img src="photo.jpg" alt="Sethapong Lertsakulbunlue smiling at a field epidemiology training workshop" width="720" height="720"></div>
@@ -592,7 +597,9 @@ html.still *, html.still *::before, html.still *::after { animation: none !impor
   <section class="contact" id="contact">
     <a class="cta-mq" href="#emails"><div class="track" id="mq3"></div></a>
     <div class="wrap contact-row" id="emails">
-      <div><span class="label" data-i18n="ct.k">Collaborations · Talks · Teaching</span></div>
+      <div><span class="label" data-i18n="ct.k">Collaborations · Talks · Teaching</span>
+        <div class="cv-box"><a class="btn cv-dl" href="cv/Sethapong-Lertsakulbunlue-CV.pdf?v=1.0" download="Sethapong-Lertsakulbunlue-CV-v1.0.pdf"><span data-i18n="cv.dl">Download CV</span><span class="arr">↓</span></a><p class="cv-meta" data-cv-meta>PDF · Version 1.0 · Updated 2 Oct 2026</p></div>
+      </div>
       <div class="emails">
         <div class="email"><code id="em1">Sethapong.ler@pcm.ac.th</code><button class="pill-btn copy" type="button" data-copy="em1" data-i18n="copy">Copy</button></div>
         <div class="email"><code id="em2">Earthyboy12@gmail.com</code><button class="pill-btn copy" type="button" data-copy="em2" data-i18n="copy">Copy</button></div>
@@ -696,7 +703,7 @@ html.still *, html.still *::before, html.still *::after { animation: none !impor
     "t5": "ทัศนคติต่องานวิจัยทางการแพทย์และผลต่อการตีพิมพ์: แบบจำลองสมการโครงสร้าง",
     "t6": "สมาคมแพทยศาสตรศึกษาแห่งยุโรป",
     "on.k": "ออนไลน์", "on.t": "ติดตาม<em>ได้ที่</em>", "on.gs": "การอ้างอิงและรายการผลงานทั้งหมด", "on.rg": "บทความและงานวิจัย",
-    "ct.k": "ร่วมวิจัย · บรรยาย · สอน", "copy": "คัดลอก", "foot": "วิทยาลัยแพทยศาสตร์พระมงกุฎเกล้า กรุงเทพฯ"
+    "ct.k": "ร่วมวิจัย · บรรยาย · สอน", "cv.dl": "ดาวน์โหลด CV", "copy": "คัดลอก", "foot": "วิทยาลัยแพทยศาสตร์พระมงกุฎเกล้า กรุงเทพฯ"
   };
   var UI = {
     en: { topics: { all: "All", edu: "Medical education", epi: "Field epidemiology", tox: "Toxinology & pharmacology", cardio: "Cardiometabolic", clin: "Clinical & genetics" },
@@ -706,7 +713,7 @@ html.still *, html.still *::before, html.still *::after { animation: none !impor
           showAll: function (n) { return "Show all " + n; }, fewer: "Show fewer", empty: "No papers match that. Try another word or clear the filters.",
           yearToast: function (n, y) { return n + " papers in " + y + ". Showing them below."; }, copied: function (t) { return "Copied " + t; }, selected: "Email selected. Press Ctrl+C to copy.",
           roles2: ["Physician", "Epidemiologist", "Pharmacology lecturer", "Outbreak investigator"], roles3: ["Snakebite researcher", "Medical educator", "Builder", "YouTuber"],
-          cta: "Let's work together →", ring: "Scroll to explore · Scroll to explore ·", motionOn: "Motion on", motionOff: "Motion off", ringLen: 298 },
+          cta: "Let's work together →", cvMeta: function (v, d) { return "PDF · Version " + v + " · Updated " + d; }, ring: "Scroll to explore · Scroll to explore ·", motionOn: "Motion on", motionOff: "Motion off", ringLen: 298 },
     th: { topics: { all: "ทั้งหมด", edu: "แพทยศาสตรศึกษา", epi: "ระบาดวิทยาภาคสนาม", tox: "พิษวิทยาและเภสัชวิทยา", cardio: "หัวใจและเมตาบอลิก", clin: "คลินิกและพันธุศาสตร์" },
           roles: { any: "ทั้งหมด", first: "ผู้นิพนธ์ชื่อแรก", cofirst: "ผู้นิพนธ์ชื่อแรกร่วม", corr: "ผู้นิพนธ์ประสานงาน" },
           tag: { first: "ชื่อแรก", cofirst: "ชื่อแรกร่วม", corr: "ผู้ประสานงาน" },
@@ -714,7 +721,7 @@ html.still *, html.still *::before, html.still *::after { animation: none !impor
           showAll: function (n) { return "แสดงทั้งหมด " + n + " เรื่อง"; }, fewer: "แสดงน้อยลง", empty: "ไม่พบผลงานที่ตรงกัน ลองคำอื่นหรือล้างตัวกรอง",
           yearToast: function (n, y) { return "ปี " + y + " มี " + n + " เรื่อง แสดงด้านล่าง"; }, copied: function (t) { return "คัดลอก " + t + " แล้ว"; }, selected: "เลือกอีเมลแล้ว กด Ctrl+C เพื่อคัดลอก",
           roles2: ["แพทย์", "นักระบาดวิทยา", "อาจารย์เภสัชวิทยา", "นักสอบสวนโรค"], roles3: ["นักวิจัยพิษงู", "อาจารย์แพทย์", "นักสร้างเว็บแอป", "ยูทูบเบอร์"],
-          cta: "มาร่วมงานกัน →", ring: "เลื่อนลงเพื่อดูต่อ · เลื่อนลงเพื่อดูต่อ ·", motionOn: "เอฟเฟกต์: เปิด", motionOff: "เอฟเฟกต์: ปิด", ringLen: 298 }
+          cta: "มาร่วมงานกัน →", cvMeta: function (v, d) { return "PDF ภาษาอังกฤษ · ฉบับที่ " + v + " · อัปเดต " + d; }, ring: "เลื่อนลงเพื่อดูต่อ · เลื่อนลงเพื่อดูต่อ ·", motionOn: "เอฟเฟกต์: เปิด", motionOff: "เอฟเฟกต์: ปิด", ringLen: 298 }
   };
 
   var lang = root.lang === "th" ? "th" : "en";
@@ -763,8 +770,23 @@ html.still *, html.still *::before, html.still *::after { animation: none !impor
     buildChips();
     document.querySelectorAll("[data-count-topic]").forEach(function (el) { el.textContent = L().papers(count(el.dataset.countTopic)); });
     motionLabel();
+    cvMeta();
     render();
   }
+
+  // ---------- CV download: version and date live in cv.json ----------
+  var CV = { version: "1.0", updated: "2026-10-02", file: "cv/Sethapong-Lertsakulbunlue-CV.pdf" };
+  function cvMeta() {
+    var d = new Date(CV.updated + "T00:00:00"), ds = CV.updated;
+    if (!isNaN(d)) ds = d.toLocaleDateString(lang === "th" ? "th-TH" : "en-GB", { day: "numeric", month: "short", year: "numeric" });
+    document.querySelectorAll(".cv-dl").forEach(function (a) {
+      a.href = CV.file + "?v=" + encodeURIComponent(CV.version);
+      a.setAttribute("download", "Sethapong-Lertsakulbunlue-CV-v" + CV.version + ".pdf");
+    });
+    document.querySelectorAll("[data-cv-meta]").forEach(function (el) { el.textContent = L().cvMeta(CV.version, ds); });
+  }
+  if (window.fetch) fetch("cv.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (j) { if (j && j.version && j.updated && j.file) { CV = j; cvMeta(); } }).catch(function () {});
 
   // ---------- explorer ----------
   function hasRole(p, r) { return r === "any" || (r === "first" && p.f === 1) || (r === "cofirst" && p.f === 2) || (r === "corr" && p.c); }
