@@ -5,503 +5,725 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Sethapong Lertsakulbunlue, MD</title>
 <meta name="description" content="Physician, epidemiologist and medical educator at Phramongkutklao College of Medicine, Bangkok. Research in medical education, field epidemiology, snakebite toxinology and cardiometabolic risk.">
+<meta name="theme-color" content="#0A0A0B">
 <meta property="og:title" content="Sethapong Lertsakulbunlue, MD">
 <meta property="og:description" content="Physician, epidemiologist and medical educator. 45 peer-reviewed papers since 2022.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="photo.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232B45E0'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='800' font-size='26' text-anchor='middle' fill='white'%3ESL%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FF6A4D'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='800' font-size='26' text-anchor='middle' fill='%230A0A0B'%3ESL%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,800&family=Noto+Sans+Thai:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Kanit:wght@500;700;800&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap">
 <script>
-  document.documentElement.classList.add("js");
-  try { var t = localStorage.getItem("pf-theme"); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  (function () {
+    var root = document.documentElement, q = new URLSearchParams(location.search), get = function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } };
+    var lang = q.get("lang") || get("pf-lang") || ((navigator.language || "").toLowerCase().indexOf("th") === 0 ? "th" : "en");
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var motion = q.get("motion") || get("pf-motion") || (reduce ? "off" : "on");
+    root.lang = lang === "th" ? "th" : "en";
+    root.classList.add("js", motion === "off" ? "still" : "motion");
+  })();
 </script>
 <style>
-/* Studio: bold personal brand. Hero card with portrait, channels, research, paper explorer, path, contact. */
+/* Dark editorial, motion-forward: giant condensed name, marquees, row-based sections that light up coral on hover. */
 :root {
-  --bg: #FFFFFF; --surface: #EEF1FF; --fg: #111430; --muted: #545979; --line: #DADFF5;
-  --accent: #2B45E0; --accent-2: #FF6A4D; --on-accent: #FFFFFF; --on-coral: #1A0D08;
-  --f-display: "Bricolage Grotesque", "Noto Sans Thai", system-ui, sans-serif;
-  --f-body: "Bricolage Grotesque", "Noto Sans Thai", system-ui, sans-serif;
-  --f-thai: "Noto Sans Thai", sans-serif;
-  --gutter: 20px;
+  --bg: #0A0A0B; --surface: #141417; --surface-2: #1C1C21; --fg: #F3F1EC; --muted: #8E8E97; --line: #26262C;
+  --accent: #FF6A4D; --accent-2: #8C9BFF; --on-accent: #140805;
+  --f-display: "Bricolage Grotesque", "Kanit", system-ui, sans-serif;
+  --f-body: "Bricolage Grotesque", "IBM Plex Sans Thai", system-ui, sans-serif;
+  --gutter: clamp(16px, 4vw, 48px);
+  color-scheme: dark;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0E1024; --surface: #1A1E3D; --fg: #F1F2FF; --muted: #A9AECF; --line: #2C3160;
-    --accent: #7E92FF; --accent-2: #FF8A70; --on-accent: #0E1024; color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0E1024; --surface: #1A1E3D; --fg: #F1F2FF; --muted: #A9AECF; --line: #2C3160;
-  --accent: #7E92FF; --accent-2: #FF8A70; --on-accent: #0E1024; color-scheme: dark;
-}
-
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 var(--f-body); transition: background .3s, color .3s; }
+html.still { scroll-behavior: auto; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 var(--f-body); overflow-x: clip; }
+html[lang="th"] body { line-height: 1.75; }
+body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 90; opacity: .07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
 img { max-width: 100%; display: block; }
-a { color: var(--accent); text-underline-offset: 3px; }
+a { color: inherit; }
 a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.wrap { max-width: 1120px; margin: 0 auto; padding-inline: var(--gutter); }
-.label { font: 800 12px/1.3 var(--f-body); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
-h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; }
-p { margin: 0; }
-.thai { font-family: var(--f-thai); }
+::selection { background: var(--accent); color: var(--on-accent); }
+.wrap { max-width: 1320px; margin: 0 auto; padding-inline: var(--gutter); }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; }
+.label { font: 600 13px/1.3 var(--f-body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 10px; }
+html[lang="th"] .label { letter-spacing: .02em; }
+.label::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+
+/* progress + cursor */
+.progress { position: fixed; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); transform-origin: 0 50%; transform: scaleX(0); z-index: 60; }
+.cur, .cur-ring { position: fixed; left: 0; top: 0; pointer-events: none; z-index: 100; border-radius: 50%; display: none; }
+.cur { width: 8px; height: 8px; margin: -4px 0 0 -4px; background: var(--accent); }
+.cur-ring { width: 40px; height: 40px; margin: -20px 0 0 -20px; border: 1.5px solid var(--fg); mix-blend-mode: difference; transition: width .25s, height .25s, margin .25s, background .25s; }
+.cur-ring.big { width: 76px; height: 76px; margin: -38px 0 0 -38px; background: var(--fg); }
+@media (hover: hover) and (pointer: fine) { html.motion .cur, html.motion .cur-ring { display: block; } }
 
 /* nav */
-.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); }
-.brand { display: flex; align-items: center; gap: 12px; color: var(--fg); text-decoration: none; font-weight: 600; }
-.mono { width: 40px; height: 40px; display: grid; place-items: center; background: var(--accent); color: var(--on-accent); border-radius: 14px; font-weight: 800; font-size: 15px; transition: transform .3s; }
-.brand:hover .mono { transform: rotate(-8deg) scale(1.06); }
-.nav-r { display: flex; align-items: center; gap: 18px; }
-.nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; }
-.nav ul a { color: var(--muted); text-decoration: none; font-size: 15px; }
-.nav ul a:hover { color: var(--fg); }
-.theme { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--fg); cursor: pointer; display: grid; place-items: center; transition: transform .4s; }
-.theme:hover { transform: rotate(25deg); }
-.theme svg { width: 18px; height: 18px; fill: currentColor; }
-
-main { display: flex; flex-direction: column; }
-section { padding-block: 40px; scroll-margin-top: 80px; }
-.sec-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
-.sec-head h2 { font-weight: 800; letter-spacing: -.02em; font-size: clamp(30px, 4.4vw, 46px); line-height: 1.1; }
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font: 800 15px/1 var(--f-display); letter-spacing: .08em; text-transform: uppercase; }
+.brand .mono { width: 36px; height: 36px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-size: 13px; letter-spacing: 0; transition: transform .4s; }
+.brand:hover .mono { transform: rotate(-20deg); }
+.links { display: flex; gap: 26px; list-style: none; margin: 0; padding: 0; }
+.links a { text-decoration: none; font-size: 15px; color: var(--muted); position: relative; }
+.links a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 1.5px; background: var(--accent); transform: scaleX(0); transform-origin: right; transition: transform .3s; }
+.links a:hover { color: var(--fg); }
+.links a:hover::after { transform: scaleX(1); transform-origin: left; }
+.tools-r { display: flex; align-items: center; gap: 10px; }
+.seg { display: flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
+.seg button { font: 600 13px/1 var(--f-body); color: var(--muted); background: none; border: 0; padding: 8px 12px; border-radius: 999px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.pill-btn { font: 600 13px/1 var(--f-body); color: var(--fg); background: none; border: 1px solid var(--line); padding: 10px 14px; border-radius: 999px; cursor: pointer; display: inline-flex; gap: 8px; align-items: center; white-space: nowrap; }
+.pill-btn:hover { border-color: var(--fg); }
+.pill-btn .led { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); }
+html.motion .pill-btn .led { background: var(--accent); box-shadow: 0 0 10px var(--accent); }
+.menu-btn { display: none; }
+.overlay { position: fixed; inset: 0; z-index: 70; background: var(--accent); color: var(--on-accent); padding: calc(80px + env(safe-area-inset-top, 0px)) var(--gutter) 40px; display: flex; flex-direction: column; justify-content: space-between; clip-path: circle(0% at calc(100% - 40px) 36px); transition: clip-path .6s cubic-bezier(.7,0,.2,1); visibility: hidden; }
+.overlay.open { clip-path: circle(150% at calc(100% - 40px) 36px); visibility: visible; }
+.overlay ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.overlay a { font: 800 clamp(44px, 13vw, 80px)/1.05 var(--f-display); font-stretch: 75%; text-transform: uppercase; text-decoration: none; }
+.overlay .close { position: absolute; top: calc(16px + env(safe-area-inset-top, 0px)); right: var(--gutter); background: var(--on-accent); color: var(--accent); border: 0; }
 
 /* hero */
-.hero { padding-top: 8px; }
-.hero-card { background: var(--surface); border-radius: 36px; padding: clamp(24px, 5vw, 56px); position: relative; overflow: hidden; display: grid; gap: 32px; }
-.intro { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 40px; align-items: center; }
-.hello { font: 600 18px/1.3 var(--f-body); color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; }
-.rot { display: inline-block; color: var(--accent-2); font-weight: 800; min-width: 10ch; }
-.rot.swap { animation: pop .45s cubic-bezier(.2,.9,.3,1.4); }
-@keyframes pop { from { transform: translateY(40%); opacity: 0; } to { transform: none; opacity: 1; } }
-.hero h1 { font-weight: 800; font-size: clamp(44px, 5.8vw, 74px); line-height: .95; letter-spacing: -.035em; margin-top: 14px; }
-.hero h1 em { font-style: normal; color: var(--accent); }
-.thai-name { margin-top: 12px; font-size: 20px; color: var(--muted); }
-.lede { margin-top: 20px; font-size: 19px; line-height: 1.55; max-width: 34em; }
-.cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
-.btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 22px; border: 1.5px solid var(--fg); color: var(--fg); text-decoration: none; font: 600 15px/1 var(--f-body); border-radius: 999px; background: transparent; cursor: pointer; transition: background .2s, color .2s, transform .2s; }
-.btn:hover { transform: translateY(-2px); }
-.btn.primary { background: var(--fg); border-color: var(--fg); color: var(--bg); }
-.btn.primary:hover { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.hero { padding-block: clamp(40px, 7vw, 90px) 48px; }
+.name { margin-top: 22px; font-weight: 800; font-stretch: 75%; text-transform: uppercase; font-size: clamp(46px, 11.2vw, 176px); line-height: .86; letter-spacing: -.02em; display: grid; }
+html[lang="th"] .name { font-stretch: 100%; line-height: 1.12; letter-spacing: 0; font-size: clamp(44px, 9.4vw, 150px); }
+.name > span { width: max-content; max-width: none; white-space: nowrap; }
+.name .l2 { color: transparent; -webkit-text-stroke: 2px var(--fg); }
+.name .l1 span, .name .l2 span { display: inline-block; }
+html.motion .name .ch { display: inline-block; transform: translateY(105%); opacity: 0; animation: up .9s cubic-bezier(.2,.8,.2,1) forwards; animation-delay: calc(var(--d) * 28ms + 150ms); }
+@keyframes up { to { transform: none; opacity: 1; } }
+.hero-row { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); margin-top: clamp(32px, 5vw, 64px); align-items: end; }
+.alt-name { font-size: 20px; color: var(--accent); font-weight: 600; }
+.lede { margin-top: 16px; font-size: clamp(18px, 1.7vw, 22px); line-height: 1.55; max-width: 36em; color: #D9D7D1; }
+.cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 24px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--fg); font: 600 15px/1 var(--f-body); text-decoration: none; cursor: pointer; transition: background .25s, color .25s, border-color .25s; }
+.btn:hover { border-color: var(--fg); }
+.btn.solid { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn.solid:hover { background: var(--fg); border-color: var(--fg); }
+.btn .arr { transition: transform .3s; }
+.btn:hover .arr { transform: translate(3px, -3px); }
 
-/* portrait */
-.side { display: grid; gap: 22px; justify-items: center; }
-.portrait { position: relative; width: min(100%, 340px); aspect-ratio: 1; perspective: 800px; }
-.portrait .blob { position: absolute; inset: -4% -6% 6% 8%; background: var(--accent-2); border-radius: 58% 42% 55% 45% / 48% 55% 45% 52%; animation: morph 9s ease-in-out infinite; }
-@keyframes morph { 50% { border-radius: 42% 58% 45% 55% / 55% 45% 55% 45%; transform: rotate(8deg); } }
-.portrait .frame { position: absolute; inset: 0; border-radius: 50%; overflow: hidden; border: 6px solid var(--bg); transition: transform .2s ease-out; transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); box-shadow: 0 20px 40px -18px rgba(17,20,48,.45); }
-.portrait img { width: 100%; height: 100%; object-fit: cover; }
-.sticker { position: absolute; font: 800 13px/1 var(--f-body); padding: 9px 13px; border-radius: 999px; background: var(--bg); color: var(--fg); box-shadow: 0 8px 20px -10px rgba(17,20,48,.5); white-space: nowrap; animation: bob 4s ease-in-out infinite; }
-.sticker.s1 { left: -6%; bottom: 14%; }
-.sticker.s2 { right: -4%; top: 8%; background: var(--accent); color: var(--on-accent); animation-delay: -2s; }
-@keyframes bob { 50% { transform: translateY(-7px); } }
+.portrait { position: relative; justify-self: end; width: min(100%, 380px); }
+.portrait .frame { aspect-ratio: 4 / 5; border-radius: 999px 999px 28px 28px; overflow: hidden; background: var(--surface); }
+.portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 40% 30%; filter: grayscale(1) contrast(1.08); transition: filter .6s, transform .8s; }
+.portrait:hover img { filter: none; transform: scale(1.04); }
+.badge { position: absolute; left: -38px; bottom: 36px; width: 128px; height: 128px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; text-decoration: none; }
+.badge svg.ring { position: absolute; inset: 0; width: 100%; height: 100%; }
+html.motion .badge svg.ring { animation: spin 14s linear infinite; }
+.badge text { font: 700 11.5px var(--f-body); letter-spacing: .14em; text-transform: uppercase; fill: var(--on-accent); }
+.badge .arrow { font-size: 26px; font-weight: 800; }
+html.motion .badge .arrow { animation: bob 1.6s ease-in-out infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes bob { 50% { transform: translateY(5px); } }
+.tag-float { position: absolute; right: -10px; top: 18%; background: var(--fg); color: var(--bg); font: 700 13px/1 var(--f-body); padding: 10px 14px; border-radius: 999px; transform: rotate(6deg); }
 
-.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; width: 100%; }
-.stat { background: var(--bg); border-radius: 20px; padding: 16px; }
-.stat b { display: block; font: 800 34px/1 var(--f-display); color: var(--accent); font-variant-numeric: tabular-nums; }
-.stat span { display: block; margin-top: 6px; font-size: 13.5px; color: var(--muted); line-height: 1.35; }
+/* marquee */
+.marquee { overflow: hidden; border-block: 1px solid var(--line); padding-block: 14px; }
+.marquee + .marquee { border-top: 0; }
+.track { display: flex; width: max-content; }
+html.motion .track { animation: mq 38s linear infinite; }
+html.motion .marquee.rev .track { animation-direction: reverse; animation-duration: 46s; }
+.marquee:hover .track { animation-play-state: paused; }
+@keyframes mq { to { transform: translateX(-50%); } }
+.mq-item { font: 800 clamp(34px, 5.6vw, 84px)/1.1 var(--f-display); font-stretch: 75%; text-transform: uppercase; white-space: nowrap; padding-inline: .35em; display: inline-flex; align-items: center; gap: .35em; }
+html[lang="th"] .mq-item { font-stretch: 100%; line-height: 1.35; }
+.mq-item.o { color: transparent; -webkit-text-stroke: 1.5px var(--fg); }
+.mq-item .star { width: .5em; height: .5em; fill: var(--accent); flex: none; }
 
-/* chart */
-.chart { margin: 0; padding: 22px 22px 16px; background: var(--bg); border-radius: 26px; }
-.chart-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; }
-.chart-head b { font-size: 16px; }
-.chart-head span { font-size: 14px; color: var(--muted); }
-.bars { height: 190px; margin-top: 30px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; align-items: end; }
-.bar { height: calc(var(--v) / 17 * 100%); background: var(--accent); border: 0; padding: 0; border-radius: 14px; position: relative; cursor: pointer; transform-origin: bottom; animation: rise .9s cubic-bezier(.2,.8,.2,1) both; animation-delay: calc(var(--i) * 90ms); transition: filter .2s, transform .2s; }
-.bar:nth-child(odd) { background: var(--accent-2); }
-.bar.partial { background: repeating-linear-gradient(135deg, var(--accent-2) 0 6px, transparent 6px 10px); outline: 1.5px solid var(--accent-2); outline-offset: -1.5px; }
-.bar::after { content: attr(data-n); position: absolute; top: -24px; left: 0; right: 0; text-align: center; font: 800 14px/1 var(--f-body); color: var(--fg); font-variant-numeric: tabular-nums; }
-.bar:hover { transform: scaleY(1.04); filter: brightness(1.08); }
-.bars.has-pick .bar:not([aria-pressed="true"]) { opacity: .35; }
-@keyframes rise { from { transform: scaleY(.1); } to { transform: scaleY(1); } }
-.years { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 8px; font: 600 13px/1 var(--f-body); color: var(--muted); text-align: center; font-variant-numeric: tabular-nums; }
-.chart figcaption { margin-top: 12px; font-size: 13.5px; color: var(--muted); }
+/* sections */
+section.block { padding-block: clamp(64px, 9vw, 120px); border-bottom: 1px solid var(--line); scroll-margin-top: 70px; }
+.sec-top { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: clamp(32px, 4vw, 56px); }
+.sec-title { font-weight: 800; font-stretch: 75%; text-transform: uppercase; font-size: clamp(44px, 7vw, 112px); line-height: .9; letter-spacing: -.01em; margin-top: 14px; }
+html[lang="th"] .sec-title { font-stretch: 100%; line-height: 1.15; font-size: clamp(38px, 5.6vw, 88px); }
+.sec-title em { font-style: normal; color: var(--accent); }
+.sec-note { color: var(--muted); max-width: 30em; font-size: 15.5px; }
 
-/* channels */
-.channels { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
-.ch { display: flex; flex-direction: column; gap: 6px; padding: 26px; min-height: 170px; border-radius: 26px; background: var(--surface); color: var(--fg); text-decoration: none; transition: transform .25s cubic-bezier(.2,.9,.3,1.3); min-width: 0; }
-.ch:hover { transform: translateY(-6px) rotate(-1.5deg); }
-.ch:nth-child(even):hover { transform: translateY(-6px) rotate(1.5deg); }
-.ch svg { width: 28px; height: 28px; fill: var(--accent); }
-.ch strong { font-size: 22px; font-weight: 800; margin-top: auto; }
-.ch span { font-size: 14px; color: var(--muted); overflow-wrap: anywhere; }
-.ch:nth-child(1) { background: var(--accent-2); color: var(--on-coral); }
-.ch:nth-child(1) svg { fill: var(--on-coral); }
-.ch:nth-child(1) span { color: var(--on-coral); opacity: .75; }
-.ch:nth-child(2) { background: var(--accent); color: var(--on-accent); }
-.ch:nth-child(2) svg { fill: var(--on-accent); }
-.ch:nth-child(2) span { color: var(--on-accent); opacity: .8; }
+/* about */
+.about { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: start; }
+.bio { font-size: clamp(20px, 2vw, 27px); line-height: 1.45; font-weight: 500; }
+html[lang="th"] .bio { line-height: 1.7; font-size: clamp(18px, 1.7vw, 23px); }
+.bio b { color: var(--accent); font-weight: 600; }
+.affil { margin-top: 36px; display: grid; gap: 12px; }
+.aff { display: flex; align-items: center; gap: 16px; padding: 14px 18px 14px 14px; border: 1px solid var(--line); border-radius: 20px; text-decoration: none; transition: border-color .25s, background .25s; }
+.aff:hover { border-color: var(--fg); background: var(--surface); }
+.aff .logo { width: 60px; height: 60px; border-radius: 14px; background: #F3F1EC; display: grid; place-items: center; flex: none; overflow: hidden; }
+.aff .logo img { max-height: 50px; width: auto; }
+.aff .logo.fetp { background: #000060; }
+.aff .logo.fetp img { max-height: 60px; }
+.aff b { display: block; font-size: 16px; line-height: 1.3; }
+.aff small { display: block; font-size: 14px; color: var(--muted); }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.stat { padding: 20px 16px 20px 0; border-bottom: 1px solid var(--line); }
+.stat + .stat { padding-left: 16px; border-left: 1px solid var(--line); }
+.stat b { display: block; font: 800 clamp(44px, 5vw, 72px)/1 var(--f-display); font-stretch: 75%; color: var(--fg); font-variant-numeric: tabular-nums; }
+.stat span { display: block; margin-top: 8px; font-size: 14px; color: var(--muted); line-height: 1.4; }
+.chart { margin: 28px 0 0; }
+.chart-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
+.chart-head b { color: var(--fg); font-weight: 600; }
+.bars { height: 200px; margin-top: 34px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; align-items: end; border-bottom: 1px solid var(--muted);
+  background-image: linear-gradient(to top, var(--line) 1px, transparent 1px); background-size: 100% 25%; }
+.bar { height: calc(var(--v) / 17 * 100%); background: var(--surface-2); border: 0; padding: 0; border-radius: 6px 6px 0 0; position: relative; cursor: pointer; transform-origin: bottom; transition: background .25s; }
+html.motion .bar { animation: rise 1s cubic-bezier(.2,.8,.2,1) both; animation-delay: calc(var(--i) * 90ms); }
+.bar:hover, .bar[aria-pressed="true"] { background: var(--accent); }
+.bar.partial { background: repeating-linear-gradient(135deg, var(--surface-2) 0 6px, transparent 6px 10px); }
+.bar.partial:hover, .bar.partial[aria-pressed="true"] { background: repeating-linear-gradient(135deg, var(--accent) 0 6px, transparent 6px 10px); }
+.bar::after { content: attr(data-n); position: absolute; top: -24px; left: 0; right: 0; text-align: center; font: 700 14px/1 var(--f-body); font-variant-numeric: tabular-nums; }
+@keyframes rise { from { transform: scaleY(.05); } }
+.years { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 10px; font: 500 13px/1 var(--f-body); color: var(--muted); text-align: center; font-variant-numeric: tabular-nums; }
 
-/* focus */
-.focus-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
-.focus { background: var(--surface); border: 2px solid transparent; border-radius: 26px; padding: 24px; display: flex; flex-direction: column; gap: 10px; min-width: 0; text-align: left; font: inherit; color: inherit; cursor: pointer; transition: border-color .2s, transform .2s; }
-.focus:hover { transform: translateY(-4px); border-color: var(--accent); }
-.focus .ico { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; background: var(--bg); color: var(--accent); }
-.focus .ico svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.focus h3 { font-weight: 800; font-size: 21px; line-height: 1.2; letter-spacing: -.01em; }
-.focus p { font-size: 15px; color: var(--muted); }
-.focus .count { margin-top: auto; font: 800 14px/1.3 var(--f-body); color: var(--accent); }
+/* projects */
+.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.proj { position: relative; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 28px; overflow: hidden; text-decoration: none; background: var(--surface); transition: border-color .3s, transform .4s cubic-bezier(.2,.8,.2,1); min-width: 0; }
+.proj:hover { border-color: var(--accent); transform: translateY(-6px); }
+.proj .art { height: 220px; position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+.proj .body { padding: 26px; display: grid; gap: 12px; }
+.proj h3 { font-weight: 800; font-size: clamp(26px, 2.6vw, 36px); line-height: 1.1; }
+.proj p { color: #C9C7C1; font-size: 16px; }
+.proj .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.proj .chips span { font: 600 12px/1 var(--f-body); padding: 7px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.proj .go { position: absolute; top: 18px; right: 18px; width: 52px; height: 52px; border-radius: 50%; background: var(--fg); color: var(--bg); display: grid; place-items: center; font-size: 22px; font-weight: 800; transition: transform .4s, background .3s; z-index: 2; }
+.proj:hover .go { transform: rotate(45deg); background: var(--accent); }
+.art.sari { background: radial-gradient(circle at 80% 0%, rgba(140,155,255,.25), transparent 60%), #101015; display: flex; align-items: flex-end; gap: 5px; padding: 24px 24px 0; }
+.art.sari i { flex: 1; background: var(--accent-2); border-radius: 4px 4px 0 0; height: var(--h); opacity: .85; transform-origin: bottom; transition: transform .5s; }
+.art.sari i:nth-child(n+9):nth-child(-n+13) { background: var(--accent); }
+.proj:hover .art.sari i { transform: scaleY(1.1); }
+.art.horo { background: radial-gradient(circle at 50% 120%, rgba(255,106,77,.35), transparent 65%), #120E14; display: grid; place-items: center; }
+.art.horo svg { width: 190px; height: 190px; transition: transform 1.2s cubic-bezier(.2,.8,.2,1); }
+.proj:hover .art.horo svg { transform: rotate(60deg); }
+
+/* research rows */
+.areas { border-top: 1px solid var(--line); }
+.area { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 8px 24px; align-items: center; width: 100%; padding: 28px 8px; border: 0; border-bottom: 1px solid var(--line); background: none; color: var(--fg); text-align: left; font: inherit; cursor: pointer; overflow: hidden; isolation: isolate; }
+.area::before { content: ""; position: absolute; inset: 0; background: var(--accent); transform: scaleY(0); transform-origin: bottom; transition: transform .45s cubic-bezier(.7,0,.2,1); z-index: -1; }
+.area:hover::before, .area:focus-visible::before { transform: scaleY(1); }
+.area:hover, .area:focus-visible { color: var(--on-accent); }
+.area .t { font: 800 clamp(28px, 4.2vw, 60px)/1 var(--f-display); font-stretch: 75%; text-transform: uppercase; transition: transform .45s; }
+html[lang="th"] .area .t { font-stretch: 100%; line-height: 1.25; font-size: clamp(24px, 3.2vw, 44px); }
+.area:hover .t { transform: translateX(12px); }
+.area .n { font: 600 14px/1 var(--f-body); border: 1px solid currentColor; border-radius: 999px; padding: 8px 12px; white-space: nowrap; opacity: .8; }
+.area .a { font-size: 30px; transition: transform .4s; }
+.area:hover .a { transform: rotate(45deg); }
+.area .d { grid-column: 1 / -1; font-size: 15.5px; max-width: 62em; color: var(--muted); transition: color .3s; }
+.area:hover .d { color: var(--on-accent); }
 
 /* explorer */
-.tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 18px; }
-.chip { font: 600 14px/1 var(--f-body); padding: 10px 14px; border-radius: 999px; border: 1.5px solid var(--line); background: transparent; color: var(--fg); cursor: pointer; transition: background .2s, border-color .2s; }
-.chip:hover { border-color: var(--accent); }
+.ex-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
+.ex-tools .lbl { font: 600 12px/1 var(--f-body); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-right: 6px; }
+.chip { font: 600 14px/1 var(--f-body); padding: 10px 14px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--fg); cursor: pointer; transition: border-color .2s, background .2s; }
+.chip:hover { border-color: var(--fg); }
 .chip[aria-pressed="true"] { background: var(--fg); border-color: var(--fg); color: var(--bg); }
-.chip small { font-size: 12px; opacity: .65; margin-left: 4px; font-variant-numeric: tabular-nums; }
-.search { flex: 1 1 220px; min-width: 0; display: flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: var(--surface); }
-.search input { flex: 1; min-width: 0; border: 0; background: transparent; color: var(--fg); font: 500 15px/1.2 var(--f-body); outline: none; }
-.search svg { width: 16px; height: 16px; fill: none; stroke: var(--muted); stroke-width: 2; flex: none; }
-.status { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 14px; color: var(--muted); margin-bottom: 12px; }
-.status button { font: 600 14px/1 var(--f-body); color: var(--accent); background: none; border: 0; cursor: pointer; padding: 6px 0; }
-ol.papers { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.paper { display: grid; grid-template-columns: 54px minmax(0, 1fr) auto; gap: 16px; align-items: start; background: var(--surface); border-radius: 20px; padding: 16px 20px; border: 2px solid transparent; transition: border-color .3s, transform .2s; animation: fadeup .35s ease both; }
-.paper:hover { transform: translateX(4px); }
-.paper.flash { border-color: var(--accent-2); animation: wiggle .6s ease; }
-@keyframes fadeup { from { opacity: 0; transform: translateY(8px); } }
-@keyframes wiggle { 20% { transform: rotate(-1deg); } 40% { transform: rotate(1deg); } 60% { transform: rotate(-.6deg); } }
-.yr { display: grid; place-items: center; height: 34px; border-radius: 999px; background: var(--accent); color: var(--on-accent); font: 800 13px/1 var(--f-body); font-variant-numeric: tabular-nums; }
-.paper h3 { font-weight: 600; font-size: 17.5px; line-height: 1.35; }
-.paper h3 a { color: var(--fg); text-decoration: none; }
-.paper h3 a:hover { color: var(--accent); text-decoration: underline; }
-.paper .meta { margin-top: 4px; font-size: 14px; color: var(--muted); }
-.paper .meta i { color: var(--fg); }
-.tag { font: 800 11px/1 var(--f-body); letter-spacing: .05em; text-transform: uppercase; padding: 6px 9px; border-radius: 999px; background: var(--bg); color: var(--muted); white-space: nowrap; }
-.tag.first { background: var(--accent-2); color: var(--on-coral); }
-.tag.cofirst { background: transparent; color: var(--accent-2); box-shadow: inset 0 0 0 1.5px var(--accent-2); }
-.tag.corr { background: var(--accent); color: var(--on-accent); }
-.tools .lbl { font: 800 12px/1 var(--f-body); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-right: 2px; }
-.affil { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; padding-top: 4px; }
-.aff { display: flex; align-items: center; gap: 12px; padding: 10px 18px 10px 10px; background: var(--bg); border-radius: 20px; color: var(--fg); text-decoration: none; min-width: 0; transition: transform .2s; }
-a.aff:hover { transform: translateY(-3px); }
-.aff img { height: 52px; width: auto; flex: none; }
-.aff img.fetp { border-radius: 10px; }
-.aff b { display: block; font-size: 15px; line-height: 1.25; }
-.aff small { display: block; font-size: 13px; color: var(--muted); }
-.tags { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
-.empty { padding: 28px; text-align: center; color: var(--muted); background: var(--surface); border-radius: 20px; }
-.more-row { display: flex; justify-content: center; margin-top: 18px; }
+.chip small { font-size: 12px; opacity: .6; margin-left: 5px; font-variant-numeric: tabular-nums; }
+.search { display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--line); padding: 14px 4px; margin-block: 8px 14px; }
+.search:focus-within { border-color: var(--accent); }
+.search input { flex: 1; min-width: 0; border: 0; background: transparent; color: var(--fg); font: 500 clamp(18px, 2vw, 24px)/1.3 var(--f-body); outline: none; }
+.search input::placeholder { color: var(--muted); }
+.search svg { width: 22px; height: 22px; fill: none; stroke: var(--muted); stroke-width: 2; flex: none; }
+.status { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 14px; color: var(--muted); margin-bottom: 6px; }
+.status button { font: 600 14px/1 var(--f-body); color: var(--accent); background: none; border: 0; cursor: pointer; padding: 4px 0; }
+ol.papers { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.paper { display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; gap: 20px; align-items: baseline; padding: 20px 4px; border-bottom: 1px solid var(--line); transition: background .25s; }
+html.motion .paper { animation: fade .4s ease both; }
+@keyframes fade { from { opacity: 0; transform: translateY(8px); } }
+.paper:hover { background: var(--surface); }
+.paper.flash { background: color-mix(in srgb, var(--accent) 18%, transparent); }
+.paper .yr { font: 700 15px/1 var(--f-body); color: var(--accent); font-variant-numeric: tabular-nums; }
+.paper h3 { font-weight: 600; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.35; font-family: var(--f-body); }
+.paper h3 a { text-decoration: none; background: linear-gradient(var(--accent), var(--accent)) 0 100% / 0 1.5px no-repeat; transition: background-size .35s; }
+.paper h3 a:hover { background-size: 100% 1.5px; }
+.paper .j { margin-top: 4px; font-size: 14px; color: var(--muted); font-style: italic; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; max-width: 260px; }
+.tag { font: 600 11px/1 var(--f-body); letter-spacing: .06em; text-transform: uppercase; padding: 6px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
+html[lang="th"] .tag { letter-spacing: 0; font-size: 12px; }
+.tag.first { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.tag.cofirst { border-color: var(--accent); color: var(--accent); }
+.tag.corr { background: var(--accent-2); border-color: var(--accent-2); color: #0B0D24; }
+.empty { padding: 32px 4px; color: var(--muted); }
+.more-row { display: flex; justify-content: center; margin-top: 28px; }
 
-/* path & talks */
-.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; }
-.tl { list-style: none; margin: 0; padding: 0 0 0 22px; display: grid; gap: 22px; border-left: 2px dashed var(--line); }
-.tl li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 16px; position: relative; }
-.tl li::before { content: ""; position: absolute; left: -30px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 3px solid var(--accent); transition: background .2s, transform .2s; }
-.tl li:hover::before { background: var(--accent-2); border-color: var(--accent-2); transform: scale(1.3); }
-.tl .when { font: 800 14px/1.5 var(--f-body); color: var(--accent); font-variant-numeric: tabular-nums; }
-.tl strong { display: block; font-weight: 600; line-height: 1.35; }
-.tl span { display: block; font-size: 15px; color: var(--muted); line-height: 1.45; margin-top: 2px; }
-.award { display: inline-block; margin-top: 6px; padding: 4px 10px; font: 800 12px/1.4 var(--f-body); letter-spacing: .04em; text-transform: uppercase; border-radius: 999px; background: var(--accent-2); color: var(--on-coral); }
+/* path */
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); }
+.two h3 { font: 800 clamp(26px, 2.6vw, 34px)/1.1 var(--f-display); font-stretch: 75%; text-transform: uppercase; margin-bottom: 18px; }
+html[lang="th"] .two h3 { font-stretch: 100%; line-height: 1.3; }
+.tl { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.tl li { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--line); transition: padding .3s; }
+.tl li:hover { padding-left: 10px; }
+.tl .when { font: 600 14px/1.6 var(--f-body); color: var(--accent); font-variant-numeric: tabular-nums; }
+.tl strong { display: block; font-weight: 600; line-height: 1.4; }
+.tl span { display: block; color: var(--muted); font-size: 15px; line-height: 1.5; margin-top: 2px; }
+.award { display: inline-block; margin-top: 8px; padding: 5px 10px; font: 700 12px/1.3 var(--f-body); letter-spacing: .05em; text-transform: uppercase; border-radius: 999px; background: var(--accent); color: var(--on-accent); }
+
+/* channels */
+.chan { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.chan a { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 26px 8px; border-bottom: 1px solid var(--line); text-decoration: none; transition: color .25s, padding .3s; min-width: 0; }
+.chan a:nth-child(odd) { border-right: 1px solid var(--line); padding-right: 24px; }
+.chan a:nth-child(even) { padding-left: 24px; }
+.chan a:hover { color: var(--accent); }
+.chan b { font: 800 clamp(26px, 3vw, 40px)/1 var(--f-display); font-stretch: 75%; text-transform: uppercase; }
+.chan small { display: block; color: var(--muted); font-size: 14px; margin-top: 8px; overflow-wrap: anywhere; }
+.chan .a { font-size: 28px; transition: transform .35s; }
+.chan a:hover .a { transform: rotate(45deg); }
 
 /* contact */
-.contact { background: var(--fg); color: var(--bg); border-radius: 36px; padding: clamp(24px, 5vw, 48px); display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; align-items: end; }
-.contact .label { color: var(--bg); opacity: .75; }
-.contact h2 { font-weight: 800; letter-spacing: -.02em; font-size: clamp(30px, 4.4vw, 48px); line-height: 1.1; margin-top: 12px; }
+.contact { padding-block: clamp(56px, 8vw, 110px) 0; scroll-margin-top: 70px; }
+.cta-mq { display: block; overflow: hidden; text-decoration: none; color: var(--accent); }
+.cta-mq .mq-item { font-size: clamp(56px, 11vw, 170px); }
+.cta-mq:hover { color: var(--fg); }
+.contact-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: end; padding-block: 40px 56px; }
 .emails { display: grid; gap: 10px; }
-.email { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; border: 1px solid rgba(127,127,160,.45); border-radius: 18px; min-width: 0; }
-.email code { font: 600 15px/1.3 var(--f-body); overflow-wrap: anywhere; user-select: all; min-width: 0; }
-.copy { font: 600 13px/1 var(--f-body); padding: 8px 12px; background: transparent; color: var(--bg); border: 1px solid rgba(127,127,160,.45); border-radius: 999px; cursor: pointer; flex: none; }
-.copy:hover { background: var(--bg); color: var(--fg); }
-footer { padding-block: 28px; font-size: 13.5px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.email { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+.email code { font: 600 clamp(17px, 1.8vw, 22px)/1.3 var(--f-body); overflow-wrap: anywhere; user-select: all; min-width: 0; }
+footer { border-top: 1px solid var(--line); }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-block: 24px; font-size: 13.5px; color: var(--muted); }
 
-.toast { position: fixed; left: 0; right: 0; margin-inline: auto; width: max-content; max-width: calc(100% - 32px); bottom: calc(20px + env(safe-area-inset-bottom, 0px)); background: var(--fg); color: var(--bg); padding: 12px 18px; border-radius: 999px; font: 600 14px/1.2 var(--f-body); transform: translateY(150%); transition: transform .3s cubic-bezier(.2,.9,.3,1.3); z-index: 30; }
+.toast { position: fixed; left: 0; right: 0; margin-inline: auto; width: max-content; max-width: calc(100% - 32px); bottom: calc(22px + env(safe-area-inset-bottom, 0px)); background: var(--fg); color: var(--bg); padding: 12px 18px; border-radius: 999px; font: 600 14px/1.3 var(--f-body); transform: translateY(160%); transition: transform .35s cubic-bezier(.2,.9,.3,1.3); z-index: 80; }
 .toast.on { transform: none; }
 
-/* reveal: visible by default, only animates once JS marks the page ready */
-.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
-.js .reveal.in { opacity: 1; transform: none; }
+/* reveal (only with motion on) */
+html.motion .rv { opacity: 0; transform: translateY(36px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
+html.motion .rv.in { opacity: 1; transform: none; }
 
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation: none !important; transition: none !important; }
-  .js .reveal { opacity: 1; transform: none; }
-}
+/* motion off: freeze everything */
+html.still *, html.still *::before, html.still *::after { animation: none !important; transition: none !important; }
 
-@media (max-width: 900px) {
-  .intro, .two, .contact { grid-template-columns: minmax(0, 1fr); gap: 32px; }
-  .side { order: -1; }
-  .portrait { width: min(70%, 280px); }
-  .focus-grid, .channels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 960px) {
+  .links { display: none; }
+  .menu-btn { display: inline-flex; }
+  .hero-row, .about, .two, .contact-row, .projects { grid-template-columns: minmax(0, 1fr); }
+  .portrait { justify-self: center; width: min(78%, 340px); }
+  .badge { left: -24px; width: 108px; height: 108px; }
 }
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   body { font-size: 16px; }
-  .nav ul { display: none; }
-  .hero h1 { font-size: clamp(32px, 10vw, 44px); }
-  .hero-card { padding: 22px; border-radius: 28px; }
-  .focus-grid { grid-template-columns: minmax(0, 1fr); }
-  .ch { padding: 18px; min-height: 140px; }
-  .ch strong { font-size: 17px; }
-  .stat b { font-size: 28px; }
-  .paper { grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 16px; }
-  .paper .yr { width: 64px; }
-  .tags { flex-direction: row; flex-wrap: wrap; justify-content: flex-start; }
+  .tools-r .pill-btn .txt { display: none; }
+  .brand .full { display: none; }
+  .name .l2 { -webkit-text-stroke-width: 1.2px; }
+  .paper { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .tags { justify-content: flex-start; max-width: none; }
   .tag { white-space: normal; }
   .tl li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
-  .sticker { font-size: 12px; padding: 7px 10px; }
+  .chan { grid-template-columns: minmax(0, 1fr); }
+  .chan a:nth-child(odd), .chan a:nth-child(even) { border-right: 0; padding-inline: 4px; }
+  .area { grid-template-columns: minmax(0, 1fr) auto; padding-block: 22px; }
+  .area .n { display: none; }
+  .stat b { font-size: 40px; }
+  .stat + .stat { padding-left: 10px; }
+  .proj .art { height: 170px; }
 }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="nav">
-    <a class="brand" href="#top"><span class="mono">SL</span><span>Sethapong Lertsakulbunlue</span></a>
-    <div class="nav-r">
-      <ul>
-        <li><a href="#focus">Research</a></li>
-        <li><a href="#papers">Publications</a></li>
-        <li><a href="#path">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="theme" id="theme" type="button" aria-label="Switch light or dark mode">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.5 0-.9-.1-1.4A5.5 5.5 0 0 1 13.4 3.1L12 3Z"/></svg>
-      </button>
-    </div>
-  </header>
+<div class="progress" id="progress"></div>
+<div class="cur" id="cur"></div><div class="cur-ring" id="ring"></div>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-card">
-        <div class="intro">
-          <div>
-            <p class="hello">Hello! I'm a <span class="rot" id="rot">physician</span></p>
-            <h1>Sethapong <em>Lertsakulbunlue</em>, MD</h1>
-            <p class="thai-name thai">ร.ท. เสฏฐพงศ์ เลิศสกุลบรรลือ</p>
-            <p class="lede">Lecturer in Pharmacology at Phramongkutklao College of Medicine, Bangkok, and resident in Preventive Medicine (Epidemiology). I study how medical students learn and are assessed, how outbreaks unfold in the field, and what snake venom does to the people it reaches.</p>
-            <div class="cta">
-              <a class="btn primary" href="#papers">Explore my papers</a>
-              <a class="btn" href="https://scholar.google.com/citations?user=pJlQxuMAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
-              <a class="btn" href="#contact">Get in touch</a>
-            </div>
-          </div>
-          <div class="side">
-            <div class="portrait" id="portrait">
-              <div class="blob"></div>
-              <div class="frame"><img src="photo.jpg" alt="Sethapong Lertsakulbunlue smiling at a field epidemiology training workshop" width="720" height="720"></div>
-              <span class="sticker s1">Bangkok, Thailand</span>
-              <span class="sticker s2">Hi there!</span>
-            </div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mono">SL</span><span class="full">Sethapong L.</span></a>
+    <ul class="links">
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#research" data-i18n="nav.research">Research</a></li>
+      <li><a href="#work" data-i18n="nav.work">Publications</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="tools-r">
+      <div class="seg" role="group" aria-label="Language">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="th">ไทย</button>
+      </div>
+      <button class="pill-btn" id="motion" type="button"><span class="led"></span><span class="txt" data-i18n="motion">Motion</span></button>
+      <button class="pill-btn menu-btn" id="menu" type="button" aria-expanded="false" data-i18n="menu">Menu</button>
+    </div>
+  </div>
+</header>
+
+<div class="overlay" id="overlay" aria-hidden="true">
+  <button class="pill-btn close" id="close" type="button" data-i18n="close">Close</button>
+  <ul>
+    <li><a href="#about" data-i18n="nav.about">About</a></li>
+    <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+    <li><a href="#research" data-i18n="nav.research">Research</a></li>
+    <li><a href="#work" data-i18n="nav.work">Publications</a></li>
+    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+  </ul>
+  <p>Sethapong.ler@pcm.ac.th</p>
+</div>
+
+<main id="top">
+  <section class="hero wrap">
+    <span class="label" data-i18n="kicker">Physician · Epidemiologist · Medical educator</span>
+    <h1 class="name" id="name" aria-label="Sethapong Lertsakulbunlue"><span class="l1" data-i18n="name1">Sethapong</span><span class="l2" data-i18n="name2">Lertsakulbunlue</span></h1>
+    <div class="hero-row">
+      <div>
+        <p class="alt-name" data-i18n="altname">ร.ท. นพ.เสฏฐพงศ์ เลิศสกุลบรรลือ</p>
+        <p class="lede" data-i18n="lede">Lecturer in Pharmacology at Phramongkutklao College of Medicine, Bangkok, and resident in Preventive Medicine (Epidemiology). I study how medical students learn and are assessed, how outbreaks unfold in the field, and what snake venom does to the people it reaches.</p>
+        <div class="cta">
+          <a class="btn solid" href="#work"><span data-i18n="cta.papers">Explore my papers</span><span class="arr">↘</span></a>
+          <a class="btn" href="https://scholar.google.com/citations?user=pJlQxuMAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar <span class="arr">↗</span></a>
+        </div>
+      </div>
+      <div class="portrait">
+        <div class="frame"><img src="photo.jpg" alt="Sethapong Lertsakulbunlue smiling at a field epidemiology training workshop" width="720" height="720"></div>
+        <span class="tag-float" data-i18n="hi">Hi there!</span>
+        <a class="badge" href="#about" aria-label="Scroll to explore">
+          <svg class="ring" viewBox="0 0 128 128" aria-hidden="true"><defs><path id="circ" d="M64,64 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0"/></defs><text><textPath href="#circ" textLength="298" id="ringtext">Scroll to explore · Scroll to explore ·</textPath></text></svg>
+          <span class="arrow">↓</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="track" id="mq1"></div></div>
+  <div class="marquee rev" aria-hidden="true"><div class="track" id="mq2"></div></div>
+
+  <section class="block" id="about">
+    <div class="wrap">
+      <div class="sec-top rv">
+        <div><span class="label" data-i18n="about.k">About</span><h2 class="sec-title" data-i18n-html="about.t">Who's <em>this?</em></h2></div>
+      </div>
+      <div class="about">
+        <div class="rv">
+          <p class="bio" data-i18n-html="about.bio">I trained at Phramongkutklao College of Medicine, graduating in 2020 with <b>first-class honours and the gold medal</b>. After an internship at Fort Wachirawut Hospital, I joined the Department of Pharmacology as a lecturer in 2022, and in 2024 began residency in Preventive Medicine (Epidemiology). My work moves between the classroom, the lab and the field: <b>fairer exams, faster outbreak answers, and better snakebite care.</b></p>
+          <div class="affil">
+            <a class="aff" href="https://www.pcm.ac.th" target="_blank" rel="noopener"><span class="logo"><img src="pcm-logo.png" alt="Phramongkutklao College of Medicine logo" width="36" height="50"></span><span><b data-i18n="aff.pcm">Phramongkutklao College of Medicine</b><small data-i18n="aff.pcm2">Department of Pharmacology</small></span></a>
+            <div class="aff"><span class="logo fetp"><img src="fetp-logo.png" alt="International Field Epidemiology Training Programme Thailand logo" width="64" height="60"></span><span><b data-i18n="aff.fetp">Field Epidemiology Training Program</b><small data-i18n="aff.fetp2">FETP Thailand</small></span></div>
           </div>
         </div>
-        <div class="intro">
+        <div class="rv">
           <div class="stats">
-            <div class="stat"><b data-count="45">45</b><span>peer-reviewed papers since 2022</span></div>
-            <div class="stat"><b data-count="6">6</b><span>conference presentations</span></div>
-            <div class="stat"><b data-count="1" data-suffix="st">1st</b><span>class honours MD, gold medal</span></div>
+            <div class="stat"><b data-count="45">45</b><span data-i18n="stat1">peer-reviewed papers since 2022</span></div>
+            <div class="stat"><b data-count="6">6</b><span data-i18n="stat2">conference presentations</span></div>
+            <div class="stat"><b data-i18n="stat3v">1st</b><span data-i18n="stat3">class honours MD, gold medal</span></div>
           </div>
           <figure class="chart">
-            <div class="chart-head"><b>Papers per year</b><span>Tap a bar to filter</span></div>
+            <div class="chart-head"><b data-i18n="chart.t">Papers per year</b><span data-i18n="chart.tap">Tap a bar to filter the list</span></div>
             <div class="bars" id="bars">
-              <button class="bar" type="button" style="--v:2;--i:0" data-n="2" data-y="2022" aria-pressed="false" aria-label="2022: 2 papers"></button>
-              <button class="bar" type="button" style="--v:8;--i:1" data-n="8" data-y="2023" aria-pressed="false" aria-label="2023: 8 papers"></button>
-              <button class="bar" type="button" style="--v:13;--i:2" data-n="13" data-y="2024" aria-pressed="false" aria-label="2024: 13 papers"></button>
-              <button class="bar" type="button" style="--v:17;--i:3" data-n="17" data-y="2025" aria-pressed="false" aria-label="2025: 17 papers"></button>
-              <button class="bar partial" type="button" style="--v:5;--i:4" data-n="5" data-y="2026" aria-pressed="false" aria-label="2026 so far: 5 papers"></button>
+              <button class="bar" type="button" style="--v:2;--i:0" data-n="2" data-y="2022" aria-pressed="false"></button>
+              <button class="bar" type="button" style="--v:8;--i:1" data-n="8" data-y="2023" aria-pressed="false"></button>
+              <button class="bar" type="button" style="--v:13;--i:2" data-n="13" data-y="2024" aria-pressed="false"></button>
+              <button class="bar" type="button" style="--v:17;--i:3" data-n="17" data-y="2025" aria-pressed="false"></button>
+              <button class="bar partial" type="button" style="--v:5;--i:4" data-n="5" data-y="2026" aria-pressed="false"></button>
             </div>
-            <div class="years"><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026*</span></div>
-            <figcaption>n = 45. *2026 to date.</figcaption>
+            <div class="years" id="years"></div>
           </figure>
         </div>
-        <div class="affil">
-          <span class="label">Affiliations</span>
-          <a class="aff" href="https://www.pcm.ac.th" target="_blank" rel="noopener"><img src="pcm-logo.png" alt="Phramongkutklao College of Medicine logo" width="37" height="52"><span><b>Phramongkutklao College of Medicine</b><small>Department of Pharmacology</small></span></a>
-          <div class="aff"><img class="fetp" src="fetp-logo.png" alt="International Field Epidemiology Training Programme Thailand logo" width="55" height="52"><span><b>Field Epidemiology Training Program</b><small>FETP Thailand</small></span></div>
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="channels" class="reveal">
-      <div class="sec-head"><h2>Find me online</h2><span class="label">Research &amp; social</span></div>
-      <div class="channels">
-        <a class="ch" href="https://www.youtube.com/@WanLaRok" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-3.2.5-4.8s-.1-3.2-.5-4.8ZM9.7 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg>
-          <strong>YouTube</strong><span>@WanLaRok</span>
+  <section class="block" id="projects">
+    <div class="wrap">
+      <div class="sec-top rv">
+        <div><span class="label" data-i18n="proj.k">Projects</span><h2 class="sec-title" data-i18n-html="proj.t">Things I've <em>built</em></h2></div>
+        <p class="sec-note" data-i18n="proj.note">Web tools I designed and shipped. Both run entirely in the browser, so no personal data leaves the user's device.</p>
+      </div>
+      <div class="projects">
+        <a class="proj rv" href="https://sari-demo.vercel.app/" target="_blank" rel="noopener">
+          <span class="go">↗</span>
+          <div class="art sari" aria-hidden="true"><i style="--h:12%"></i><i style="--h:18%"></i><i style="--h:15%"></i><i style="--h:22%"></i><i style="--h:30%"></i><i style="--h:26%"></i><i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:70%"></i><i style="--h:88%"></i><i style="--h:80%"></i><i style="--h:64%"></i><i style="--h:48%"></i><i style="--h:36%"></i><i style="--h:28%"></i><i style="--h:20%"></i><i style="--h:16%"></i><i style="--h:12%"></i></div>
+          <div class="body">
+            <h3 data-i18n="sari.t">SARI Surveillance Dashboard</h3>
+            <p data-i18n="sari.d">Estimates severe acute respiratory infection (SARI) activity from routine hospital ICD-10 admission data, using models built on sentinel surveillance. Files are processed in the browser, so patient data never leaves the hospital.</p>
+            <div class="chips"><span data-i18n="tag.epi">Epidemiology</span><span data-i18n="tag.dash">Dashboard</span><span>EN / ไทย</span></div>
+          </div>
         </a>
-        <a class="ch" href="https://www.facebook.com/Earthyboy12/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12Z"/></svg>
-          <strong>Facebook</strong><span>Earthyboy12</span>
-        </a>
-        <a class="ch" href="https://scholar.google.com/citations?user=pJlQxuMAAAAJ&amp;hl=en" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 0 9.5l4.4 2.7A7.5 7.5 0 0 1 12 8a7.5 7.5 0 0 1 7.6 4.2L24 9.5 12 2Zm0 8a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/></svg>
-          <strong>Google Scholar</strong><span>Citations &amp; full list</span>
-        </a>
-        <a class="ch" href="https://www.researchgate.net/profile/Sethapong-Lertsakulbunlue" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2h20v20H2V2Zm12.8 4.2c-1.6 0-2.5 1-2.5 2.4v1.2c0 1.5.9 2.4 2.5 2.4 1.3 0 2.2-.6 2.4-1.8h-1.2c-.1.5-.5.8-1.2.8-.8 0-1.2-.5-1.2-1.4V9.6h2.5v-1h-2.5v-.1c0-.8.4-1.3 1.2-1.3.6 0 1 .3 1.1.8h1.2c-.2-1.2-1.1-1.8-2.3-1.8ZM6 8.6v9.2h1.6v-3.7h1.2l2 3.7h1.8l-2.2-4a2.6 2.6 0 0 0-1-5.2H6Zm1.6 1.2h1.6c.8 0 1.3.5 1.3 1.3s-.5 1.3-1.3 1.3H7.6V9.8Z"/></svg>
-          <strong>ResearchGate</strong><span>Papers &amp; preprints</span>
+        <a class="proj rv" href="https://plb-horoscope.vercel.app/" target="_blank" rel="noopener">
+          <span class="go">↗</span>
+          <div class="art horo" aria-hidden="true">
+            <svg viewBox="0 0 200 200"><g fill="none" stroke="#F3F1EC" stroke-opacity=".55"><circle cx="100" cy="100" r="92"/><circle cx="100" cy="100" r="64"/><circle cx="100" cy="100" r="30"/></g><g stroke="#F3F1EC" stroke-opacity=".35"><line x1="100" y1="8" x2="100" y2="192"/><line x1="8" y1="100" x2="192" y2="100"/><line x1="35" y1="35" x2="165" y2="165"/><line x1="165" y1="35" x2="35" y2="165"/><line x1="54" y1="20" x2="146" y2="180"/><line x1="146" y1="20" x2="54" y2="180"/><line x1="20" y1="54" x2="180" y2="146"/><line x1="180" y1="54" x2="20" y2="146"/></g><circle cx="100" cy="36" r="6" fill="#FF6A4D"/><circle cx="155" cy="128" r="4" fill="#8C9BFF"/><circle cx="58" cy="140" r="5" fill="#F3F1EC"/><path d="M100 84l4 12h12l-10 7 4 12-10-7-10 7 4-12-10-7h12z" fill="#FF6A4D"/></svg>
+          </div>
+          <div class="body">
+            <h3 data-i18n="horo.t">PLB Horoscope</h3>
+            <p data-i18n="horo.d">A Thai daily horoscope app based on traditional Thai astrology: daily readings by ascendant, couple compatibility, lucky colours and numbers, and a 28-day fortune chart. Everything is calculated on your own device.</p>
+            <div class="chips"><span data-i18n="tag.side">Side project</span><span>ไทย</span></div>
+          </div>
         </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="focus" class="reveal">
-      <div class="sec-head"><h2>Research focus</h2><span class="label">Tap a topic to see its papers</span></div>
-      <div class="focus-grid">
-        <button class="focus" type="button" data-topic="edu">
-          <span class="ico"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/></svg></span>
-          <h3>Medical education &amp; assessment</h3>
-          <p>Generalizability theory for exam reliability, peer-assessment rubrics for ACLS and ECG skills, very short answer questions, and student co-designed curricula.</p>
-          <span class="count" data-count-topic="edu"></span>
-        </button>
-        <button class="focus" type="button" data-topic="epi">
-          <span class="ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M8.5 11h5M11 8.5v5"/></svg></span>
-          <h3>Field epidemiology</h3>
-          <p>Outbreak and death investigations across Thailand: a vaccine-related mumps cluster, an infant pertussis death, a road traffic crash, and digital influenza surveillance.</p>
-          <span class="count" data-count-topic="epi"></span>
-        </button>
-        <button class="focus" type="button" data-topic="tox">
-          <span class="ico"><svg viewBox="0 0 24 24"><path d="M4 18c3 0 3-4 6-4s3 4 6 4 3-6 4-9"/><circle cx="19" cy="6" r="2"/></svg></span>
-          <h3>Toxinology &amp; pharmacology</h3>
-          <p>Russell's viper and cobra envenoming, linking venom pharmacokinetics in the lab with clinical outcomes and community-hospital snakebite care.</p>
-          <span class="count" data-count-topic="tox"></span>
-        </button>
-        <button class="focus" type="button" data-topic="cardio">
-          <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span>
-          <h3>Cardiometabolic risk</h3>
-          <p>Triglyceride-glucose index, HDL and predicted cardiovascular risk in people with diabetes and in Royal Thai Army personnel.</p>
-          <span class="count" data-count-topic="cardio"></span>
-        </button>
+  <section class="block" id="research">
+    <div class="wrap">
+      <div class="sec-top rv">
+        <div><span class="label" data-i18n="res.k">Research</span><h2 class="sec-title" data-i18n-html="res.t">What I <em>study</em></h2></div>
+        <p class="sec-note" data-i18n="res.note">Pick a topic to jump to its papers.</p>
       </div>
-    </section>
+      <div class="areas rv">
+        <button class="area" type="button" data-topic="edu"><span class="t" data-i18n="t.edu.l">Medical education</span><span class="n" data-count-topic="edu"></span><span class="a">↗</span><span class="d" data-i18n="d.edu">Generalizability theory for exam reliability, peer-assessment rubrics for ACLS and ECG skills, very short answer questions, and curricula co-designed with students.</span></button>
+        <button class="area" type="button" data-topic="epi"><span class="t" data-i18n="t.epi.l">Field epidemiology</span><span class="n" data-count-topic="epi"></span><span class="a">↗</span><span class="d" data-i18n="d.epi">Outbreak and death investigations across Thailand: a vaccine-related mumps cluster, an infant pertussis death, a road traffic crash, and digital influenza surveillance.</span></button>
+        <button class="area" type="button" data-topic="tox"><span class="t" data-i18n="t.tox.l">Toxinology</span><span class="n" data-count-topic="tox"></span><span class="a">↗</span><span class="d" data-i18n="d.tox">Russell's viper and cobra envenoming, linking venom pharmacokinetics in the lab with clinical outcomes and community-hospital snakebite care.</span></button>
+        <button class="area" type="button" data-topic="cardio"><span class="t" data-i18n="t.cardio.l">Cardiometabolic risk</span><span class="n" data-count-topic="cardio"></span><span class="a">↗</span><span class="d" data-i18n="d.cardio">Triglyceride-glucose index, HDL and predicted cardiovascular risk in people with diabetes and in Royal Thai Army personnel.</span></button>
+        <button class="area" type="button" data-topic="clin"><span class="t" data-i18n="t.clin.l">Clinical &amp; genetics</span><span class="n" data-count-topic="clin"></span><span class="a">↗</span><span class="d" data-i18n="d.clin">Case reports of rare genetic disorders, tuberculosis outcomes, ocular injuries and other clinical studies.</span></button>
+      </div>
+    </div>
+  </section>
 
-    <section id="papers" class="reveal">
-      <div class="sec-head"><h2>Publication explorer</h2><button class="btn" id="surprise" type="button">Surprise me</button></div>
-      <div class="tools" id="chips"></div>
-      <div class="tools" id="roles"><span class="lbl">My role</span></div>
-      <div class="tools">
+  <section class="block" id="work">
+    <div class="wrap">
+      <div class="sec-top rv">
+        <div><span class="label" data-i18n="work.k">Publications</span><h2 class="sec-title" data-i18n-html="work.t">Selected <em>work</em></h2></div>
+        <button class="btn" id="surprise" type="button"><span data-i18n="surprise">Surprise me</span> <span class="arr">✦</span></button>
+      </div>
+      <div class="rv">
+        <div class="ex-tools" id="chips"></div>
+        <div class="ex-tools" id="roles"><span class="lbl" data-i18n="role">My role</span></div>
         <label class="search" for="q">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-          <input id="q" type="search" placeholder="Search titles or journals, e.g. snake, empathy, diabetes" autocomplete="off">
+          <input id="q" type="search" autocomplete="off" data-i18n-ph="search" placeholder="Search titles or journals: snake, empathy, diabetes…">
         </label>
+        <div class="status"><span id="status" aria-live="polite"></span><button id="clear" type="button" hidden data-i18n="clear">Clear filters</button></div>
+        <ol class="papers" id="list"></ol>
+        <div class="more-row"><button class="btn" id="more" type="button" hidden></button></div>
       </div>
-      <div class="status"><span id="status" aria-live="polite"></span><button id="clear" type="button" hidden>Clear filters</button></div>
-      <ol class="papers" id="list"></ol>
-      <div class="more-row"><button class="btn" id="more" type="button" hidden>Show all</button></div>
-    </section>
+    </div>
+  </section>
 
-    <section id="path" class="reveal">
+  <section class="block" id="path">
+    <div class="wrap">
+      <div class="sec-top rv">
+        <div><span class="label" data-i18n="path.k">Path</span><h2 class="sec-title" data-i18n-html="path.t">So <em>far</em></h2></div>
+      </div>
       <div class="two">
-        <div>
-          <div class="sec-head"><h2>Experience &amp; training</h2></div>
+        <div class="rv">
+          <h3 data-i18n="exp.t">Experience &amp; training</h3>
           <ul class="tl">
-            <li><span class="when">2024 – now</span><div><strong>Resident, Preventive Medicine (Epidemiology)</strong><span>Thai board residency training</span></div></li>
-            <li><span class="when">2022 – now</span><div><strong>Lecturer, Department of Pharmacology</strong><span>Phramongkutklao College of Medicine, Bangkok</span></div></li>
-            <li><span class="when">2021</span><div><strong>Medical intern</strong><span>Fort Wachirawut Hospital, Nakhon Si Thammarat</span></div></li>
-            <li><span class="when">2015 – 2020</span><div><strong>Doctor of Medicine</strong><span>Phramongkutklao College of Medicine. First-class honours with gold medal.</span></div></li>
-            <li><span class="when">2008 – 2014</span><div><strong>Secondary school</strong><span>Samsenwittayalai School, Bangkok</span></div></li>
+            <li><span class="when" data-i18n="e1w">2024 – now</span><div><strong data-i18n="e1">Resident, Preventive Medicine (Epidemiology)</strong><span data-i18n="e1s">Thai board residency training</span></div></li>
+            <li><span class="when" data-i18n="e2w">2022 – now</span><div><strong data-i18n="e2">Lecturer, Department of Pharmacology</strong><span data-i18n="e2s">Phramongkutklao College of Medicine, Bangkok</span></div></li>
+            <li><span class="when" data-i18n="e3w">2021</span><div><strong data-i18n="e3">Medical intern</strong><span data-i18n="e3s">Fort Wachirawut Hospital, Nakhon Si Thammarat</span></div></li>
+            <li><span class="when" data-i18n="e4w">2015 – 2020</span><div><strong data-i18n="e4">Doctor of Medicine</strong><span data-i18n="e4s">Phramongkutklao College of Medicine. First-class honours with gold medal.</span></div></li>
+            <li><span class="when" data-i18n="e5w">2008 – 2014</span><div><strong data-i18n="e5">Secondary school</strong><span data-i18n="e5s">Samsenwittayalai School, Bangkok</span></div></li>
           </ul>
         </div>
-        <div>
-          <div class="sec-head"><h2>Talks &amp; awards</h2></div>
+        <div class="rv">
+          <h3 data-i18n="talk.t">Talks &amp; awards</h3>
           <ul class="tl">
-            <li><span class="when">2025 · Oral</span><div><strong>China FETP Annual Conference</strong><span>Pertussis amid ongoing conflict and missed maternal vaccination: an infant death investigation in Tak Province</span></div></li>
-            <li><span class="when">2025 · Oral</span><div><strong>SAFETYNET Conference</strong><span>An MMR-related mumps cluster among practical nursing students, Bangkok</span></div></li>
-            <li><span class="when">2024 · Oral</span><div><strong>Thai Medical Education Conference</strong><span>Peer assessment of ECG interpretation in simulation-based ACLS stations</span></div></li>
-            <li><span class="when">2024 · Poster</span><div><strong>Ottawa Conference</strong><span>Evaluating an undergraduate medical research module with the CIPP model</span></div></li>
-            <li><span class="when">2023 · Oral</span><div><strong>Japan Society for Medical Education</strong><span>Beliefs about medical research and their impact on publication: a structural equation model</span><em class="award">Young Investigator Award</em></div></li>
-            <li><span class="when">2023 · Poster</span><div><strong>AMEE Conference</strong><span>Association for Medical Education in Europe</span></div></li>
+            <li><span class="when" data-i18n="t1w">2025 · Oral</span><div><strong>China FETP Annual Conference</strong><span data-i18n="t1">Pertussis amid ongoing conflict and missed maternal vaccination: an infant death investigation in Tak Province</span></div></li>
+            <li><span class="when" data-i18n="t2w">2025 · Oral</span><div><strong>SAFETYNET Conference</strong><span data-i18n="t2">An MMR-related mumps cluster among practical nursing students, Bangkok</span></div></li>
+            <li><span class="when" data-i18n="t3w">2024 · Oral</span><div><strong>Thai Medical Education Conference</strong><span data-i18n="t3">Peer assessment of ECG interpretation in simulation-based ACLS stations</span></div></li>
+            <li><span class="when" data-i18n="t4w">2024 · Poster</span><div><strong>Ottawa Conference</strong><span data-i18n="t4">Evaluating an undergraduate medical research module with the CIPP model</span></div></li>
+            <li><span class="when" data-i18n="t5w">2023 · Oral</span><div><strong>Japan Society for Medical Education</strong><span data-i18n="t5">Beliefs about medical research and their impact on publication: a structural equation model</span><em class="award">Young Investigator Award</em></div></li>
+            <li><span class="when" data-i18n="t6w">2023 · Poster</span><div><strong>AMEE Conference</strong><span data-i18n="t6">Association for Medical Education in Europe</span></div></li>
           </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact" class="reveal">
-      <div class="contact">
-        <div>
-          <div class="label">Collaborations, talks, teaching</div>
-          <h2>Let's work on something together.</h2>
-        </div>
-        <div class="emails">
-          <div class="email"><code id="em1">Sethapong.ler@pcm.ac.th</code><button class="copy" type="button" data-copy="em1">Copy</button></div>
-          <div class="email"><code id="em2">Earthyboy12@gmail.com</code><button class="copy" type="button" data-copy="em2">Copy</button></div>
-        </div>
+  <section class="block" id="online">
+    <div class="wrap">
+      <div class="sec-top rv">
+        <div><span class="label" data-i18n="on.k">Online</span><h2 class="sec-title" data-i18n-html="on.t">Find <em>me</em></h2></div>
       </div>
-    </section>
-  </main>
+      <div class="chan rv">
+        <a href="https://www.youtube.com/@WanLaRok" target="_blank" rel="noopener"><span><b>YouTube</b><small>@WanLaRok</small></span><span class="a">↗</span></a>
+        <a href="https://www.facebook.com/Earthyboy12/" target="_blank" rel="noopener"><span><b>Facebook</b><small>Earthyboy12</small></span><span class="a">↗</span></a>
+        <a href="https://scholar.google.com/citations?user=pJlQxuMAAAAJ&amp;hl=en" target="_blank" rel="noopener"><span><b>Google Scholar</b><small data-i18n="on.gs">Citations and the full list</small></span><span class="a">↗</span></a>
+        <a href="https://www.researchgate.net/profile/Sethapong-Lertsakulbunlue" target="_blank" rel="noopener"><span><b>ResearchGate</b><small data-i18n="on.rg">Papers and preprints</small></span><span class="a">↗</span></a>
+      </div>
+    </div>
+  </section>
 
-  <footer><span>© 2026 Sethapong Lertsakulbunlue</span><span>Phramongkutklao College of Medicine, Bangkok</span></footer>
-</div>
+  <section class="contact" id="contact">
+    <a class="cta-mq" href="#emails"><div class="track" id="mq3"></div></a>
+    <div class="wrap contact-row" id="emails">
+      <div><span class="label" data-i18n="ct.k">Collaborations · Talks · Teaching</span></div>
+      <div class="emails">
+        <div class="email"><code id="em1">Sethapong.ler@pcm.ac.th</code><button class="pill-btn copy" type="button" data-copy="em1" data-i18n="copy">Copy</button></div>
+        <div class="email"><code id="em2">Earthyboy12@gmail.com</code><button class="pill-btn copy" type="button" data-copy="em2" data-i18n="copy">Copy</button></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Sethapong Lertsakulbunlue, MD</span><span data-i18n="foot">Phramongkutklao College of Medicine, Bangkok</span></div></footer>
 <div class="toast" id="toast" role="status"></div>
 
 <script>
 (function () {
-  // y: year, t: title, j: journal, u: link, k: topic, f: 1 first author / 2 co-first author, c: corresponding author
+  var root = document.documentElement, $ = function (id) { return document.getElementById(id); };
   var P = [
-    {y:2026,k:"epi",t:"Multisystem detection and molecular evidence linking dog-associated ticks to two fatal human SFTSV infections in Thailand",j:"Vector-Borne and Zoonotic Diseases",u:"https://doi.org/10.1177/15303667261457401"},
-    {y:2026,k:"epi",t:"An explanatory sequential mixed methods study of Opisthorchis viverrini infection incidence and behavioral determinants over twenty years in rural Thailand",j:"Discover Public Health",u:"https://doi.org/10.1186/s12982-026-02025-7"},
-    {y:2026,k:"cardio",f:1,t:"Role of nighttime lights on cardiovascular risk in Thailand: a preliminary ecological analysis, 2024",j:"OSIR Journal",u:"https://he02.tci-thaijo.org/index.php/OSIR/article/view/278867"},
-    {c:1,y:2026,k:"cardio",t:"Systemic inflammatory response index and its obesity-related derivatives as predictors of heart failure: NHANES 2017–2020",j:"JRSM Cardiovascular Disease",u:"https://doi.org/10.1177/20480040261419613"},
-    {y:2026,k:"tox",f:1,t:"Early clinical approach prevents severe neurotoxicity following cobra envenoming: an integrated experimental and multi-center clinical study in Thailand",j:"Biomedicines",u:"https://doi.org/10.3390/biomedicines14010144"},
-    {y:2025,k:"epi",t:"High usability but limited case capture: performance of Thailand's digital influenza surveillance system in a private hospital setting",j:"OSIR Journal",u:"https://doi.org/10.59096/osir.v18i4.275859"},
-    {y:2025,k:"clin",t:"Microbial ozone decontamination of N95 respirators: efficacy and material preservation",j:"Journal of Current Science and Technology",u:"https://doi.org/10.59796/jcst.V16N1.2026.165"},
-    {y:2025,k:"clin",t:"Prevalence and factors associated with foreign body associated ocular injury in four community hospitals, Central Thailand",j:"Journal of Southeast Asian Medical Research",u:"https://jseamed.org/index.php/jseamed/article/view/233"},
-    {y:2025,k:"epi",f:1,t:"Drunk driving, sleep deprivation, unsafe vehicle, and poor road design: converging hazards in a road traffic crash in Sukhothai Province, 2025",j:"OSIR Journal",u:"https://doi.org/10.59096/osir.v18i3.275901"},
-    {y:2025,k:"edu",f:2,t:"Student engagement in program evaluation: redesigning the premedical curriculum through instructor–learner co-creation",j:"Journal of Medical Education and Curricular Development",u:"https://doi.org/10.1177/23821205251374898"},
-    {y:2025,k:"edu",f:2,t:"Unveiling barriers of introverts to collaborative learning: an exploratory mixed-methods study across medical student personalities",j:"BMC Psychology",u:"https://doi.org/10.1186/s40359-025-03282-y"},
-    {y:2025,k:"epi",f:1,t:"Investigation of an MMR-related mumps cluster following immunization among practical nursing students, Bangkok, 2024",j:"Journal of Tropical Medicine",u:"https://doi.org/10.1155/jotm/9974081"},
-    {y:2025,k:"clin",f:1,t:"Pontocerebellar hypoplasia type 3 with two novel PCLO gene mutations: a case report",j:"Case Reports in Pediatrics"},
-    {y:2025,k:"cardio",f:2,t:"Experiences and perceptions of living with type 1 diabetes among youth patients, parents, and peers: a qualitative study",j:"Journal of Southeast Asian Medical Research",u:"https://jseamed.org/index.php/jseamed/article/view/215"},
-    {y:2025,k:"edu",f:1,t:"Assessing medication counseling skills from pre-clinical to clinical years: using generalizability theory to optimize reliable pharmacology exam design",j:"Pharmacy Practice",u:"https://www.pharmacypractice.org/index.php/pp/article/view/3147"},
-    {y:2025,k:"cardio",f:2,t:"Triglyceride to high-density lipoprotein ratio as a predictor for 10-year cardiovascular disease in individuals with diabetes in Thailand",j:"Journal of Health, Population and Nutrition",u:"https://doi.org/10.1186/s41043-025-00835-0"},
-    {y:2025,k:"edu",f:1,t:"Reliability and validity of simulation-based electrocardiogram assessment rubrics for cardiac life support skills using generalizability theory",j:"Medical Education Online",u:"https://doi.org/10.1080/10872981.2025.2479962"},
-    {y:2025,k:"clin",f:1,t:"Common alpha-globin gene abnormalities as genetic modifiers in Thai children with β-globin gene abnormalities",j:"Anemia",u:"https://doi.org/10.1155/anem/9933808"},
-    {y:2025,k:"clin",f:1,t:"Homozygous CHST14 mutation in an adolescent girl with musculocontractural Ehlers-Danlos syndrome: a first report in Thailand",j:"Journal of Southeast Asian Medical Research"},
-    {y:2025,k:"edu",f:1,t:"Evaluating the dependability of peer assessment in project-based learning for pre-clinical students: a generalizability theory approach",j:"BMC Medical Education",u:"https://doi.org/10.1186/s12909-025-06772-0"},
-    {c:1,y:2025,k:"tox",t:"Clinical management of snakebites in a community care unit: a single-center retrospective study in Lopburi, Central Thailand",j:"Journal of Southeast Asian Medical Research",u:"https://doi.org/10.55374/jseamed.v9.204"},
-    {y:2025,k:"tox",f:1,t:"Snake venom pharmacokinetics and acute toxic outcomes following Daboia siamensis envenoming: experimental and clinical correlations",j:"Toxins",u:"https://doi.org/10.3390/toxins17010010"},
-    {c:1,y:2024,k:"clin",t:"Incidence and risk factors of recurrent ocular injuries: a multicenter retrospective cohort study in four community hospitals",j:"Clinical Epidemiology and Global Health",u:"https://doi.org/10.1016/j.cegh.2024.101892"},
-    {y:2024,k:"edu",f:1,t:"Student engagement in medical research curriculum development: a mixed-methods study using SWOT-TOWS-AHP analysis",j:"Medical Science Educator"},
-    {y:2024,k:"clin",t:"Clinical characteristics and mortality of tuberculosis among adults living with HIV/AIDS: a retrospective cohort study in Thailand",j:"International Journal of STD & AIDS",u:"https://doi.org/10.1177/09564624241289986"},
-    {y:2024,k:"edu",f:1,t:"Immediate self-feedback very short answer questions: implementing testlet response theory in formative examinations across multiple occasions",j:"Medical Science Educator",u:"https://doi.org/10.1007/s40670-024-02167-w"},
-    {y:2024,k:"clin",f:1,t:"Recurrent rhabdomyolysis in a medical cadet during military training as a rare initial presentation of calpainopathy",j:"Case Reports in Neurological Medicine",u:"https://doi.org/10.1155/2024/2775517"},
-    {y:2024,k:"edu",f:1,t:"Declining empathy trends throughout the medical curriculum and factors associated with low empathy among medical students and residents",j:"BMC Medical Education",u:"https://doi.org/10.1186/s12909-024-05962-6"},
-    {y:2024,k:"edu",f:2,t:"Integrating basic ECG interpretation into acute cardiac life support stations through simulation-based learning: student and teacher perceptions",j:"Strides in Development of Medical Education",u:"https://doi.org/10.22062/sdme.2024.199478.1351"},
-    {c:1,y:2024,k:"edu",t:"Development and validation of comprehensive prescription writing rubrics for medical students",j:"Pharmacy Education",u:"https://pharmacyeducation.fip.org/pharmacyeducation/article/view/2695"},
-    {y:2024,k:"edu",f:1,t:"Development of peer assessment rubrics in simulation-based learning for advanced cardiac life support skills among medical students",j:"Advances in Simulation",u:"https://doi.org/10.1186/s41077-024-00301-7"},
-    {y:2024,k:"cardio",f:2,t:"The association between serum HDL and hemoglobin A1c in type 2 diabetes: a nationwide cross-sectional study",j:"Diabetes Epidemiology and Management",u:"https://doi.org/10.1016/j.deman.2024.100232"},
-    {y:2024,k:"edu",f:1,t:"Development and validation of immediate self-feedback very short answer questions for medical students using generalizability theory",j:"BMC Medical Education",u:"https://doi.org/10.1186/s12909-024-05569-x"},
-    {c:1,y:2024,k:"clin",t:"Increased risk for sleep-disordered breathing and its relationship with BMI among medical students, intern doctors, and residents",j:"Clinical Epidemiology and Global Health",u:"https://doi.org/10.1016/j.cegh.2024.101586"},
-    {y:2024,k:"cardio",f:1,t:"Associations of triglyceride-glucose index with hyperuricemia among Royal Thai Army personnel",j:"BMC Endocrine Disorders",u:"https://doi.org/10.1186/s12902-024-01542-3"},
-    {y:2023,k:"edu",f:1,t:"Practices, perceptions, attitudes, barriers and motivation and their impacts on research publication",j:"The Asia Pacific Scholar",u:"https://doi.org/10.29060/TAPS.2023-8-4/OA3006"},
-    {y:2023,k:"epi",f:1,t:"What sustains mask-wearing behavior among elders in a rural community in the post-COVID-19 era: an exploratory mixed-methods study",j:"Behavioral Sciences",u:"https://doi.org/10.3390/bs13080678"},
-    {y:2023,k:"cardio",f:1,t:"Trends in baseline triglyceride-glucose index and association with predicted 10-year cardiovascular disease risk among type 2 diabetes patients in Thailand",j:"Scientific Reports",u:"https://doi.org/10.1038/s41598-023-40299-y"},
-    {y:2023,k:"cardio",t:"Relationship between pulse pressure and body mass index in active-duty Royal Thai Army personnel",j:"BMC Cardiovascular Disorders",u:"https://doi.org/10.1186/s12872-023-03390-w"},
-    {y:2023,k:"tox",f:1,t:"Clinical profile and pharmacological management of snakebites in community care units: two military hospital databases in South Thailand",j:"Tropical Medicine and Infectious Disease",u:"https://doi.org/10.3390/tropicalmed8070346"},
-    {y:2023,k:"cardio",f:1,t:"Relationship between triglyceride-glucose index and aminotransferase among Royal Thai Army personnel 2017–2021",j:"Lipids in Health and Disease",u:"https://doi.org/10.1186/s12944-023-01811-5"},
-    {y:2023,k:"cardio",f:1,t:"Trends in predicted 10-year risk for cardiovascular diseases among patients with type 2 diabetes in Thailand, 2014–2018",j:"BMC Cardiovascular Disorders",u:"https://doi.org/10.1186/s12872-023-03217-8"},
-    {y:2023,k:"cardio",t:"Association between raised blood pressure and elevated serum liver enzymes among active-duty Royal Thai Army personnel",j:"BMC Cardiovascular Disorders",u:"https://doi.org/10.1186/s12872-023-03181-3"},
-    {c:1,y:2022,k:"tox",t:"Effects of performance-enhancing drugs in athletes",j:"Journal of Sports Science and Technology",u:"https://he01.tci-thaijo.org/index.php/JSST/article/view/257298"},
-    {y:2022,k:"clin",f:1,t:"Pulmonary tuberculosis mortality and its risk factors among patients with type 2 diabetes and pulmonary tuberculosis in four community hospitals",j:"Journal of Southeast Asian Medical Research",u:"https://www.jseamed.org/index.php/jseamed/article/view/120"}
-  ];
-  var TOPICS = { all: "All", edu: "Medical education", epi: "Field epidemiology", tox: "Toxinology & pharmacology", cardio: "Cardiometabolic", clin: "Clinical & genetics" };
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var ROLES = { any: "Any", first: "First author", cofirst: "Co-first author", corr: "Corresponding author" };
+      {y:2026,k:"epi",t:"Multisystem detection and molecular evidence linking dog-associated ticks to two fatal human SFTSV infections in Thailand",j:"Vector-Borne and Zoonotic Diseases",u:"https://doi.org/10.1177/15303667261457401"},
+      {y:2026,k:"epi",t:"An explanatory sequential mixed methods study of Opisthorchis viverrini infection incidence and behavioral determinants over twenty years in rural Thailand",j:"Discover Public Health",u:"https://doi.org/10.1186/s12982-026-02025-7"},
+      {y:2026,k:"cardio",f:1,t:"Role of nighttime lights on cardiovascular risk in Thailand: a preliminary ecological analysis, 2024",j:"OSIR Journal",u:"https://he02.tci-thaijo.org/index.php/OSIR/article/view/278867"},
+      {c:1,y:2026,k:"cardio",t:"Systemic inflammatory response index and its obesity-related derivatives as predictors of heart failure: NHANES 2017–2020",j:"JRSM Cardiovascular Disease",u:"https://doi.org/10.1177/20480040261419613"},
+      {y:2026,k:"tox",f:1,t:"Early clinical approach prevents severe neurotoxicity following cobra envenoming: an integrated experimental and multi-center clinical study in Thailand",j:"Biomedicines",u:"https://doi.org/10.3390/biomedicines14010144"},
+      {y:2025,k:"epi",t:"High usability but limited case capture: performance of Thailand's digital influenza surveillance system in a private hospital setting",j:"OSIR Journal",u:"https://doi.org/10.59096/osir.v18i4.275859"},
+      {y:2025,k:"clin",t:"Microbial ozone decontamination of N95 respirators: efficacy and material preservation",j:"Journal of Current Science and Technology",u:"https://doi.org/10.59796/jcst.V16N1.2026.165"},
+      {y:2025,k:"clin",t:"Prevalence and factors associated with foreign body associated ocular injury in four community hospitals, Central Thailand",j:"Journal of Southeast Asian Medical Research",u:"https://jseamed.org/index.php/jseamed/article/view/233"},
+      {y:2025,k:"epi",f:1,t:"Drunk driving, sleep deprivation, unsafe vehicle, and poor road design: converging hazards in a road traffic crash in Sukhothai Province, 2025",j:"OSIR Journal",u:"https://doi.org/10.59096/osir.v18i3.275901"},
+      {y:2025,k:"edu",f:2,t:"Student engagement in program evaluation: redesigning the premedical curriculum through instructor–learner co-creation",j:"Journal of Medical Education and Curricular Development",u:"https://doi.org/10.1177/23821205251374898"},
+      {y:2025,k:"edu",f:2,t:"Unveiling barriers of introverts to collaborative learning: an exploratory mixed-methods study across medical student personalities",j:"BMC Psychology",u:"https://doi.org/10.1186/s40359-025-03282-y"},
+      {y:2025,k:"epi",f:1,t:"Investigation of an MMR-related mumps cluster following immunization among practical nursing students, Bangkok, 2024",j:"Journal of Tropical Medicine",u:"https://doi.org/10.1155/jotm/9974081"},
+      {y:2025,k:"clin",f:1,t:"Pontocerebellar hypoplasia type 3 with two novel PCLO gene mutations: a case report",j:"Case Reports in Pediatrics"},
+      {y:2025,k:"cardio",f:2,t:"Experiences and perceptions of living with type 1 diabetes among youth patients, parents, and peers: a qualitative study",j:"Journal of Southeast Asian Medical Research",u:"https://jseamed.org/index.php/jseamed/article/view/215"},
+      {y:2025,k:"edu",f:1,t:"Assessing medication counseling skills from pre-clinical to clinical years: using generalizability theory to optimize reliable pharmacology exam design",j:"Pharmacy Practice",u:"https://www.pharmacypractice.org/index.php/pp/article/view/3147"},
+      {y:2025,k:"cardio",f:2,t:"Triglyceride to high-density lipoprotein ratio as a predictor for 10-year cardiovascular disease in individuals with diabetes in Thailand",j:"Journal of Health, Population and Nutrition",u:"https://doi.org/10.1186/s41043-025-00835-0"},
+      {y:2025,k:"edu",f:1,t:"Reliability and validity of simulation-based electrocardiogram assessment rubrics for cardiac life support skills using generalizability theory",j:"Medical Education Online",u:"https://doi.org/10.1080/10872981.2025.2479962"},
+      {y:2025,k:"clin",f:1,t:"Common alpha-globin gene abnormalities as genetic modifiers in Thai children with β-globin gene abnormalities",j:"Anemia",u:"https://doi.org/10.1155/anem/9933808"},
+      {y:2025,k:"clin",f:1,t:"Homozygous CHST14 mutation in an adolescent girl with musculocontractural Ehlers-Danlos syndrome: a first report in Thailand",j:"Journal of Southeast Asian Medical Research"},
+      {y:2025,k:"edu",f:1,t:"Evaluating the dependability of peer assessment in project-based learning for pre-clinical students: a generalizability theory approach",j:"BMC Medical Education",u:"https://doi.org/10.1186/s12909-025-06772-0"},
+      {c:1,y:2025,k:"tox",t:"Clinical management of snakebites in a community care unit: a single-center retrospective study in Lopburi, Central Thailand",j:"Journal of Southeast Asian Medical Research",u:"https://doi.org/10.55374/jseamed.v9.204"},
+      {y:2025,k:"tox",f:1,t:"Snake venom pharmacokinetics and acute toxic outcomes following Daboia siamensis envenoming: experimental and clinical correlations",j:"Toxins",u:"https://doi.org/10.3390/toxins17010010"},
+      {c:1,y:2024,k:"clin",t:"Incidence and risk factors of recurrent ocular injuries: a multicenter retrospective cohort study in four community hospitals",j:"Clinical Epidemiology and Global Health",u:"https://doi.org/10.1016/j.cegh.2024.101892"},
+      {y:2024,k:"edu",f:1,t:"Student engagement in medical research curriculum development: a mixed-methods study using SWOT-TOWS-AHP analysis",j:"Medical Science Educator"},
+      {y:2024,k:"clin",t:"Clinical characteristics and mortality of tuberculosis among adults living with HIV/AIDS: a retrospective cohort study in Thailand",j:"International Journal of STD & AIDS",u:"https://doi.org/10.1177/09564624241289986"},
+      {y:2024,k:"edu",f:1,t:"Immediate self-feedback very short answer questions: implementing testlet response theory in formative examinations across multiple occasions",j:"Medical Science Educator",u:"https://doi.org/10.1007/s40670-024-02167-w"},
+      {y:2024,k:"clin",f:1,t:"Recurrent rhabdomyolysis in a medical cadet during military training as a rare initial presentation of calpainopathy",j:"Case Reports in Neurological Medicine",u:"https://doi.org/10.1155/2024/2775517"},
+      {y:2024,k:"edu",f:1,t:"Declining empathy trends throughout the medical curriculum and factors associated with low empathy among medical students and residents",j:"BMC Medical Education",u:"https://doi.org/10.1186/s12909-024-05962-6"},
+      {y:2024,k:"edu",f:2,t:"Integrating basic ECG interpretation into acute cardiac life support stations through simulation-based learning: student and teacher perceptions",j:"Strides in Development of Medical Education",u:"https://doi.org/10.22062/sdme.2024.199478.1351"},
+      {c:1,y:2024,k:"edu",t:"Development and validation of comprehensive prescription writing rubrics for medical students",j:"Pharmacy Education",u:"https://pharmacyeducation.fip.org/pharmacyeducation/article/view/2695"},
+      {y:2024,k:"edu",f:1,t:"Development of peer assessment rubrics in simulation-based learning for advanced cardiac life support skills among medical students",j:"Advances in Simulation",u:"https://doi.org/10.1186/s41077-024-00301-7"},
+      {y:2024,k:"cardio",f:2,t:"The association between serum HDL and hemoglobin A1c in type 2 diabetes: a nationwide cross-sectional study",j:"Diabetes Epidemiology and Management",u:"https://doi.org/10.1016/j.deman.2024.100232"},
+      {y:2024,k:"edu",f:1,t:"Development and validation of immediate self-feedback very short answer questions for medical students using generalizability theory",j:"BMC Medical Education",u:"https://doi.org/10.1186/s12909-024-05569-x"},
+      {c:1,y:2024,k:"clin",t:"Increased risk for sleep-disordered breathing and its relationship with BMI among medical students, intern doctors, and residents",j:"Clinical Epidemiology and Global Health",u:"https://doi.org/10.1016/j.cegh.2024.101586"},
+      {y:2024,k:"cardio",f:1,t:"Associations of triglyceride-glucose index with hyperuricemia among Royal Thai Army personnel",j:"BMC Endocrine Disorders",u:"https://doi.org/10.1186/s12902-024-01542-3"},
+      {y:2023,k:"edu",f:1,t:"Practices, perceptions, attitudes, barriers and motivation and their impacts on research publication",j:"The Asia Pacific Scholar",u:"https://doi.org/10.29060/TAPS.2023-8-4/OA3006"},
+      {y:2023,k:"epi",f:1,t:"What sustains mask-wearing behavior among elders in a rural community in the post-COVID-19 era: an exploratory mixed-methods study",j:"Behavioral Sciences",u:"https://doi.org/10.3390/bs13080678"},
+      {y:2023,k:"cardio",f:1,t:"Trends in baseline triglyceride-glucose index and association with predicted 10-year cardiovascular disease risk among type 2 diabetes patients in Thailand",j:"Scientific Reports",u:"https://doi.org/10.1038/s41598-023-40299-y"},
+      {y:2023,k:"cardio",t:"Relationship between pulse pressure and body mass index in active-duty Royal Thai Army personnel",j:"BMC Cardiovascular Disorders",u:"https://doi.org/10.1186/s12872-023-03390-w"},
+      {y:2023,k:"tox",f:1,t:"Clinical profile and pharmacological management of snakebites in community care units: two military hospital databases in South Thailand",j:"Tropical Medicine and Infectious Disease",u:"https://doi.org/10.3390/tropicalmed8070346"},
+      {y:2023,k:"cardio",f:1,t:"Relationship between triglyceride-glucose index and aminotransferase among Royal Thai Army personnel 2017–2021",j:"Lipids in Health and Disease",u:"https://doi.org/10.1186/s12944-023-01811-5"},
+      {y:2023,k:"cardio",f:1,t:"Trends in predicted 10-year risk for cardiovascular diseases among patients with type 2 diabetes in Thailand, 2014–2018",j:"BMC Cardiovascular Disorders",u:"https://doi.org/10.1186/s12872-023-03217-8"},
+      {y:2023,k:"cardio",t:"Association between raised blood pressure and elevated serum liver enzymes among active-duty Royal Thai Army personnel",j:"BMC Cardiovascular Disorders",u:"https://doi.org/10.1186/s12872-023-03181-3"},
+      {c:1,y:2022,k:"tox",t:"Effects of performance-enhancing drugs in athletes",j:"Journal of Sports Science and Technology",u:"https://he01.tci-thaijo.org/index.php/JSST/article/view/257298"},
+      {y:2022,k:"clin",f:1,t:"Pulmonary tuberculosis mortality and its risk factors among patients with type 2 diabetes and pulmonary tuberculosis in four community hospitals",j:"Journal of Southeast Asian Medical Research",u:"https://www.jseamed.org/index.php/jseamed/article/view/120"}
+    ];
+
+  var TH = {
+    "nav.about": "เกี่ยวกับ", "nav.projects": "โปรเจกต์", "nav.research": "งานวิจัย", "nav.work": "ผลงานตีพิมพ์", "nav.contact": "ติดต่อ",
+    "motion": "เอฟเฟกต์", "menu": "เมนู", "close": "ปิด",
+    "kicker": "แพทย์ · นักระบาดวิทยา · อาจารย์แพทย์",
+    "name1": "เสฏฐพงศ์", "name2": "เลิศสกุลบรรลือ",
+    "altname": "Lt Sethapong Lertsakulbunlue, MD",
+    "lede": "อาจารย์ภาควิชาเภสัชวิทยา วิทยาลัยแพทยศาสตร์พระมงกุฎเกล้า และแพทย์ประจำบ้านสาขาเวชศาสตร์ป้องกัน แขนงระบาดวิทยา สนใจวิจัยด้านการเรียนรู้และการประเมินผลของนักศึกษาแพทย์ การสอบสวนการระบาดของโรคในภาคสนาม และผลของพิษงูต่อผู้ป่วย",
+    "cta.papers": "ดูผลงานตีพิมพ์", "hi": "สวัสดี!",
+    "about.k": "เกี่ยวกับ", "about.t": "รู้จัก<em>กันหน่อย</em>",
+    "about.bio": "สำเร็จการศึกษาแพทยศาสตรบัณฑิตจากวิทยาลัยแพทยศาสตร์พระมงกุฎเกล้าในปี 2563 ด้วย<b>เกียรตินิยมอันดับ 1 และเหรียญทอง</b> หลังเพิ่มพูนทักษะที่โรงพยาบาลค่ายวชิราวุธ ได้เป็นอาจารย์ภาควิชาเภสัชวิทยาในปี 2565 และเริ่มฝึกอบรมแพทย์ประจำบ้านสาขาเวชศาสตร์ป้องกัน แขนงระบาดวิทยา ในปี 2567 งานครอบคลุมทั้งห้องเรียน ห้องปฏิบัติการ และภาคสนาม: <b>ข้อสอบที่เที่ยงตรงขึ้น การสอบสวนโรคที่รวดเร็วขึ้น และการดูแลผู้ป่วยถูกงูกัดที่ดีขึ้น</b>",
+    "aff.pcm": "วิทยาลัยแพทยศาสตร์พระมงกุฎเกล้า", "aff.pcm2": "ภาควิชาเภสัชวิทยา",
+    "aff.fetp": "หลักสูตรฝึกอบรมนักระบาดวิทยาภาคสนาม", "aff.fetp2": "FETP ประเทศไทย",
+    "stat1": "บทความวิจัยตีพิมพ์ตั้งแต่ปี 2565", "stat2": "การนำเสนอในงานประชุมวิชาการ", "stat3v": "1", "stat3": "เกียรตินิยมอันดับ 1 เหรียญทอง",
+    "chart.t": "จำนวนผลงานต่อปี", "chart.tap": "แตะแท่งกราฟเพื่อกรองรายการ",
+    "proj.k": "โปรเจกต์", "proj.t": "สิ่งที่<em>สร้าง</em>", "proj.note": "เว็บแอปที่ออกแบบและพัฒนาเอง ทั้งสองระบบประมวลผลในเบราว์เซอร์ ข้อมูลส่วนบุคคลจึงไม่ออกจากเครื่องของผู้ใช้",
+    "sari.t": "ระบบเฝ้าระวังผู้ป่วย SARI", "sari.d": "ประมาณการและเฝ้าระวังผู้ป่วยติดเชื้อทางเดินหายใจเฉียบพลันรุนแรง (SARI) จากรหัส ICD-10 ของผู้ป่วยในโรงพยาบาล ด้วยแบบจำลองที่พัฒนาจากข้อมูลโรงพยาบาลเฝ้าระวัง ประมวลผลในเบราว์เซอร์ทั้งหมด ข้อมูลผู้ป่วยจึงไม่ออกจากโรงพยาบาล",
+    "horo.t": "PLB โหราศาสตร์", "horo.d": "ดูดวงรายวันตามลัคนาราศี ตรวจดวงสมพงษ์คู่แท้ สีมงคล เลขนำโชค และกราฟดวง 28 วัน ตามหลักโหราศาสตร์ไทย คำนวณบนเครื่องของผู้ใช้ทั้งหมด",
+    "tag.epi": "ระบาดวิทยา", "tag.dash": "แดชบอร์ด", "tag.side": "โปรเจกต์ส่วนตัว",
+    "res.k": "งานวิจัย", "res.t": "สิ่งที่<em>ศึกษา</em>", "res.note": "เลือกหัวข้อเพื่อดูผลงานในหัวข้อนั้น",
+    "t.edu.l": "แพทยศาสตรศึกษา", "t.epi.l": "ระบาดวิทยาภาคสนาม", "t.tox.l": "พิษวิทยา", "t.cardio.l": "โรคหัวใจและเมตาบอลิก", "t.clin.l": "คลินิกและพันธุศาสตร์",
+    "d.edu": "ใช้ทฤษฎี Generalizability ประเมินความเที่ยงของข้อสอบ พัฒนาเกณฑ์การประเมินโดยเพื่อนสำหรับทักษะ ACLS และการแปลผลคลื่นไฟฟ้าหัวใจ ข้อสอบแบบ very short answer และหลักสูตรที่ออกแบบร่วมกับนักศึกษา",
+    "d.epi": "สอบสวนการระบาดและการเสียชีวิตทั่วประเทศไทย เช่น กลุ่มผู้ป่วยคางทูมหลังได้รับวัคซีน MMR การเสียชีวิตจากโรคไอกรนในทารก อุบัติเหตุจราจร และระบบเฝ้าระวังไข้หวัดใหญ่แบบดิจิทัล",
+    "d.tox": "พิษงูแมวเซาและงูเห่า เชื่อมโยงเภสัชจลนศาสตร์ของพิษในห้องปฏิบัติการกับผลลัพธ์ทางคลินิก และการดูแลผู้ป่วยถูกงูกัดในโรงพยาบาลชุมชน",
+    "d.cardio": "ดัชนีไตรกลีเซอไรด์-กลูโคส (TyG) ระดับ HDL และความเสี่ยงโรคหัวใจและหลอดเลือดในผู้ป่วยเบาหวานและกำลังพลกองทัพบก",
+    "d.clin": "รายงานผู้ป่วยโรคทางพันธุกรรมที่พบได้ยาก ผลการรักษาวัณโรค การบาดเจ็บทางตา และงานวิจัยทางคลินิกอื่น ๆ",
+    "work.k": "ผลงานตีพิมพ์", "work.t": "ผลงาน<em>วิจัย</em>", "surprise": "สุ่มบทความ", "role": "บทบาท",
+    "search": "ค้นหาชื่อเรื่องหรือวารสาร เช่น snake, empathy, diabetes…", "clear": "ล้างตัวกรอง",
+    "path.k": "เส้นทาง", "path.t": "ที่ผ่าน<em>มา</em>", "exp.t": "การศึกษาและการทำงาน", "talk.t": "การนำเสนอและรางวัล",
+    "e1w": "2567 – ปัจจุบัน", "e1": "แพทย์ประจำบ้าน สาขาเวชศาสตร์ป้องกัน แขนงระบาดวิทยา", "e1s": "การฝึกอบรมเพื่อวุฒิบัตรแสดงความรู้ความชำนาญฯ",
+    "e2w": "2565 – ปัจจุบัน", "e2": "อาจารย์ ภาควิชาเภสัชวิทยา", "e2s": "วิทยาลัยแพทยศาสตร์พระมงกุฎเกล้า",
+    "e3w": "2564", "e3": "แพทย์เพิ่มพูนทักษะ", "e3s": "โรงพยาบาลค่ายวชิราวุธ จ.นครศรีธรรมราช",
+    "e4w": "2558 – 2563", "e4": "แพทยศาสตรบัณฑิต", "e4s": "วิทยาลัยแพทยศาสตร์พระมงกุฎเกล้า เกียรตินิยมอันดับ 1 เหรียญทอง",
+    "e5w": "2551 – 2557", "e5": "มัธยมศึกษา", "e5s": "โรงเรียนสามเสนวิทยาลัย",
+    "t1w": "2568 · บรรยาย", "t2w": "2568 · บรรยาย", "t3w": "2567 · บรรยาย", "t4w": "2567 · โปสเตอร์", "t5w": "2566 · บรรยาย", "t6w": "2566 · โปสเตอร์",
+    "t1": "ไอกรนท่ามกลางสถานการณ์ความขัดแย้งและการพลาดวัคซีนในหญิงตั้งครรภ์: การสอบสวนการเสียชีวิตของทารกใน จ.ตาก",
+    "t2": "กลุ่มผู้ป่วยคางทูมที่สัมพันธ์กับวัคซีน MMR ในนักศึกษาผู้ช่วยพยาบาล กรุงเทพฯ",
+    "t3": "การประเมินโดยเพื่อนในการแปลผลคลื่นไฟฟ้าหัวใจ ในสถานี ACLS แบบสถานการณ์จำลอง",
+    "t4": "การประเมินรายวิชาวิจัยทางการแพทย์ระดับปริญญาตรีด้วย CIPP model",
+    "t5": "ทัศนคติต่องานวิจัยทางการแพทย์และผลต่อการตีพิมพ์: แบบจำลองสมการโครงสร้าง",
+    "t6": "สมาคมแพทยศาสตรศึกษาแห่งยุโรป",
+    "on.k": "ออนไลน์", "on.t": "ติดตาม<em>ได้ที่</em>", "on.gs": "การอ้างอิงและรายการผลงานทั้งหมด", "on.rg": "บทความและงานวิจัย",
+    "ct.k": "ร่วมวิจัย · บรรยาย · สอน", "copy": "คัดลอก", "foot": "วิทยาลัยแพทยศาสตร์พระมงกุฎเกล้า กรุงเทพฯ"
+  };
+  var UI = {
+    en: { topics: { all: "All", edu: "Medical education", epi: "Field epidemiology", tox: "Toxinology & pharmacology", cardio: "Cardiometabolic", clin: "Clinical & genetics" },
+          roles: { any: "Any", first: "First author", cofirst: "Co-first author", corr: "Corresponding author" },
+          tag: { first: "First author", cofirst: "Co-first author", corr: "Corresponding" },
+          of: function (n, t) { return n + " of " + t + " papers"; }, papers: function (n) { return n + " papers"; },
+          showAll: function (n) { return "Show all " + n; }, fewer: "Show fewer", empty: "No papers match that. Try another word or clear the filters.",
+          yearToast: function (n, y) { return n + " papers in " + y + ". Showing them below."; }, copied: function (t) { return "Copied " + t; }, selected: "Email selected. Press Ctrl+C to copy.",
+          roles2: ["Physician", "Epidemiologist", "Pharmacology lecturer", "Outbreak investigator"], roles3: ["Snakebite researcher", "Medical educator", "Builder", "YouTuber"],
+          cta: "Let's work together →", ring: "Scroll to explore · Scroll to explore ·", motionOn: "Motion on", motionOff: "Motion off", ringLen: 298 },
+    th: { topics: { all: "ทั้งหมด", edu: "แพทยศาสตรศึกษา", epi: "ระบาดวิทยาภาคสนาม", tox: "พิษวิทยาและเภสัชวิทยา", cardio: "หัวใจและเมตาบอลิก", clin: "คลินิกและพันธุศาสตร์" },
+          roles: { any: "ทั้งหมด", first: "ผู้นิพนธ์ชื่อแรก", cofirst: "ผู้นิพนธ์ชื่อแรกร่วม", corr: "ผู้นิพนธ์ประสานงาน" },
+          tag: { first: "ชื่อแรก", cofirst: "ชื่อแรกร่วม", corr: "ผู้ประสานงาน" },
+          of: function (n, t) { return n + " จาก " + t + " เรื่อง"; }, papers: function (n) { return n + " เรื่อง"; },
+          showAll: function (n) { return "แสดงทั้งหมด " + n + " เรื่อง"; }, fewer: "แสดงน้อยลง", empty: "ไม่พบผลงานที่ตรงกัน ลองคำอื่นหรือล้างตัวกรอง",
+          yearToast: function (n, y) { return "ปี " + y + " มี " + n + " เรื่อง แสดงด้านล่าง"; }, copied: function (t) { return "คัดลอก " + t + " แล้ว"; }, selected: "เลือกอีเมลแล้ว กด Ctrl+C เพื่อคัดลอก",
+          roles2: ["แพทย์", "นักระบาดวิทยา", "อาจารย์เภสัชวิทยา", "นักสอบสวนโรค"], roles3: ["นักวิจัยพิษงู", "อาจารย์แพทย์", "นักสร้างเว็บแอป", "ยูทูบเบอร์"],
+          cta: "มาร่วมงานกัน →", ring: "เลื่อนลงเพื่อดูต่อ · เลื่อนลงเพื่อดูต่อ ·", motionOn: "เอฟเฟกต์: เปิด", motionOff: "เอฟเฟกต์: ปิด", ringLen: 298 }
+  };
+
+  var lang = root.lang === "th" ? "th" : "en";
+  var EN = {};
+  document.querySelectorAll("[data-i18n]").forEach(function (el) { EN[el.dataset.i18n] = el.textContent; });
+  document.querySelectorAll("[data-i18n-html]").forEach(function (el) { EN[el.dataset.i18nHtml] = el.innerHTML; });
+  document.querySelectorAll("[data-i18n-ph]").forEach(function (el) { EN[el.dataset.i18nPh] = el.placeholder; });
+  function L() { return UI[lang]; }
+  function fy(y) { return lang === "th" ? y + 543 : y; }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  var star = '<svg class="star" viewBox="0 0 20 20"><path d="M10 0l2.6 7.4L20 10l-7.4 2.6L10 20l-2.6-7.4L0 10l7.4-2.6z"/></svg>';
+
+  function splitName() {
+    document.querySelectorAll("#name > span").forEach(function (line, li) {
+      var txt = line.textContent;
+      if (!root.classList.contains("motion") || lang === "th") { line.textContent = txt; return; }
+      line.innerHTML = Array.from(txt).map(function (c, i) { return '<span class="ch" style="--d:' + (i + li * 9) + '">' + esc(c) + "</span>"; }).join("");
+    });
+  }
+  function fitName() {
+    var name = $("name"); name.style.fontSize = "";
+    var avail = name.clientWidth, widest = 0;
+    name.querySelectorAll(":scope > span").forEach(function (l) { widest = Math.max(widest, l.offsetWidth); });
+    if (widest > avail) name.style.fontSize = (parseFloat(getComputedStyle(name).fontSize) * avail / widest * .98) + "px";
+  }
+  addEventListener("resize", fitName);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitName);
+  function fillMarquee(id, words, outlineEvery) {
+    var html = words.map(function (w, i) { return '<span class="mq-item' + (i % 2 === outlineEvery ? " o" : "") + '">' + esc(w) + star + "</span>"; }).join("");
+    $(id).innerHTML = html + html + html + html;
+  }
+  function applyLang() {
+    root.lang = lang;
+    document.querySelectorAll("[data-i18n]").forEach(function (el) { var k = el.dataset.i18n; el.textContent = lang === "th" && TH[k] != null ? TH[k] : EN[k]; });
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) { var k = el.dataset.i18nHtml; el.innerHTML = lang === "th" && TH[k] != null ? TH[k] : EN[k]; });
+    document.querySelectorAll("[data-i18n-ph]").forEach(function (el) { var k = el.dataset.i18nPh; el.placeholder = lang === "th" && TH[k] != null ? TH[k] : EN[k]; });
+    document.querySelectorAll(".seg button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.lang === lang); });
+    $("ringtext").textContent = L().ring;
+    splitName(); fitName();
+    fillMarquee("mq1", L().roles2, 1);
+    fillMarquee("mq2", L().roles3, 0);
+    $("mq3").innerHTML = new Array(5).join('<span class="mq-item">' + esc(L().cta) + "</span>");
+    $("years").innerHTML = [2022, 2023, 2024, 2025, 2026].map(function (y) { return "<span>" + fy(y) + (y === 2026 ? "*" : "") + "</span>"; }).join("");
+    document.querySelectorAll(".bar").forEach(function (b) { b.setAttribute("aria-label", fy(+b.dataset.y) + ": " + L().papers(b.dataset.n)); });
+    buildChips();
+    document.querySelectorAll("[data-count-topic]").forEach(function (el) { el.textContent = L().papers(count(el.dataset.countTopic)); });
+    motionLabel();
+    render();
+  }
+
+  // ---------- explorer ----------
   function hasRole(p, r) { return r === "any" || (r === "first" && p.f === 1) || (r === "cofirst" && p.f === 2) || (r === "corr" && p.c); }
-  var state = { topic: "all", year: null, q: "", showAll: false, role: "any" };
-  var LIMIT = 8;
-  var $ = function (id) { return document.getElementById(id); };
-  var list = $("list"), chips = $("chips"), bars = $("bars");
-
-  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
-  function link(p) { return p.u || "https://scholar.google.com/scholar?q=" + encodeURIComponent(p.t); }
   function count(k) { return P.filter(function (p) { return k === "all" || p.k === k; }).length; }
+  function link(p) { return p.u || "https://scholar.google.com/scholar?q=" + encodeURIComponent(p.t); }
+  var state = { topic: "all", year: null, q: "", showAll: false, role: "any" }, LIMIT = 8;
+  var list = $("list"), chips = $("chips"), rolesEl = $("roles"), bars = $("bars");
 
-  // topic chips
-  Object.keys(TOPICS).forEach(function (k) {
-    var b = document.createElement("button");
-    b.type = "button"; b.className = "chip"; b.dataset.topic = k;
-    b.innerHTML = esc(TOPICS[k]) + "<small>" + count(k) + "</small>";
-    b.addEventListener("click", function () { setTopic(k); });
-    chips.appendChild(b);
-  });
-  var rolesEl = $("roles");
-  Object.keys(ROLES).forEach(function (r) {
-    var b = document.createElement("button");
-    b.type = "button"; b.className = "chip"; b.dataset.role = r;
-    b.innerHTML = esc(ROLES[r]) + (r === "any" ? "" : "<small>" + P.filter(function (p) { return hasRole(p, r); }).length + "</small>");
-    b.addEventListener("click", function () { state.role = r; state.showAll = false; render(); });
-    rolesEl.appendChild(b);
-  });
-  document.querySelectorAll("[data-count-topic]").forEach(function (el) { el.textContent = count(el.dataset.countTopic) + " papers →"; });
-
+  function buildChips() {
+    chips.innerHTML = "";
+    Object.keys(L().topics).forEach(function (k) {
+      var b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.dataset.topic = k;
+      b.innerHTML = esc(L().topics[k]) + "<small>" + count(k) + "</small>";
+      b.addEventListener("click", function () { state.topic = k; state.showAll = false; render(); });
+      chips.appendChild(b);
+    });
+    rolesEl.querySelectorAll(".chip").forEach(function (c) { c.remove(); });
+    Object.keys(L().roles).forEach(function (r) {
+      var b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.dataset.role = r;
+      b.innerHTML = esc(L().roles[r]) + (r === "any" ? "" : "<small>" + P.filter(function (p) { return hasRole(p, r); }).length + "</small>");
+      b.addEventListener("click", function () { state.role = r; state.showAll = false; render(); });
+      rolesEl.appendChild(b);
+    });
+  }
   function filtered() {
     var q = state.q.trim().toLowerCase();
     return P.filter(function (p) {
@@ -509,42 +731,41 @@ footer { padding-block: 28px; font-size: 13.5px; color: var(--muted); display: f
         (!q || (p.t + " " + p.j).toLowerCase().indexOf(q) > -1);
     });
   }
-
   function render() {
-    var rows = filtered(), shown = state.showAll ? rows : rows.slice(0, LIMIT);
+    var rows = filtered(), shown = state.showAll ? rows : rows.slice(0, LIMIT), T = L().tag;
     list.innerHTML = shown.length ? shown.map(function (p, i) {
-      return '<li class="paper" style="animation-delay:' + Math.min(i, 10) * 30 + 'ms" data-i="' + P.indexOf(p) + '">' +
-        '<span class="yr">' + p.y + '</span>' +
-        '<div><h3><a href="' + esc(link(p)) + '" target="_blank" rel="noopener">' + esc(p.t) + '</a></h3>' +
-        '<p class="meta"><i>' + esc(p.j) + '</i></p></div>' +
-        '<div class="tags"><span class="tag">' + esc(TOPICS[p.k]) + '</span>' + (p.f === 1 ? '<span class="tag first">First author</span>' : '') + (p.f === 2 ? '<span class="tag cofirst">Co-first author</span>' : '') + (p.c ? '<span class="tag corr">Corresponding</span>' : '') + '</div></li>';
-    }).join("") : '<li class="empty">No papers match that. Try another word or clear the filters.</li>';
+      return '<li class="paper" style="animation-delay:' + Math.min(i, 10) * 35 + 'ms" data-i="' + P.indexOf(p) + '">' +
+        '<span class="yr">' + fy(p.y) + "</span>" +
+        '<div><h3><a href="' + esc(link(p)) + '" target="_blank" rel="noopener">' + esc(p.t) + "</a></h3>" +
+        '<p class="j">' + esc(p.j) + "</p></div>" +
+        '<div class="tags"><span class="tag">' + esc(L().topics[p.k]) + "</span>" +
+        (p.f === 1 ? '<span class="tag first">' + T.first + "</span>" : "") +
+        (p.f === 2 ? '<span class="tag cofirst">' + T.cofirst + "</span>" : "") +
+        (p.c ? '<span class="tag corr">' + T.corr + "</span>" : "") + "</div></li>";
+    }).join("") : '<li class="empty">' + esc(L().empty) + "</li>";
     var bits = [];
-    if (state.topic !== "all") bits.push(TOPICS[state.topic]);
-    if (state.year) bits.push(String(state.year));
-    if (state.role !== "any") bits.push(ROLES[state.role]);
+    if (state.topic !== "all") bits.push(L().topics[state.topic]);
+    if (state.year) bits.push(String(fy(state.year)));
+    if (state.role !== "any") bits.push(L().roles[state.role]);
     if (state.q.trim()) bits.push("“" + state.q.trim() + "”");
-    $("status").textContent = rows.length + " of " + P.length + " papers" + (bits.length ? " · " + bits.join(" · ") : "");
+    $("status").textContent = L().of(rows.length, P.length) + (bits.length ? " · " + bits.join(" · ") : "");
     $("clear").hidden = !bits.length;
     $("more").hidden = rows.length <= LIMIT;
-    $("more").textContent = state.showAll ? "Show fewer" : "Show all " + rows.length;
+    $("more").textContent = state.showAll ? L().fewer : L().showAll(rows.length);
     chips.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", c.dataset.topic === state.topic); });
     rolesEl.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", c.dataset.role === state.role); });
     bars.querySelectorAll(".bar").forEach(function (b) { b.setAttribute("aria-pressed", +b.dataset.y === state.year); });
-    bars.classList.toggle("has-pick", !!state.year);
   }
-
-  function setTopic(k) { state.topic = k; state.showAll = false; render(); }
-  function jump() { document.getElementById("papers").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); }
-
+  function still() { return root.classList.contains("still"); }
+  function jump() { $("work").scrollIntoView({ behavior: still() ? "auto" : "smooth" }); }
   bars.querySelectorAll(".bar").forEach(function (b) {
     b.addEventListener("click", function () {
       var y = +b.dataset.y; state.year = state.year === y ? null : y; state.showAll = false; render();
-      if (state.year) toast(b.dataset.n + " papers in " + y + ". Showing them below.");
+      if (state.year) toast(L().yearToast(b.dataset.n, fy(y)));
     });
   });
-  document.querySelectorAll(".focus").forEach(function (f) {
-    f.addEventListener("click", function () { state.topic = f.dataset.topic; state.year = null; state.q = ""; $("q").value = ""; state.showAll = false; render(); jump(); });
+  document.querySelectorAll(".area").forEach(function (a) {
+    a.addEventListener("click", function () { state = { topic: a.dataset.topic, year: null, q: "", showAll: false, role: "any" }; $("q").value = ""; render(); jump(); });
   });
   $("q").addEventListener("input", function (e) { state.q = e.target.value; state.showAll = false; render(); });
   $("clear").addEventListener("click", function () { state = { topic: "all", year: null, q: "", showAll: false, role: "any" }; $("q").value = ""; render(); });
@@ -553,58 +774,76 @@ footer { padding-block: 28px; font-size: 13.5px; color: var(--muted); display: f
     var p = P[Math.floor(Math.random() * P.length)];
     state = { topic: "all", year: null, q: "", showAll: true, role: "any" }; $("q").value = ""; render();
     var el = list.querySelector('[data-i="' + P.indexOf(p) + '"]');
-    if (el) { el.classList.add("flash"); el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" }); setTimeout(function () { el.classList.remove("flash"); }, 2400); }
+    if (el) { el.classList.add("flash"); el.scrollIntoView({ behavior: still() ? "auto" : "smooth", block: "center" }); setTimeout(function () { el.classList.remove("flash"); }, 2600); }
   });
-  render();
 
-  // rotating role
-  var roles = ["physician", "epidemiologist", "pharmacology lecturer", "medical educator", "snakebite researcher", "YouTuber"], ri = 0, rot = $("rot");
-  if (!reduce) setInterval(function () { ri = (ri + 1) % roles.length; rot.textContent = roles[ri]; rot.classList.remove("swap"); void rot.offsetWidth; rot.classList.add("swap"); }, 2200);
+  // ---------- language ----------
+  function setParam(k, v) { try { var u = new URL(location.href); u.searchParams.set(k, v); history.replaceState(null, "", u); } catch (e) {} }
+  document.querySelectorAll(".seg button").forEach(function (b) {
+    b.addEventListener("click", function () { lang = b.dataset.lang; try { localStorage.setItem("pf-lang", lang); } catch (e) {} setParam("lang", lang); applyLang(); });
+  });
 
-  // portrait tilt
-  var portrait = $("portrait"), frame = portrait.querySelector(".frame");
-  if (!reduce && window.matchMedia("(hover: hover)").matches) {
-    portrait.addEventListener("mousemove", function (e) {
-      var r = portrait.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
-      frame.style.setProperty("--ry", (x * 16) + "deg"); frame.style.setProperty("--rx", (-y * 16) + "deg");
+  // ---------- motion ----------
+  function motionLabel() { $("motion").querySelector(".txt").textContent = still() ? L().motionOff : L().motionOn; $("motion").setAttribute("aria-pressed", !still()); }
+  $("motion").addEventListener("click", function () {
+    var on = still();
+    root.classList.toggle("still", !on); root.classList.toggle("motion", on);
+    try { localStorage.setItem("pf-motion", on ? "on" : "off"); } catch (e) {}
+    setParam("motion", on ? "on" : "off");
+    document.querySelectorAll(".rv").forEach(function (r) { r.classList.add("in"); });
+    splitName(); motionLabel();
+  });
+
+  // ---------- menu ----------
+  var ov = $("overlay");
+  function menu(open) { ov.classList.toggle("open", open); ov.setAttribute("aria-hidden", !open); $("menu").setAttribute("aria-expanded", open); }
+  $("menu").addEventListener("click", function () { menu(true); });
+  $("close").addEventListener("click", function () { menu(false); });
+  ov.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { menu(false); }); });
+
+  // ---------- scroll progress + reveal ----------
+  var prog = $("progress");
+  function onScroll() { var h = document.documentElement.scrollHeight - innerHeight; prog.style.transform = "scaleX(" + (h > 0 ? scrollY / h : 0) + ")"; }
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+  var revs = document.querySelectorAll(".rv");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { rootMargin: "0px 0px -10% 0px" });
+    revs.forEach(function (r) { io.observe(r); });
+  } else revs.forEach(function (r) { r.classList.add("in"); });
+  setTimeout(function () { revs.forEach(function (r) { r.classList.add("in"); }); }, 6000);
+
+  // ---------- count-up ----------
+  var counted = false, statsEl = document.querySelector(".stats");
+  function countUp() {
+    if (counted || still()) return; counted = true;
+    statsEl.querySelectorAll("[data-count]").forEach(function (el) {
+      var end = +el.dataset.count, t0 = null;
+      function step(t) { if (!t0) t0 = t; var k = Math.min((t - t0) / 1300, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); }
+      requestAnimationFrame(step);
     });
-    portrait.addEventListener("mouseleave", function () { frame.style.setProperty("--ry", "0deg"); frame.style.setProperty("--rx", "0deg"); });
+  }
+  if ("IntersectionObserver" in window) new IntersectionObserver(function (es, o) { if (es[0].isIntersecting) { countUp(); o.disconnect(); } }).observe(statsEl);
+
+  // ---------- cursor ----------
+  var cur = $("cur"), ring = $("ring"), mx = -100, my = -100, rx = -100, ry = -100;
+  if (matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    addEventListener("mousemove", function (e) { mx = e.clientX; my = e.clientY; cur.style.transform = "translate(" + mx + "px," + my + "px)"; });
+    (function loop() { rx += (mx - rx) * .18; ry += (my - ry) * .18; ring.style.transform = "translate(" + rx + "px," + ry + "px)"; requestAnimationFrame(loop); })();
+    document.addEventListener("mouseover", function (e) { ring.classList.toggle("big", !!e.target.closest("a, button")); });
   }
 
-  // count-up stats
-  if (!reduce) document.querySelectorAll("[data-count]").forEach(function (el) {
-    var end = +el.dataset.count, suf = el.dataset.suffix || "", t0 = null;
-    if (end < 3) return;
-    function step(t) { if (!t0) t0 = t; var k = Math.min((t - t0) / 1200, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))) + suf; if (k < 1) requestAnimationFrame(step); }
-    requestAnimationFrame(step);
-  });
-
-  // reveal on scroll
-  var revs = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && !reduce) {
-    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { rootMargin: "0px 0px -8% 0px" });
-    revs.forEach(function (r) { io.observe(r); });
-    setTimeout(function () { revs.forEach(function (r) { r.classList.add("in"); }); }, 4000);
-  } else revs.forEach(function (r) { r.classList.add("in"); });
-
-  // theme toggle
-  $("theme").addEventListener("click", function () {
-    var root = document.documentElement, cur = root.getAttribute("data-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    var next = cur === "dark" ? "light" : "dark";
-    root.setAttribute("data-theme", next);
-    try { localStorage.setItem("pf-theme", next); } catch (e) {}
-  });
-
-  // toast + copy
+  // ---------- toast + copy ----------
   var tt = $("toast"), th;
-  function toast(msg) { tt.textContent = msg; tt.classList.add("on"); clearTimeout(th); th = setTimeout(function () { tt.classList.remove("on"); }, 2200); }
+  function toast(msg) { tt.textContent = msg; tt.classList.add("on"); clearTimeout(th); th = setTimeout(function () { tt.classList.remove("on"); }, 2400); }
   document.querySelectorAll(".copy").forEach(function (b) {
     b.addEventListener("click", function () {
-      var el = document.getElementById(b.dataset.copy), text = el.textContent;
-      function selectIt() { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); toast("Email selected. Press Ctrl+C to copy."); }
-      try { navigator.clipboard.writeText(text).then(function () { toast("Copied " + text); }, selectIt); } catch (e) { selectIt(); }
+      var el = $(b.dataset.copy), text = el.textContent;
+      function selectIt() { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); toast(L().selected); }
+      try { navigator.clipboard.writeText(text).then(function () { toast(L().copied(text)); }, selectIt); } catch (e) { selectIt(); }
     });
   });
+
+  applyLang();
 })();
 </script>
 </body>
