@@ -174,6 +174,17 @@ html.motion .bar { animation: rise 1s cubic-bezier(.2,.8,.2,1) both; animation-d
 @keyframes rise { from { transform: scaleY(.05); } }
 .years { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 10px; font: 500 13px/1 var(--f-body); color: var(--muted); text-align: center; font-variant-numeric: tabular-nums; }
 
+/* citations */
+.cite { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
+.cite .stats { border-top: 0; }
+.cite .stat b { color: var(--accent); }
+.cbars { height: 150px; margin-top: 34px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; align-items: end; border-bottom: 1px solid var(--muted); }
+.cbar { height: calc(var(--v) / 113 * 100%); background: var(--accent); border-radius: 6px 6px 0 0; position: relative; transform-origin: bottom; opacity: .9; }
+html.motion .cbar { animation: rise 1s cubic-bezier(.2,.8,.2,1) both; animation-delay: calc(var(--i) * 90ms + 200ms); }
+.cbar::after { content: attr(data-n); position: absolute; top: -24px; left: 0; right: 0; text-align: center; font: 700 14px/1 var(--f-body); color: var(--fg); font-variant-numeric: tabular-nums; }
+.cyears { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 10px; font: 500 13px/1 var(--f-body); color: var(--muted); text-align: center; font-variant-numeric: tabular-nums; }
+.cite .note { margin-top: 12px; font-size: 13px; color: var(--muted); }
+
 /* projects */
 .projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .proj { position: relative; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 28px; overflow: hidden; text-decoration: none; background: var(--surface); transition: border-color .3s, transform .4s cubic-bezier(.2,.8,.2,1); min-width: 0; }
@@ -408,6 +419,22 @@ html.still *, html.still *::before, html.still *::after { animation: none !impor
             </div>
             <div class="years" id="years"></div>
           </figure>
+          <div class="cite">
+            <div class="chart-head"><b data-i18n="cite.t">Google Scholar citations</b><a href="https://scholar.google.com/citations?user=pJlQxuMAAAAJ&amp;hl=en" target="_blank" rel="noopener" style="color:var(--muted)" data-i18n="cite.src">View profile ↗</a></div>
+            <div class="stats">
+              <div class="stat"><b data-count="262">262</b><span data-i18n="cite.c">citations</span></div>
+              <div class="stat"><b data-count="11">11</b><span>h-index</span></div>
+              <div class="stat"><b data-count="12">12</b><span>i10-index</span></div>
+            </div>
+            <div class="cbars" aria-label="Citations per year, approximate: 2023 about 7, 2024 about 47, 2025 about 113, 2026 so far about 94">
+              <span class="cbar" style="--v:7;--i:0" data-n="7"></span>
+              <span class="cbar" style="--v:47;--i:1" data-n="47"></span>
+              <span class="cbar" style="--v:113;--i:2" data-n="113"></span>
+              <span class="cbar" style="--v:94;--i:3" data-n="94"></span>
+            </div>
+            <div class="cyears" id="cyears"></div>
+            <p class="note" data-i18n="cite.note">Citations per year, read from the Google Scholar chart, so yearly values are approximate. 2026 to date. Updated October 2026.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -604,7 +631,7 @@ html.still *, html.still *::before, html.still *::after { animation: none !impor
     "aff.pcm": "วิทยาลัยแพทยศาสตร์พระมงกุฎเกล้า", "aff.pcm2": "ภาควิชาเภสัชวิทยา",
     "aff.fetp": "หลักสูตรฝึกอบรมนักระบาดวิทยาภาคสนาม", "aff.fetp2": "FETP ประเทศไทย",
     "stat1": "บทความวิจัยตีพิมพ์ตั้งแต่ปี 2565", "stat2": "การนำเสนอในงานประชุมวิชาการ", "stat3v": "1", "stat3": "เกียรตินิยมอันดับ 1 เหรียญทอง",
-    "chart.t": "จำนวนผลงานต่อปี", "chart.tap": "แตะแท่งกราฟเพื่อกรองรายการ",
+    "chart.t": "จำนวนผลงานต่อปี", "cite.t": "การอ้างอิงจาก Google Scholar", "cite.src": "ดูโปรไฟล์ ↗", "cite.c": "การอ้างอิง", "cite.note": "จำนวนการอ้างอิงรายปีอ่านจากกราฟใน Google Scholar จึงเป็นค่าโดยประมาณ ปี 2569 นับถึงปัจจุบัน อัปเดตเดือนตุลาคม 2569", "chart.tap": "แตะแท่งกราฟเพื่อกรองรายการ",
     "proj.k": "โปรเจกต์", "proj.t": "สิ่งที่<em>สร้าง</em>", "proj.note": "เว็บแอปที่ออกแบบและพัฒนาเอง ทั้งสองระบบประมวลผลในเบราว์เซอร์ ข้อมูลส่วนบุคคลจึงไม่ออกจากเครื่องของผู้ใช้",
     "sari.t": "ระบบเฝ้าระวังผู้ป่วย SARI", "sari.d": "ประมาณการและเฝ้าระวังผู้ป่วยติดเชื้อทางเดินหายใจเฉียบพลันรุนแรง (SARI) จากรหัส ICD-10 ของผู้ป่วยในโรงพยาบาล ด้วยแบบจำลองที่พัฒนาจากข้อมูลโรงพยาบาลเฝ้าระวัง ประมวลผลในเบราว์เซอร์ทั้งหมด ข้อมูลผู้ป่วยจึงไม่ออกจากโรงพยาบาล",
     "horo.t": "PLB โหราศาสตร์", "horo.d": "ดูดวงรายวันตามลัคนาราศี ตรวจดวงสมพงษ์คู่แท้ สีมงคล เลขนำโชค และกราฟดวง 28 วัน ตามหลักโหราศาสตร์ไทย คำนวณบนเครื่องของผู้ใช้ทั้งหมด",
@@ -693,6 +720,7 @@ html.still *, html.still *::before, html.still *::after { animation: none !impor
     fillMarquee("mq1", L().roles2, 1);
     fillMarquee("mq2", L().roles3, 0);
     $("mq3").innerHTML = new Array(5).join('<span class="mq-item">' + esc(L().cta) + "</span>");
+    $("cyears").innerHTML = [2023, 2024, 2025, 2026].map(function (y) { return "<span>" + fy(y) + (y === 2026 ? "*" : "") + "</span>"; }).join("");
     $("years").innerHTML = [2022, 2023, 2024, 2025, 2026].map(function (y) { return "<span>" + fy(y) + (y === 2026 ? "*" : "") + "</span>"; }).join("");
     document.querySelectorAll(".bar").forEach(function (b) { b.setAttribute("aria-label", fy(+b.dataset.y) + ": " + L().papers(b.dataset.n)); });
     buildChips();
@@ -813,16 +841,19 @@ html.still *, html.still *::before, html.still *::after { animation: none !impor
   setTimeout(function () { revs.forEach(function (r) { r.classList.add("in"); }); }, 6000);
 
   // ---------- count-up ----------
-  var counted = false, statsEl = document.querySelector(".stats");
-  function countUp() {
-    if (counted || still()) return; counted = true;
+  var statsEls = document.querySelectorAll(".stats");
+  function countUp(statsEl) {
+    if (statsEl.dataset.done || still()) return; statsEl.dataset.done = 1;
     statsEl.querySelectorAll("[data-count]").forEach(function (el) {
       var end = +el.dataset.count, t0 = null;
       function step(t) { if (!t0) t0 = t; var k = Math.min((t - t0) / 1300, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); }
       requestAnimationFrame(step);
     });
   }
-  if ("IntersectionObserver" in window) new IntersectionObserver(function (es, o) { if (es[0].isIntersecting) { countUp(); o.disconnect(); } }).observe(statsEl);
+  if ("IntersectionObserver" in window) {
+    var co = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { countUp(e.target); co.unobserve(e.target); } }); });
+    statsEls.forEach(function (el) { co.observe(el); });
+  }
 
   // ---------- cursor ----------
   var cur = $("cur"), ring = $("ring"), mx = -100, my = -100, rx = -100, ry = -100;
