@@ -169,6 +169,16 @@ ol.papers { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .paper .meta i { color: var(--fg); }
 .tag { font: 800 11px/1 var(--f-body); letter-spacing: .05em; text-transform: uppercase; padding: 6px 9px; border-radius: 999px; background: var(--bg); color: var(--muted); white-space: nowrap; }
 .tag.first { background: var(--accent-2); color: var(--on-coral); }
+.tag.cofirst { background: transparent; color: var(--accent-2); box-shadow: inset 0 0 0 1.5px var(--accent-2); }
+.tag.corr { background: var(--accent); color: var(--on-accent); }
+.tools .lbl { font: 800 12px/1 var(--f-body); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-right: 2px; }
+.affil { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; padding-top: 4px; }
+.aff { display: flex; align-items: center; gap: 12px; padding: 10px 18px 10px 10px; background: var(--bg); border-radius: 20px; color: var(--fg); text-decoration: none; min-width: 0; transition: transform .2s; }
+a.aff:hover { transform: translateY(-3px); }
+.aff img { height: 52px; width: auto; flex: none; }
+.aff img.fetp { border-radius: 10px; }
+.aff b { display: block; font-size: 15px; line-height: 1.25; }
+.aff small { display: block; font-size: 13px; color: var(--muted); }
 .tags { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
 .empty { padding: 28px; text-align: center; color: var(--muted); background: var(--surface); border-radius: 20px; }
 .more-row { display: flex; justify-content: center; margin-top: 18px; }
@@ -292,6 +302,11 @@ footer { padding-block: 28px; font-size: 13.5px; color: var(--muted); display: f
             <figcaption>n = 45. *2026 to date.</figcaption>
           </figure>
         </div>
+        <div class="affil">
+          <span class="label">Affiliations</span>
+          <a class="aff" href="https://www.pcm.ac.th" target="_blank" rel="noopener"><img src="pcm-logo.png" alt="Phramongkutklao College of Medicine logo" width="37" height="52"><span><b>Phramongkutklao College of Medicine</b><small>Department of Pharmacology</small></span></a>
+          <div class="aff"><img class="fetp" src="fetp-logo.png" alt="International Field Epidemiology Training Programme Thailand logo" width="55" height="52"><span><b>Field Epidemiology Training Program</b><small>FETP Thailand</small></span></div>
+        </div>
       </div>
     </section>
 
@@ -350,6 +365,7 @@ footer { padding-block: 28px; font-size: 13.5px; color: var(--muted); display: f
     <section id="papers" class="reveal">
       <div class="sec-head"><h2>Publication explorer</h2><button class="btn" id="surprise" type="button">Surprise me</button></div>
       <div class="tools" id="chips"></div>
+      <div class="tools" id="roles"><span class="lbl">My role</span></div>
       <div class="tools">
         <label class="search" for="q">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
@@ -407,42 +423,42 @@ footer { padding-block: 28px; font-size: 13.5px; color: var(--muted); display: f
 
 <script>
 (function () {
-  // y: year, t: title, j: journal, u: link, k: topic, f: first or co-first author
+  // y: year, t: title, j: journal, u: link, k: topic, f: 1 first author / 2 co-first author, c: corresponding author
   var P = [
     {y:2026,k:"epi",t:"Multisystem detection and molecular evidence linking dog-associated ticks to two fatal human SFTSV infections in Thailand",j:"Vector-Borne and Zoonotic Diseases",u:"https://doi.org/10.1177/15303667261457401"},
     {y:2026,k:"epi",t:"An explanatory sequential mixed methods study of Opisthorchis viverrini infection incidence and behavioral determinants over twenty years in rural Thailand",j:"Discover Public Health",u:"https://doi.org/10.1186/s12982-026-02025-7"},
     {y:2026,k:"cardio",f:1,t:"Role of nighttime lights on cardiovascular risk in Thailand: a preliminary ecological analysis, 2024",j:"OSIR Journal",u:"https://he02.tci-thaijo.org/index.php/OSIR/article/view/278867"},
-    {y:2026,k:"cardio",t:"Systemic inflammatory response index and its obesity-related derivatives as predictors of heart failure: NHANES 2017–2020",j:"JRSM Cardiovascular Disease",u:"https://doi.org/10.1177/20480040261419613"},
+    {c:1,y:2026,k:"cardio",t:"Systemic inflammatory response index and its obesity-related derivatives as predictors of heart failure: NHANES 2017–2020",j:"JRSM Cardiovascular Disease",u:"https://doi.org/10.1177/20480040261419613"},
     {y:2026,k:"tox",f:1,t:"Early clinical approach prevents severe neurotoxicity following cobra envenoming: an integrated experimental and multi-center clinical study in Thailand",j:"Biomedicines",u:"https://doi.org/10.3390/biomedicines14010144"},
     {y:2025,k:"epi",t:"High usability but limited case capture: performance of Thailand's digital influenza surveillance system in a private hospital setting",j:"OSIR Journal",u:"https://doi.org/10.59096/osir.v18i4.275859"},
     {y:2025,k:"clin",t:"Microbial ozone decontamination of N95 respirators: efficacy and material preservation",j:"Journal of Current Science and Technology",u:"https://doi.org/10.59796/jcst.V16N1.2026.165"},
     {y:2025,k:"clin",t:"Prevalence and factors associated with foreign body associated ocular injury in four community hospitals, Central Thailand",j:"Journal of Southeast Asian Medical Research",u:"https://jseamed.org/index.php/jseamed/article/view/233"},
     {y:2025,k:"epi",f:1,t:"Drunk driving, sleep deprivation, unsafe vehicle, and poor road design: converging hazards in a road traffic crash in Sukhothai Province, 2025",j:"OSIR Journal",u:"https://doi.org/10.59096/osir.v18i3.275901"},
-    {y:2025,k:"edu",f:1,t:"Student engagement in program evaluation: redesigning the premedical curriculum through instructor–learner co-creation",j:"Journal of Medical Education and Curricular Development",u:"https://doi.org/10.1177/23821205251374898"},
-    {y:2025,k:"edu",f:1,t:"Unveiling barriers of introverts to collaborative learning: an exploratory mixed-methods study across medical student personalities",j:"BMC Psychology",u:"https://doi.org/10.1186/s40359-025-03282-y"},
+    {y:2025,k:"edu",f:2,t:"Student engagement in program evaluation: redesigning the premedical curriculum through instructor–learner co-creation",j:"Journal of Medical Education and Curricular Development",u:"https://doi.org/10.1177/23821205251374898"},
+    {y:2025,k:"edu",f:2,t:"Unveiling barriers of introverts to collaborative learning: an exploratory mixed-methods study across medical student personalities",j:"BMC Psychology",u:"https://doi.org/10.1186/s40359-025-03282-y"},
     {y:2025,k:"epi",f:1,t:"Investigation of an MMR-related mumps cluster following immunization among practical nursing students, Bangkok, 2024",j:"Journal of Tropical Medicine",u:"https://doi.org/10.1155/jotm/9974081"},
     {y:2025,k:"clin",f:1,t:"Pontocerebellar hypoplasia type 3 with two novel PCLO gene mutations: a case report",j:"Case Reports in Pediatrics"},
-    {y:2025,k:"cardio",f:1,t:"Experiences and perceptions of living with type 1 diabetes among youth patients, parents, and peers: a qualitative study",j:"Journal of Southeast Asian Medical Research",u:"https://jseamed.org/index.php/jseamed/article/view/215"},
+    {y:2025,k:"cardio",f:2,t:"Experiences and perceptions of living with type 1 diabetes among youth patients, parents, and peers: a qualitative study",j:"Journal of Southeast Asian Medical Research",u:"https://jseamed.org/index.php/jseamed/article/view/215"},
     {y:2025,k:"edu",f:1,t:"Assessing medication counseling skills from pre-clinical to clinical years: using generalizability theory to optimize reliable pharmacology exam design",j:"Pharmacy Practice",u:"https://www.pharmacypractice.org/index.php/pp/article/view/3147"},
-    {y:2025,k:"cardio",f:1,t:"Triglyceride to high-density lipoprotein ratio as a predictor for 10-year cardiovascular disease in individuals with diabetes in Thailand",j:"Journal of Health, Population and Nutrition",u:"https://doi.org/10.1186/s41043-025-00835-0"},
+    {y:2025,k:"cardio",f:2,t:"Triglyceride to high-density lipoprotein ratio as a predictor for 10-year cardiovascular disease in individuals with diabetes in Thailand",j:"Journal of Health, Population and Nutrition",u:"https://doi.org/10.1186/s41043-025-00835-0"},
     {y:2025,k:"edu",f:1,t:"Reliability and validity of simulation-based electrocardiogram assessment rubrics for cardiac life support skills using generalizability theory",j:"Medical Education Online",u:"https://doi.org/10.1080/10872981.2025.2479962"},
     {y:2025,k:"clin",f:1,t:"Common alpha-globin gene abnormalities as genetic modifiers in Thai children with β-globin gene abnormalities",j:"Anemia",u:"https://doi.org/10.1155/anem/9933808"},
     {y:2025,k:"clin",f:1,t:"Homozygous CHST14 mutation in an adolescent girl with musculocontractural Ehlers-Danlos syndrome: a first report in Thailand",j:"Journal of Southeast Asian Medical Research"},
     {y:2025,k:"edu",f:1,t:"Evaluating the dependability of peer assessment in project-based learning for pre-clinical students: a generalizability theory approach",j:"BMC Medical Education",u:"https://doi.org/10.1186/s12909-025-06772-0"},
-    {y:2025,k:"tox",t:"Clinical management of snakebites in a community care unit: a single-center retrospective study in Lopburi, Central Thailand",j:"Journal of Southeast Asian Medical Research",u:"https://doi.org/10.55374/jseamed.v9.204"},
+    {c:1,y:2025,k:"tox",t:"Clinical management of snakebites in a community care unit: a single-center retrospective study in Lopburi, Central Thailand",j:"Journal of Southeast Asian Medical Research",u:"https://doi.org/10.55374/jseamed.v9.204"},
     {y:2025,k:"tox",f:1,t:"Snake venom pharmacokinetics and acute toxic outcomes following Daboia siamensis envenoming: experimental and clinical correlations",j:"Toxins",u:"https://doi.org/10.3390/toxins17010010"},
-    {y:2024,k:"clin",t:"Incidence and risk factors of recurrent ocular injuries: a multicenter retrospective cohort study in four community hospitals",j:"Clinical Epidemiology and Global Health",u:"https://doi.org/10.1016/j.cegh.2024.101892"},
+    {c:1,y:2024,k:"clin",t:"Incidence and risk factors of recurrent ocular injuries: a multicenter retrospective cohort study in four community hospitals",j:"Clinical Epidemiology and Global Health",u:"https://doi.org/10.1016/j.cegh.2024.101892"},
     {y:2024,k:"edu",f:1,t:"Student engagement in medical research curriculum development: a mixed-methods study using SWOT-TOWS-AHP analysis",j:"Medical Science Educator"},
     {y:2024,k:"clin",t:"Clinical characteristics and mortality of tuberculosis among adults living with HIV/AIDS: a retrospective cohort study in Thailand",j:"International Journal of STD & AIDS",u:"https://doi.org/10.1177/09564624241289986"},
     {y:2024,k:"edu",f:1,t:"Immediate self-feedback very short answer questions: implementing testlet response theory in formative examinations across multiple occasions",j:"Medical Science Educator",u:"https://doi.org/10.1007/s40670-024-02167-w"},
     {y:2024,k:"clin",f:1,t:"Recurrent rhabdomyolysis in a medical cadet during military training as a rare initial presentation of calpainopathy",j:"Case Reports in Neurological Medicine",u:"https://doi.org/10.1155/2024/2775517"},
     {y:2024,k:"edu",f:1,t:"Declining empathy trends throughout the medical curriculum and factors associated with low empathy among medical students and residents",j:"BMC Medical Education",u:"https://doi.org/10.1186/s12909-024-05962-6"},
-    {y:2024,k:"edu",f:1,t:"Integrating basic ECG interpretation into acute cardiac life support stations through simulation-based learning: student and teacher perceptions",j:"Strides in Development of Medical Education",u:"https://doi.org/10.22062/sdme.2024.199478.1351"},
-    {y:2024,k:"edu",t:"Development and validation of comprehensive prescription writing rubrics for medical students",j:"Pharmacy Education",u:"https://pharmacyeducation.fip.org/pharmacyeducation/article/view/2695"},
+    {y:2024,k:"edu",f:2,t:"Integrating basic ECG interpretation into acute cardiac life support stations through simulation-based learning: student and teacher perceptions",j:"Strides in Development of Medical Education",u:"https://doi.org/10.22062/sdme.2024.199478.1351"},
+    {c:1,y:2024,k:"edu",t:"Development and validation of comprehensive prescription writing rubrics for medical students",j:"Pharmacy Education",u:"https://pharmacyeducation.fip.org/pharmacyeducation/article/view/2695"},
     {y:2024,k:"edu",f:1,t:"Development of peer assessment rubrics in simulation-based learning for advanced cardiac life support skills among medical students",j:"Advances in Simulation",u:"https://doi.org/10.1186/s41077-024-00301-7"},
-    {y:2024,k:"cardio",f:1,t:"The association between serum HDL and hemoglobin A1c in type 2 diabetes: a nationwide cross-sectional study",j:"Diabetes Epidemiology and Management",u:"https://doi.org/10.1016/j.deman.2024.100232"},
+    {y:2024,k:"cardio",f:2,t:"The association between serum HDL and hemoglobin A1c in type 2 diabetes: a nationwide cross-sectional study",j:"Diabetes Epidemiology and Management",u:"https://doi.org/10.1016/j.deman.2024.100232"},
     {y:2024,k:"edu",f:1,t:"Development and validation of immediate self-feedback very short answer questions for medical students using generalizability theory",j:"BMC Medical Education",u:"https://doi.org/10.1186/s12909-024-05569-x"},
-    {y:2024,k:"clin",t:"Increased risk for sleep-disordered breathing and its relationship with BMI among medical students, intern doctors, and residents",j:"Clinical Epidemiology and Global Health",u:"https://doi.org/10.1016/j.cegh.2024.101586"},
+    {c:1,y:2024,k:"clin",t:"Increased risk for sleep-disordered breathing and its relationship with BMI among medical students, intern doctors, and residents",j:"Clinical Epidemiology and Global Health",u:"https://doi.org/10.1016/j.cegh.2024.101586"},
     {y:2024,k:"cardio",f:1,t:"Associations of triglyceride-glucose index with hyperuricemia among Royal Thai Army personnel",j:"BMC Endocrine Disorders",u:"https://doi.org/10.1186/s12902-024-01542-3"},
     {y:2023,k:"edu",f:1,t:"Practices, perceptions, attitudes, barriers and motivation and their impacts on research publication",j:"The Asia Pacific Scholar",u:"https://doi.org/10.29060/TAPS.2023-8-4/OA3006"},
     {y:2023,k:"epi",f:1,t:"What sustains mask-wearing behavior among elders in a rural community in the post-COVID-19 era: an exploratory mixed-methods study",j:"Behavioral Sciences",u:"https://doi.org/10.3390/bs13080678"},
@@ -452,12 +468,14 @@ footer { padding-block: 28px; font-size: 13.5px; color: var(--muted); display: f
     {y:2023,k:"cardio",f:1,t:"Relationship between triglyceride-glucose index and aminotransferase among Royal Thai Army personnel 2017–2021",j:"Lipids in Health and Disease",u:"https://doi.org/10.1186/s12944-023-01811-5"},
     {y:2023,k:"cardio",f:1,t:"Trends in predicted 10-year risk for cardiovascular diseases among patients with type 2 diabetes in Thailand, 2014–2018",j:"BMC Cardiovascular Disorders",u:"https://doi.org/10.1186/s12872-023-03217-8"},
     {y:2023,k:"cardio",t:"Association between raised blood pressure and elevated serum liver enzymes among active-duty Royal Thai Army personnel",j:"BMC Cardiovascular Disorders",u:"https://doi.org/10.1186/s12872-023-03181-3"},
-    {y:2022,k:"tox",t:"Effects of performance-enhancing drugs in athletes",j:"Journal of Sports Science and Technology",u:"https://he01.tci-thaijo.org/index.php/JSST/article/view/257298"},
+    {c:1,y:2022,k:"tox",t:"Effects of performance-enhancing drugs in athletes",j:"Journal of Sports Science and Technology",u:"https://he01.tci-thaijo.org/index.php/JSST/article/view/257298"},
     {y:2022,k:"clin",f:1,t:"Pulmonary tuberculosis mortality and its risk factors among patients with type 2 diabetes and pulmonary tuberculosis in four community hospitals",j:"Journal of Southeast Asian Medical Research",u:"https://www.jseamed.org/index.php/jseamed/article/view/120"}
   ];
   var TOPICS = { all: "All", edu: "Medical education", epi: "Field epidemiology", tox: "Toxinology & pharmacology", cardio: "Cardiometabolic", clin: "Clinical & genetics" };
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var state = { topic: "all", year: null, q: "", showAll: false };
+  var ROLES = { any: "Any", first: "First author", cofirst: "Co-first author", corr: "Corresponding author" };
+  function hasRole(p, r) { return r === "any" || (r === "first" && p.f === 1) || (r === "cofirst" && p.f === 2) || (r === "corr" && p.c); }
+  var state = { topic: "all", year: null, q: "", showAll: false, role: "any" };
   var LIMIT = 8;
   var $ = function (id) { return document.getElementById(id); };
   var list = $("list"), chips = $("chips"), bars = $("bars");
@@ -474,12 +492,20 @@ footer { padding-block: 28px; font-size: 13.5px; color: var(--muted); display: f
     b.addEventListener("click", function () { setTopic(k); });
     chips.appendChild(b);
   });
+  var rolesEl = $("roles");
+  Object.keys(ROLES).forEach(function (r) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.dataset.role = r;
+    b.innerHTML = esc(ROLES[r]) + (r === "any" ? "" : "<small>" + P.filter(function (p) { return hasRole(p, r); }).length + "</small>");
+    b.addEventListener("click", function () { state.role = r; state.showAll = false; render(); });
+    rolesEl.appendChild(b);
+  });
   document.querySelectorAll("[data-count-topic]").forEach(function (el) { el.textContent = count(el.dataset.countTopic) + " papers →"; });
 
   function filtered() {
     var q = state.q.trim().toLowerCase();
     return P.filter(function (p) {
-      return (state.topic === "all" || p.k === state.topic) && (!state.year || p.y === state.year) &&
+      return (state.topic === "all" || p.k === state.topic) && hasRole(p, state.role) && (!state.year || p.y === state.year) &&
         (!q || (p.t + " " + p.j).toLowerCase().indexOf(q) > -1);
     });
   }
@@ -491,17 +517,19 @@ footer { padding-block: 28px; font-size: 13.5px; color: var(--muted); display: f
         '<span class="yr">' + p.y + '</span>' +
         '<div><h3><a href="' + esc(link(p)) + '" target="_blank" rel="noopener">' + esc(p.t) + '</a></h3>' +
         '<p class="meta"><i>' + esc(p.j) + '</i></p></div>' +
-        '<div class="tags"><span class="tag">' + esc(TOPICS[p.k]) + '</span>' + (p.f ? '<span class="tag first">First author</span>' : '') + '</div></li>';
+        '<div class="tags"><span class="tag">' + esc(TOPICS[p.k]) + '</span>' + (p.f === 1 ? '<span class="tag first">First author</span>' : '') + (p.f === 2 ? '<span class="tag cofirst">Co-first author</span>' : '') + (p.c ? '<span class="tag corr">Corresponding</span>' : '') + '</div></li>';
     }).join("") : '<li class="empty">No papers match that. Try another word or clear the filters.</li>';
     var bits = [];
     if (state.topic !== "all") bits.push(TOPICS[state.topic]);
     if (state.year) bits.push(String(state.year));
+    if (state.role !== "any") bits.push(ROLES[state.role]);
     if (state.q.trim()) bits.push("“" + state.q.trim() + "”");
     $("status").textContent = rows.length + " of " + P.length + " papers" + (bits.length ? " · " + bits.join(" · ") : "");
     $("clear").hidden = !bits.length;
     $("more").hidden = rows.length <= LIMIT;
     $("more").textContent = state.showAll ? "Show fewer" : "Show all " + rows.length;
     chips.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", c.dataset.topic === state.topic); });
+    rolesEl.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", c.dataset.role === state.role); });
     bars.querySelectorAll(".bar").forEach(function (b) { b.setAttribute("aria-pressed", +b.dataset.y === state.year); });
     bars.classList.toggle("has-pick", !!state.year);
   }
@@ -519,11 +547,11 @@ footer { padding-block: 28px; font-size: 13.5px; color: var(--muted); display: f
     f.addEventListener("click", function () { state.topic = f.dataset.topic; state.year = null; state.q = ""; $("q").value = ""; state.showAll = false; render(); jump(); });
   });
   $("q").addEventListener("input", function (e) { state.q = e.target.value; state.showAll = false; render(); });
-  $("clear").addEventListener("click", function () { state = { topic: "all", year: null, q: "", showAll: false }; $("q").value = ""; render(); });
+  $("clear").addEventListener("click", function () { state = { topic: "all", year: null, q: "", showAll: false, role: "any" }; $("q").value = ""; render(); });
   $("more").addEventListener("click", function () { state.showAll = !state.showAll; render(); });
   $("surprise").addEventListener("click", function () {
     var p = P[Math.floor(Math.random() * P.length)];
-    state = { topic: "all", year: null, q: "", showAll: true }; $("q").value = ""; render();
+    state = { topic: "all", year: null, q: "", showAll: true, role: "any" }; $("q").value = ""; render();
     var el = list.querySelector('[data-i="' + P.indexOf(p) + '"]');
     if (el) { el.classList.add("flash"); el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" }); setTimeout(function () { el.classList.remove("flash"); }, 2400); }
   });
