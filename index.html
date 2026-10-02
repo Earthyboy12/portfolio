@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-style="studio">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -8,329 +8,360 @@
 <meta property="og:title" content="Sethapong Lertsakulbunlue, MD">
 <meta property="og:description" content="Physician, epidemiologist and medical educator. 45 peer-reviewed papers since 2022.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="photo.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232B45E0'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='800' font-size='26' text-anchor='middle' fill='white'%3ESL%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,500&family=Source+Sans+3:wght@400;600;700&family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Noto+Sans+Thai:wght@400;600&family=Noto+Serif+Thai:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,800&family=Noto+Sans+Thai:wght@400;600&display=swap">
+<script>
+  document.documentElement.classList.add("js");
+  try { var t = localStorage.getItem("pf-theme"); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+</script>
 <style>
-/* Layout: one shared page (hero + chart, focus, papers, path, talks, channels, contact); each style re-skins and re-orders it. */
+/* Studio: bold personal brand. Hero card with portrait, channels, research, paper explorer, path, contact. */
 :root {
-  /* A · Journal (default, light) */
-  --bg: #F5F7F9; --surface: #FFFFFF; --fg: #14233A; --muted: #55657A; --line: #D5DCE4;
-  --accent: #0D6B6E; --accent-2: #8A3B2E; --on-accent: #FFFFFF; --bar: #0D6B6E;
-  --f-display: "Newsreader", "Noto Serif Thai", Georgia, serif;
-  --f-body: "Source Sans 3", "Noto Sans Thai", system-ui, sans-serif;
-  --f-label: "Source Sans 3", "Noto Sans Thai", system-ui, sans-serif;
-  --f-thai: "Noto Serif Thai", serif;
-  --radius: 2px; --gutter: 20px;
-}
-/* C · Studio (light, with dark tokens) */
-:root[data-style="studio"] {
   --bg: #FFFFFF; --surface: #EEF1FF; --fg: #111430; --muted: #545979; --line: #DADFF5;
-  --accent: #2B45E0; --accent-2: #FF6A4D; --on-accent: #FFFFFF; --bar: #2B45E0;
+  --accent: #2B45E0; --accent-2: #FF6A4D; --on-accent: #FFFFFF; --on-coral: #1A0D08;
   --f-display: "Bricolage Grotesque", "Noto Sans Thai", system-ui, sans-serif;
   --f-body: "Bricolage Grotesque", "Noto Sans Thai", system-ui, sans-serif;
-  --f-label: "Bricolage Grotesque", "Noto Sans Thai", system-ui, sans-serif;
   --f-thai: "Noto Sans Thai", sans-serif;
-  --radius: 22px;
+  --gutter: 20px;
 }
 @media (prefers-color-scheme: dark) {
-  :root[data-style="studio"]:not([data-theme="light"]) {
+  :root:not([data-theme="light"]) {
     --bg: #0E1024; --surface: #1A1E3D; --fg: #F1F2FF; --muted: #A9AECF; --line: #2C3160;
-    --accent: #7E92FF; --accent-2: #FF8A70; --on-accent: #0E1024; --bar: #7E92FF; color-scheme: dark;
+    --accent: #7E92FF; --accent-2: #FF8A70; --on-accent: #0E1024; color-scheme: dark;
   }
 }
-:root[data-style="studio"][data-theme="dark"] {
+:root[data-theme="dark"] {
   --bg: #0E1024; --surface: #1A1E3D; --fg: #F1F2FF; --muted: #A9AECF; --line: #2C3160;
-  --accent: #7E92FF; --accent-2: #FF8A70; --on-accent: #0E1024; --bar: #7E92FF; color-scheme: dark;
+  --accent: #7E92FF; --accent-2: #FF8A70; --on-accent: #0E1024; color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
-body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 var(--f-body); padding-bottom: 24px; transition: background .3s, color .3s; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 var(--f-body); transition: background .3s, color .3s; }
+img { max-width: 100%; display: block; }
 a { color: var(--accent); text-underline-offset: 3px; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .wrap { max-width: 1120px; margin: 0 auto; padding-inline: var(--gutter); }
-.label { font: 600 12px/1.3 var(--f-label); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.label { font: 800 12px/1.3 var(--f-body); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
 h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; }
 p { margin: 0; }
 .thai { font-family: var(--f-thai); }
 
-/* ---------- nav ---------- */
-.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; flex-wrap: wrap; }
+/* nav */
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); }
 .brand { display: flex; align-items: center; gap: 12px; color: var(--fg); text-decoration: none; font-weight: 600; }
-.mono { width: 40px; height: 40px; display: grid; place-items: center; border: 1.5px solid var(--fg); font: 600 15px/1 var(--f-display); letter-spacing: .04em; border-radius: var(--radius); }
-.nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; flex-wrap: wrap; }
+.mono { width: 40px; height: 40px; display: grid; place-items: center; background: var(--accent); color: var(--on-accent); border-radius: 14px; font-weight: 800; font-size: 15px; transition: transform .3s; }
+.brand:hover .mono { transform: rotate(-8deg) scale(1.06); }
+.nav-r { display: flex; align-items: center; gap: 18px; }
+.nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; }
 .nav ul a { color: var(--muted); text-decoration: none; font-size: 15px; }
 .nav ul a:hover { color: var(--fg); }
+.theme { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--fg); cursor: pointer; display: grid; place-items: center; transition: transform .4s; }
+.theme:hover { transform: rotate(25deg); }
+.theme svg { width: 18px; height: 18px; fill: currentColor; }
 
-/* ---------- main column order (re-ordered per style) ---------- */
 main { display: flex; flex-direction: column; }
-section { padding-block: 56px; border-top: 1px solid var(--line); }
-section.hero { border-top: 0; padding-top: 32px; }
-.sec-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
-.sec-head h2 { font-size: clamp(26px, 3.4vw, 36px); font-weight: 600; line-height: 1.15; }
+section { padding-block: 40px; scroll-margin-top: 80px; }
+.sec-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+.sec-head h2 { font-weight: 800; letter-spacing: -.02em; font-size: clamp(30px, 4.4vw, 46px); line-height: 1.1; }
 
-/* ---------- hero ---------- */
-.hero-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 48px; align-items: end; }
-.hero h1 { font-size: clamp(42px, 6.4vw, 78px); line-height: 1.02; font-weight: 400; letter-spacing: -.01em; margin-top: 14px; }
-.hero h1 em { font-style: italic; color: var(--accent); }
-.hero .thai-name { margin-top: 10px; font-size: 20px; color: var(--muted); }
-.hero .lede { margin-top: 22px; font-size: 20px; line-height: 1.55; max-width: 34em; }
-.cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
-.btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border: 1.5px solid var(--fg); color: var(--fg); text-decoration: none; font: 600 15px/1 var(--f-label); border-radius: var(--radius); transition: background .2s, color .2s; }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
-.btn:hover { background: var(--fg); color: var(--bg); border-color: var(--fg); }
-.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; max-width: 560px; }
-.stat b { display: block; font: 600 36px/1 var(--f-display); font-variant-numeric: tabular-nums; }
-.stat span { display: block; margin-top: 6px; font-size: 14px; color: var(--muted); line-height: 1.35; }
+/* hero */
+.hero { padding-top: 8px; }
+.hero-card { background: var(--surface); border-radius: 36px; padding: clamp(24px, 5vw, 56px); position: relative; overflow: hidden; display: grid; gap: 32px; }
+.intro { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.hello { font: 600 18px/1.3 var(--f-body); color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; }
+.rot { display: inline-block; color: var(--accent-2); font-weight: 800; min-width: 10ch; }
+.rot.swap { animation: pop .45s cubic-bezier(.2,.9,.3,1.4); }
+@keyframes pop { from { transform: translateY(40%); opacity: 0; } to { transform: none; opacity: 1; } }
+.hero h1 { font-weight: 800; font-size: clamp(44px, 5.8vw, 74px); line-height: .95; letter-spacing: -.035em; margin-top: 14px; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.thai-name { margin-top: 12px; font-size: 20px; color: var(--muted); }
+.lede { margin-top: 20px; font-size: 19px; line-height: 1.55; max-width: 34em; }
+.cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 22px; border: 1.5px solid var(--fg); color: var(--fg); text-decoration: none; font: 600 15px/1 var(--f-body); border-radius: 999px; background: transparent; cursor: pointer; transition: background .2s, color .2s, transform .2s; }
+.btn:hover { transform: translateY(-2px); }
+.btn.primary { background: var(--fg); border-color: var(--fg); color: var(--bg); }
+.btn.primary:hover { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 
-/* chart: publications per year */
-figure.chart { margin: 0; padding: 22px 22px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
-.bars { height: 200px; margin-top: 24px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; align-items: end; border-bottom: 1.5px solid var(--fg); position: relative; }
-.bar { height: calc(var(--v) / 17 * 100%); background: var(--bar); position: relative; border-radius: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0; transform-origin: bottom; animation: rise .9s cubic-bezier(.2,.8,.2,1) both; animation-delay: calc(var(--i) * 80ms); }
-.bar::after { content: attr(data-n); position: absolute; top: -22px; left: 0; right: 0; text-align: center; font: 600 13px/1 var(--f-label); color: var(--fg); font-variant-numeric: tabular-nums; }
-.bar.partial { background: repeating-linear-gradient(135deg, var(--bar) 0 6px, transparent 6px 10px); outline: 1.5px solid var(--bar); outline-offset: -1.5px; }
-@keyframes rise { from { transform: scaleY(.15); } to { transform: scaleY(1); } }
-.years { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 8px; font: 500 13px/1 var(--f-label); color: var(--muted); text-align: center; font-variant-numeric: tabular-nums; }
-figcaption { margin-top: 14px; font-size: 14px; color: var(--muted); line-height: 1.45; }
-figcaption b { color: var(--fg); }
+/* portrait */
+.side { display: grid; gap: 22px; justify-items: center; }
+.portrait { position: relative; width: min(100%, 340px); aspect-ratio: 1; perspective: 800px; }
+.portrait .blob { position: absolute; inset: -4% -6% 6% 8%; background: var(--accent-2); border-radius: 58% 42% 55% 45% / 48% 55% 45% 52%; animation: morph 9s ease-in-out infinite; }
+@keyframes morph { 50% { border-radius: 42% 58% 45% 55% / 55% 45% 55% 45%; transform: rotate(8deg); } }
+.portrait .frame { position: absolute; inset: 0; border-radius: 50%; overflow: hidden; border: 6px solid var(--bg); transition: transform .2s ease-out; transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); box-shadow: 0 20px 40px -18px rgba(17,20,48,.45); }
+.portrait img { width: 100%; height: 100%; object-fit: cover; }
+.sticker { position: absolute; font: 800 13px/1 var(--f-body); padding: 9px 13px; border-radius: 999px; background: var(--bg); color: var(--fg); box-shadow: 0 8px 20px -10px rgba(17,20,48,.5); white-space: nowrap; animation: bob 4s ease-in-out infinite; }
+.sticker.s1 { left: -6%; bottom: 14%; }
+.sticker.s2 { right: -4%; top: 8%; background: var(--accent); color: var(--on-accent); animation-delay: -2s; }
+@keyframes bob { 50% { transform: translateY(-7px); } }
 
-/* ---------- focus ---------- */
-.focus-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-left: 1px solid var(--line); }
-.focus { padding: 4px 22px 8px; border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; min-width: 0; }
-.focus h3 { font-size: 22px; font-weight: 600; line-height: 1.2; }
-.focus p { font-size: 15.5px; color: var(--muted); }
-.focus .count { font: 600 13px/1.3 var(--f-label); color: var(--accent); letter-spacing: .04em; margin-top: auto; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; width: 100%; }
+.stat { background: var(--bg); border-radius: 20px; padding: 16px; }
+.stat b { display: block; font: 800 34px/1 var(--f-display); color: var(--accent); font-variant-numeric: tabular-nums; }
+.stat span { display: block; margin-top: 6px; font-size: 13.5px; color: var(--muted); line-height: 1.35; }
 
-/* ---------- papers ---------- */
-ol.papers { list-style: none; margin: 0; padding: 0; counter-reset: ref; display: grid; gap: 0; }
-.paper { counter-increment: ref; display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; gap: 18px; padding-block: 18px; border-bottom: 1px solid var(--line); align-items: baseline; }
-.paper::before { content: "[" counter(ref) "]"; font: 500 15px/1.4 var(--f-label); color: var(--accent); font-variant-numeric: tabular-nums; }
-.paper h3 { font-size: 20px; font-weight: 500; line-height: 1.3; }
+/* chart */
+.chart { margin: 0; padding: 22px 22px 16px; background: var(--bg); border-radius: 26px; }
+.chart-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; }
+.chart-head b { font-size: 16px; }
+.chart-head span { font-size: 14px; color: var(--muted); }
+.bars { height: 190px; margin-top: 30px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; align-items: end; }
+.bar { height: calc(var(--v) / 17 * 100%); background: var(--accent); border: 0; padding: 0; border-radius: 14px; position: relative; cursor: pointer; transform-origin: bottom; animation: rise .9s cubic-bezier(.2,.8,.2,1) both; animation-delay: calc(var(--i) * 90ms); transition: filter .2s, transform .2s; }
+.bar:nth-child(odd) { background: var(--accent-2); }
+.bar.partial { background: repeating-linear-gradient(135deg, var(--accent-2) 0 6px, transparent 6px 10px); outline: 1.5px solid var(--accent-2); outline-offset: -1.5px; }
+.bar::after { content: attr(data-n); position: absolute; top: -24px; left: 0; right: 0; text-align: center; font: 800 14px/1 var(--f-body); color: var(--fg); font-variant-numeric: tabular-nums; }
+.bar:hover { transform: scaleY(1.04); filter: brightness(1.08); }
+.bars.has-pick .bar:not([aria-pressed="true"]) { opacity: .35; }
+@keyframes rise { from { transform: scaleY(.1); } to { transform: scaleY(1); } }
+.years { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 8px; font: 600 13px/1 var(--f-body); color: var(--muted); text-align: center; font-variant-numeric: tabular-nums; }
+.chart figcaption { margin-top: 12px; font-size: 13.5px; color: var(--muted); }
+
+/* channels */
+.channels { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.ch { display: flex; flex-direction: column; gap: 6px; padding: 26px; min-height: 170px; border-radius: 26px; background: var(--surface); color: var(--fg); text-decoration: none; transition: transform .25s cubic-bezier(.2,.9,.3,1.3); min-width: 0; }
+.ch:hover { transform: translateY(-6px) rotate(-1.5deg); }
+.ch:nth-child(even):hover { transform: translateY(-6px) rotate(1.5deg); }
+.ch svg { width: 28px; height: 28px; fill: var(--accent); }
+.ch strong { font-size: 22px; font-weight: 800; margin-top: auto; }
+.ch span { font-size: 14px; color: var(--muted); overflow-wrap: anywhere; }
+.ch:nth-child(1) { background: var(--accent-2); color: var(--on-coral); }
+.ch:nth-child(1) svg { fill: var(--on-coral); }
+.ch:nth-child(1) span { color: var(--on-coral); opacity: .75; }
+.ch:nth-child(2) { background: var(--accent); color: var(--on-accent); }
+.ch:nth-child(2) svg { fill: var(--on-accent); }
+.ch:nth-child(2) span { color: var(--on-accent); opacity: .8; }
+
+/* focus */
+.focus-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.focus { background: var(--surface); border: 2px solid transparent; border-radius: 26px; padding: 24px; display: flex; flex-direction: column; gap: 10px; min-width: 0; text-align: left; font: inherit; color: inherit; cursor: pointer; transition: border-color .2s, transform .2s; }
+.focus:hover { transform: translateY(-4px); border-color: var(--accent); }
+.focus .ico { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; background: var(--bg); color: var(--accent); }
+.focus .ico svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.focus h3 { font-weight: 800; font-size: 21px; line-height: 1.2; letter-spacing: -.01em; }
+.focus p { font-size: 15px; color: var(--muted); }
+.focus .count { margin-top: auto; font: 800 14px/1.3 var(--f-body); color: var(--accent); }
+
+/* explorer */
+.tools { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 18px; }
+.chip { font: 600 14px/1 var(--f-body); padding: 10px 14px; border-radius: 999px; border: 1.5px solid var(--line); background: transparent; color: var(--fg); cursor: pointer; transition: background .2s, border-color .2s; }
+.chip:hover { border-color: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--fg); border-color: var(--fg); color: var(--bg); }
+.chip small { font-size: 12px; opacity: .65; margin-left: 4px; font-variant-numeric: tabular-nums; }
+.search { flex: 1 1 220px; min-width: 0; display: flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px; background: var(--surface); }
+.search input { flex: 1; min-width: 0; border: 0; background: transparent; color: var(--fg); font: 500 15px/1.2 var(--f-body); outline: none; }
+.search svg { width: 16px; height: 16px; fill: none; stroke: var(--muted); stroke-width: 2; flex: none; }
+.status { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 14px; color: var(--muted); margin-bottom: 12px; }
+.status button { font: 600 14px/1 var(--f-body); color: var(--accent); background: none; border: 0; cursor: pointer; padding: 6px 0; }
+ol.papers { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.paper { display: grid; grid-template-columns: 54px minmax(0, 1fr) auto; gap: 16px; align-items: start; background: var(--surface); border-radius: 20px; padding: 16px 20px; border: 2px solid transparent; transition: border-color .3s, transform .2s; animation: fadeup .35s ease both; }
+.paper:hover { transform: translateX(4px); }
+.paper.flash { border-color: var(--accent-2); animation: wiggle .6s ease; }
+@keyframes fadeup { from { opacity: 0; transform: translateY(8px); } }
+@keyframes wiggle { 20% { transform: rotate(-1deg); } 40% { transform: rotate(1deg); } 60% { transform: rotate(-.6deg); } }
+.yr { display: grid; place-items: center; height: 34px; border-radius: 999px; background: var(--accent); color: var(--on-accent); font: 800 13px/1 var(--f-body); font-variant-numeric: tabular-nums; }
+.paper h3 { font-weight: 600; font-size: 17.5px; line-height: 1.35; }
 .paper h3 a { color: var(--fg); text-decoration: none; }
 .paper h3 a:hover { color: var(--accent); text-decoration: underline; }
-.paper .meta { margin-top: 6px; font-size: 14.5px; color: var(--muted); }
+.paper .meta { margin-top: 4px; font-size: 14px; color: var(--muted); }
 .paper .meta i { color: var(--fg); }
-.paper .yr { font: 600 14px/1 var(--f-label); color: var(--muted); font-variant-numeric: tabular-nums; }
-.more { margin-top: 22px; font-size: 15px; color: var(--muted); }
+.tag { font: 800 11px/1 var(--f-body); letter-spacing: .05em; text-transform: uppercase; padding: 6px 9px; border-radius: 999px; background: var(--bg); color: var(--muted); white-space: nowrap; }
+.tag.first { background: var(--accent-2); color: var(--on-coral); }
+.tags { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+.empty { padding: 28px; text-align: center; color: var(--muted); background: var(--surface); border-radius: 20px; }
+.more-row { display: flex; justify-content: center; margin-top: 18px; }
 
-/* ---------- path & talks ---------- */
+/* path & talks */
 .two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; }
-.tl { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
-.tl li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 16px; }
-.tl .when { font: 600 14px/1.5 var(--f-label); color: var(--accent); font-variant-numeric: tabular-nums; }
+.tl { list-style: none; margin: 0; padding: 0 0 0 22px; display: grid; gap: 22px; border-left: 2px dashed var(--line); }
+.tl li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 16px; position: relative; }
+.tl li::before { content: ""; position: absolute; left: -30px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 3px solid var(--accent); transition: background .2s, transform .2s; }
+.tl li:hover::before { background: var(--accent-2); border-color: var(--accent-2); transform: scale(1.3); }
+.tl .when { font: 800 14px/1.5 var(--f-body); color: var(--accent); font-variant-numeric: tabular-nums; }
 .tl strong { display: block; font-weight: 600; line-height: 1.35; }
 .tl span { display: block; font-size: 15px; color: var(--muted); line-height: 1.45; margin-top: 2px; }
-.award { display: inline-block; margin-top: 6px; padding: 3px 9px; font: 600 12px/1.4 var(--f-label); letter-spacing: .06em; text-transform: uppercase; color: var(--accent-2); border: 1px solid currentColor; border-radius: var(--radius); }
+.award { display: inline-block; margin-top: 6px; padding: 4px 10px; font: 800 12px/1.4 var(--f-body); letter-spacing: .04em; text-transform: uppercase; border-radius: 999px; background: var(--accent-2); color: var(--on-coral); }
 
-/* ---------- channels ---------- */
-.channels { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
-.ch { display: flex; flex-direction: column; gap: 6px; padding: 20px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); text-decoration: none; border-radius: var(--radius); transition: border-color .2s, transform .2s; min-width: 0; }
-.ch:hover { border-color: var(--accent); transform: translateY(-2px); }
-.ch svg { width: 26px; height: 26px; fill: var(--accent); }
-.ch strong { font-size: 18px; margin-top: 8px; }
-.ch span { font-size: 14px; color: var(--muted); overflow-wrap: anywhere; }
-
-/* ---------- contact ---------- */
-.contact { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; align-items: end; }
-.contact h2 { font-size: clamp(30px, 4.4vw, 48px); font-weight: 400; line-height: 1.1; }
+/* contact */
+.contact { background: var(--fg); color: var(--bg); border-radius: 36px; padding: clamp(24px, 5vw, 48px); display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; align-items: end; }
+.contact .label { color: var(--bg); opacity: .75; }
+.contact h2 { font-weight: 800; letter-spacing: -.02em; font-size: clamp(30px, 4.4vw, 48px); line-height: 1.1; margin-top: 12px; }
 .emails { display: grid; gap: 10px; }
-.email { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); min-width: 0; }
-.email code { font: 500 15px/1.3 var(--f-label); overflow-wrap: anywhere; user-select: all; min-width: 0; }
-.copy { font: 600 13px/1 var(--f-label); padding: 8px 12px; background: transparent; color: var(--fg); border: 1px solid var(--line); border-radius: var(--radius); cursor: pointer; flex: none; }
-.copy:hover { border-color: var(--accent); color: var(--accent); }
-footer { padding-block: 28px 8px; font-size: 13.5px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.email { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; border: 1px solid rgba(127,127,160,.45); border-radius: 18px; min-width: 0; }
+.email code { font: 600 15px/1.3 var(--f-body); overflow-wrap: anywhere; user-select: all; min-width: 0; }
+.copy { font: 600 13px/1 var(--f-body); padding: 8px 12px; background: transparent; color: var(--bg); border: 1px solid rgba(127,127,160,.45); border-radius: 999px; cursor: pointer; flex: none; }
+.copy:hover { background: var(--bg); color: var(--fg); }
+footer { padding-block: 28px; font-size: 13.5px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 
-/* =========================================================
-   C · STUDIO — bold personal brand, channels up front
-   ========================================================= */
-[data-style="studio"] .label { color: var(--accent); letter-spacing: .06em; font-weight: 800; }
-[data-style="studio"] .mono { background: var(--accent); color: var(--on-accent); border: 0; border-radius: 14px; font-weight: 800; }
-[data-style="studio"] .hero { padding-top: 12px; }
-[data-style="studio"] .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; background: var(--surface); border-radius: 36px; padding: clamp(24px, 5vw, 56px); position: relative; overflow: hidden; }
-[data-style="studio"] .hero-grid::before { content: ""; position: absolute; width: 360px; height: 360px; border-radius: 50%; background: var(--accent-2); right: -110px; top: -140px; opacity: .9; }
-[data-style="studio"] .hero-grid > * { position: relative; }
-[data-style="studio"] .hero h1 { font-weight: 800; font-size: clamp(44px, 8vw, 104px); line-height: .95; letter-spacing: -.035em; }
-[data-style="studio"] .hero h1 em { font-style: normal; color: var(--accent); }
-[data-style="studio"] .hero .intro { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 36px; align-items: end; }
-[data-style="studio"] .btn { border-radius: 999px; padding: 14px 22px; }
-[data-style="studio"] .btn.primary { background: var(--fg); border-color: var(--fg); color: var(--bg); }
-[data-style="studio"] .btn.primary:hover { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
-[data-style="studio"] .stats { margin-top: 0; gap: 12px; }
-[data-style="studio"] .stat { background: var(--bg); border-radius: 20px; padding: 16px; }
-[data-style="studio"] .stat b { font-weight: 800; font-size: 34px; color: var(--accent); }
-[data-style="studio"] figure.chart { background: var(--bg); border: 0; border-radius: 26px; }
-[data-style="studio"] .bars { border-bottom: 0; gap: 10px; }
-[data-style="studio"] .bar { border-radius: 14px; }
-[data-style="studio"] .bar:nth-child(odd) { background: var(--accent-2); }
-[data-style="studio"] .bar.partial { background: repeating-linear-gradient(135deg, var(--accent-2) 0 6px, transparent 6px 10px); outline-color: var(--accent-2); }
-[data-style="studio"] section { border-top: 0; padding-block: 40px; }
-[data-style="studio"] .sec-head h2 { font-weight: 800; letter-spacing: -.02em; font-size: clamp(30px, 4.4vw, 46px); }
-[data-style="studio"] #channels { order: 1; }
-[data-style="studio"] #focus { order: 2; }
-[data-style="studio"] #papers { order: 3; }
-[data-style="studio"] #path { order: 4; }
-[data-style="studio"] #contact { order: 5; }
-[data-style="studio"] .ch { border: 0; border-radius: 26px; padding: 26px; min-height: 170px; }
-[data-style="studio"] .ch:nth-child(1) { background: var(--accent-2); color: #1A0D08; }
-[data-style="studio"] .ch:nth-child(1) svg { fill: #1A0D08; }
-[data-style="studio"] .ch:nth-child(1) span { color: #3D1E14; }
-[data-style="studio"] .ch:nth-child(2) { background: var(--accent); color: var(--on-accent); }
-[data-style="studio"] .ch:nth-child(2) svg { fill: var(--on-accent); }
-[data-style="studio"] .ch:nth-child(2) span { color: var(--on-accent); opacity: .8; }
-[data-style="studio"] .ch strong { font-size: 22px; font-weight: 800; margin-top: auto; }
-[data-style="studio"] .focus-grid { border: 0; gap: 14px; }
-[data-style="studio"] .focus { background: var(--surface); border: 0; border-radius: 26px; padding: 24px; }
-[data-style="studio"] .focus h3 { font-weight: 800; letter-spacing: -.01em; }
-[data-style="studio"] .paper { border-bottom: 0; background: var(--surface); border-radius: 20px; padding: 18px 22px; margin-bottom: 10px; }
-[data-style="studio"] .paper::before { content: counter(ref); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: var(--on-accent); font-weight: 800; align-self: start; }
-[data-style="studio"] .paper h3 { font-weight: 800; font-size: 19px; }
-[data-style="studio"] .award { border-radius: 999px; background: var(--accent-2); color: #1A0D08; border-color: var(--accent-2); }
-[data-style="studio"] .contact { background: var(--fg); color: var(--bg); border-radius: 36px; padding: clamp(24px, 5vw, 48px); }
-[data-style="studio"] .contact .label, [data-style="studio"] .contact p { color: var(--bg); opacity: .8; }
-[data-style="studio"] .contact h2 { font-weight: 800; letter-spacing: -.02em; }
-[data-style="studio"] .email { background: transparent; border-color: rgba(127,127,160,.45); border-radius: 18px; }
-[data-style="studio"] .copy { color: var(--bg); border-color: rgba(127,127,160,.45); border-radius: 999px; }
+.toast { position: fixed; left: 0; right: 0; margin-inline: auto; width: max-content; max-width: calc(100% - 32px); bottom: calc(20px + env(safe-area-inset-bottom, 0px)); background: var(--fg); color: var(--bg); padding: 12px 18px; border-radius: 999px; font: 600 14px/1.2 var(--f-body); transform: translateY(150%); transition: transform .3s cubic-bezier(.2,.9,.3,1.3); z-index: 30; }
+.toast.on { transform: none; }
 
-/* ---------- responsive ---------- */
+/* reveal: visible by default, only animates once JS marks the page ready */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
 @media (max-width: 900px) {
-  .hero-grid, [data-style="studio"] .hero .intro, .two, .contact { grid-template-columns: minmax(0, 1fr); gap: 32px; }
-  .focus-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; }
-  .channels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .intro, .two, .contact { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .side { order: -1; }
+  .portrait { width: min(70%, 280px); }
+  .focus-grid, .channels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 560px) {
   body { font-size: 16px; }
-  .hero h1, [data-style="studio"] .hero h1 { font-size: clamp(30px, 9vw, 44px); }
-  [data-style="studio"] .hero-grid::before { width: 150px; height: 150px; right: -60px; top: -70px; }
-  [data-style="studio"] .hero .label { padding-right: 70px; }
-  [data-style="studio"] .hero-grid { padding: 22px; border-radius: 28px; }
-  [data-style="studio"] .ch { padding: 18px; min-height: 140px; }
-  [data-style="studio"] .ch strong, .ch strong { font-size: 17px; }
   .nav ul { display: none; }
+  .hero h1 { font-size: clamp(32px, 10vw, 44px); }
+  .hero-card { padding: 22px; border-radius: 28px; }
   .focus-grid { grid-template-columns: minmax(0, 1fr); }
-  .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
-  .stat b { font-size: 28px !important; }
-  .paper { grid-template-columns: minmax(0, 1fr); gap: 6px; }
-  .paper .yr { order: -1; }
+  .ch { padding: 18px; min-height: 140px; }
+  .ch strong { font-size: 17px; }
+  .stat b { font-size: 28px; }
+  .paper { grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 16px; }
+  .paper .yr { width: 64px; }
+  .tags { flex-direction: row; flex-wrap: wrap; justify-content: flex-start; }
+  .tag { white-space: normal; }
   .tl li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .sticker { font-size: 12px; padding: 7px 10px; }
 }
 </style>
-
-
 </head>
 <body>
 <div class="wrap">
   <header class="nav">
     <a class="brand" href="#top"><span class="mono">SL</span><span>Sethapong Lertsakulbunlue</span></a>
-    <ul>
-      <li><a href="#focus">Research</a></li>
-      <li><a href="#papers">Publications</a></li>
-      <li><a href="#path">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-r">
+      <ul>
+        <li><a href="#focus">Research</a></li>
+        <li><a href="#papers">Publications</a></li>
+        <li><a href="#path">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme" id="theme" type="button" aria-label="Switch light or dark mode">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.5 0-.9-.1-1.4A5.5 5.5 0 0 1 13.4 3.1L12 3Z"/></svg>
+      </button>
+    </div>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="hero-grid">
+      <div class="hero-card">
         <div class="intro">
           <div>
-            <div class="label">Physician · Epidemiologist · Medical educator</div>
+            <p class="hello">Hello! I'm a <span class="rot" id="rot">physician</span></p>
             <h1>Sethapong <em>Lertsakulbunlue</em>, MD</h1>
             <p class="thai-name thai">ร.ท. เสฏฐพงศ์ เลิศสกุลบรรลือ</p>
             <p class="lede">Lecturer in Pharmacology at Phramongkutklao College of Medicine, Bangkok, and resident in Preventive Medicine (Epidemiology). I study how medical students learn and are assessed, how outbreaks unfold in the field, and what snake venom does to the people it reaches.</p>
             <div class="cta">
-              <a class="btn primary" href="https://scholar.google.com/citations?user=pJlQxuMAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
-              <a class="btn" href="https://www.researchgate.net/profile/Sethapong-Lertsakulbunlue" target="_blank" rel="noopener">ResearchGate</a>
+              <a class="btn primary" href="#papers">Explore my papers</a>
+              <a class="btn" href="https://scholar.google.com/citations?user=pJlQxuMAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
               <a class="btn" href="#contact">Get in touch</a>
             </div>
           </div>
-          <div class="stats">
-            <div class="stat"><b>45</b><span>peer-reviewed papers since 2022</span></div>
-            <div class="stat"><b>6</b><span>conference presentations</span></div>
-            <div class="stat"><b>1st</b><span>class honours MD, gold medal</span></div>
+          <div class="side">
+            <div class="portrait" id="portrait">
+              <div class="blob"></div>
+              <div class="frame"><img src="photo.jpg" alt="Sethapong Lertsakulbunlue smiling at a field epidemiology training workshop" width="720" height="720"></div>
+              <span class="sticker s1">Bangkok, Thailand</span>
+              <span class="sticker s2">Hi there!</span>
+            </div>
           </div>
         </div>
-        <figure class="chart" aria-label="Publications per year: 2022, 2; 2023, 8; 2024, 13; 2025, 17; 2026 so far, 5">
-          <div class="bars">
-            <div class="bar" style="--v:2;--i:0" data-n="2"></div>
-            <div class="bar" style="--v:8;--i:1" data-n="8"></div>
-            <div class="bar" style="--v:13;--i:2" data-n="13"></div>
-            <div class="bar" style="--v:17;--i:3" data-n="17"></div>
-            <div class="bar partial" style="--v:5;--i:4" data-n="5"></div>
+        <div class="intro">
+          <div class="stats">
+            <div class="stat"><b data-count="45">45</b><span>peer-reviewed papers since 2022</span></div>
+            <div class="stat"><b data-count="6">6</b><span>conference presentations</span></div>
+            <div class="stat"><b data-count="1" data-suffix="st">1st</b><span>class honours MD, gold medal</span></div>
           </div>
-          <div class="years"><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026*</span></div>
-          <figcaption><b>Fig. 1</b> Publications per year, n = 45. *2026 to date.</figcaption>
-        </figure>
+          <figure class="chart">
+            <div class="chart-head"><b>Papers per year</b><span>Tap a bar to filter</span></div>
+            <div class="bars" id="bars">
+              <button class="bar" type="button" style="--v:2;--i:0" data-n="2" data-y="2022" aria-pressed="false" aria-label="2022: 2 papers"></button>
+              <button class="bar" type="button" style="--v:8;--i:1" data-n="8" data-y="2023" aria-pressed="false" aria-label="2023: 8 papers"></button>
+              <button class="bar" type="button" style="--v:13;--i:2" data-n="13" data-y="2024" aria-pressed="false" aria-label="2024: 13 papers"></button>
+              <button class="bar" type="button" style="--v:17;--i:3" data-n="17" data-y="2025" aria-pressed="false" aria-label="2025: 17 papers"></button>
+              <button class="bar partial" type="button" style="--v:5;--i:4" data-n="5" data-y="2026" aria-pressed="false" aria-label="2026 so far: 5 papers"></button>
+            </div>
+            <div class="years"><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026*</span></div>
+            <figcaption>n = 45. *2026 to date.</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
-    <section id="focus">
-      <div class="sec-head"><h2>Research focus</h2><span class="label">Four lines of work</span></div>
+    <section id="channels" class="reveal">
+      <div class="sec-head"><h2>Find me online</h2><span class="label">Research &amp; social</span></div>
+      <div class="channels">
+        <a class="ch" href="https://www.youtube.com/@WanLaRok" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-3.2.5-4.8s-.1-3.2-.5-4.8ZM9.7 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg>
+          <strong>YouTube</strong><span>@WanLaRok</span>
+        </a>
+        <a class="ch" href="https://www.facebook.com/Earthyboy12/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12Z"/></svg>
+          <strong>Facebook</strong><span>Earthyboy12</span>
+        </a>
+        <a class="ch" href="https://scholar.google.com/citations?user=pJlQxuMAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 0 9.5l4.4 2.7A7.5 7.5 0 0 1 12 8a7.5 7.5 0 0 1 7.6 4.2L24 9.5 12 2Zm0 8a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/></svg>
+          <strong>Google Scholar</strong><span>Citations &amp; full list</span>
+        </a>
+        <a class="ch" href="https://www.researchgate.net/profile/Sethapong-Lertsakulbunlue" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2h20v20H2V2Zm12.8 4.2c-1.6 0-2.5 1-2.5 2.4v1.2c0 1.5.9 2.4 2.5 2.4 1.3 0 2.2-.6 2.4-1.8h-1.2c-.1.5-.5.8-1.2.8-.8 0-1.2-.5-1.2-1.4V9.6h2.5v-1h-2.5v-.1c0-.8.4-1.3 1.2-1.3.6 0 1 .3 1.1.8h1.2c-.2-1.2-1.1-1.8-2.3-1.8ZM6 8.6v9.2h1.6v-3.7h1.2l2 3.7h1.8l-2.2-4a2.6 2.6 0 0 0-1-5.2H6Zm1.6 1.2h1.6c.8 0 1.3.5 1.3 1.3s-.5 1.3-1.3 1.3H7.6V9.8Z"/></svg>
+          <strong>ResearchGate</strong><span>Papers &amp; preprints</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="focus" class="reveal">
+      <div class="sec-head"><h2>Research focus</h2><span class="label">Tap a topic to see its papers</span></div>
       <div class="focus-grid">
-        <div class="focus">
+        <button class="focus" type="button" data-topic="edu">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/></svg></span>
           <h3>Medical education &amp; assessment</h3>
           <p>Generalizability theory for exam reliability, peer-assessment rubrics for ACLS and ECG skills, very short answer questions, and student co-designed curricula.</p>
-          <span class="count">BMC Med Educ · Med Educ Online · Adv Simul</span>
-        </div>
-        <div class="focus">
+          <span class="count" data-count-topic="edu"></span>
+        </button>
+        <button class="focus" type="button" data-topic="epi">
+          <span class="ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M8.5 11h5M11 8.5v5"/></svg></span>
           <h3>Field epidemiology</h3>
           <p>Outbreak and death investigations across Thailand: a vaccine-related mumps cluster, an infant pertussis death, a road traffic crash, and digital influenza surveillance.</p>
-          <span class="count">OSIR Journal · J Trop Med</span>
-        </div>
-        <div class="focus">
-          <h3>Toxinology &amp; snakebite</h3>
+          <span class="count" data-count-topic="epi"></span>
+        </button>
+        <button class="focus" type="button" data-topic="tox">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M4 18c3 0 3-4 6-4s3 4 6 4 3-6 4-9"/><circle cx="19" cy="6" r="2"/></svg></span>
+          <h3>Toxinology &amp; pharmacology</h3>
           <p>Russell's viper and cobra envenoming, linking venom pharmacokinetics in the lab with clinical outcomes and community-hospital snakebite care.</p>
-          <span class="count">Toxins · Biomedicines · Trop Med Infect Dis</span>
-        </div>
-        <div class="focus">
+          <span class="count" data-count-topic="tox"></span>
+        </button>
+        <button class="focus" type="button" data-topic="cardio">
+          <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span>
           <h3>Cardiometabolic risk</h3>
-          <p>Triglyceride-glucose index, HDL and predicted cardiovascular risk in people with type 2 diabetes and in Royal Thai Army personnel.</p>
-          <span class="count">Sci Rep · BMC Cardiovasc Disord · Lipids Health Dis</span>
-        </div>
+          <p>Triglyceride-glucose index, HDL and predicted cardiovascular risk in people with diabetes and in Royal Thai Army personnel.</p>
+          <span class="count" data-count-topic="cardio"></span>
+        </button>
       </div>
     </section>
 
-    <section id="papers">
-      <div class="sec-head"><h2>Selected publications</h2><span class="label">6 of 45</span></div>
-      <ol class="papers">
-        <li class="paper">
-          <div><h3><a href="https://doi.org/10.3390/biomedicines14010144" target="_blank" rel="noopener">Early clinical approach prevents severe neurotoxicity following cobra envenoming: an integrated experimental and multi-center clinical study in Thailand</a></h3>
-          <p class="meta"><b>Lertsakulbunlue S</b>, Chesor M, Promsorn P, et al. <i>Biomedicines</i> 14, 144</p></div>
-          <span class="yr">2026</span>
-        </li>
-        <li class="paper">
-          <div><h3><a href="https://doi.org/10.3390/toxins17010010" target="_blank" rel="noopener">Snake venom pharmacokinetics and acute toxic outcomes following <i>Daboia siamensis</i> envenoming</a></h3>
-          <p class="meta"><b>Lertsakulbunlue S</b>, Khimmaktong W, Khow O, et al. <i>Toxins</i> 17(1), 10</p></div>
-          <span class="yr">2025</span>
-        </li>
-        <li class="paper">
-          <div><h3><a href="https://doi.org/10.1155/jotm/9974081" target="_blank" rel="noopener">Investigation of an MMR-related mumps cluster following immunization among practical nursing students, Bangkok, 2024</a></h3>
-          <p class="meta"><b>Lertsakulbunlue S</b>, Srithammavong D, Tepsittha K, et al. <i>Journal of Tropical Medicine</i></p></div>
-          <span class="yr">2025</span>
-        </li>
-        <li class="paper">
-          <div><h3><a href="https://doi.org/10.1186/s12909-024-05569-x" target="_blank" rel="noopener">Development and validation of immediate self-feedback very short answer questions for medical students</a></h3>
-          <p class="meta"><b>Lertsakulbunlue S</b>, Kantiwong A. <i>BMC Medical Education</i> 24, 572</p></div>
-          <span class="yr">2024</span>
-        </li>
-        <li class="paper">
-          <div><h3><a href="https://doi.org/10.1186/s12909-024-05962-6" target="_blank" rel="noopener">Declining empathy trends throughout the medical curriculum and factors associated with low empathy among medical students and residents</a></h3>
-          <p class="meta"><b>Lertsakulbunlue S</b>, Kiatsrithanakorn C, Kittisarapong P, et al. <i>BMC Medical Education</i> 24, 951</p></div>
-          <span class="yr">2024</span>
-        </li>
-        <li class="paper">
-          <div><h3><a href="https://doi.org/10.1038/s41598-023-40299-y" target="_blank" rel="noopener">Trends in baseline triglyceride-glucose index and association with predicted 10-year cardiovascular disease risk among type 2 diabetes patients in Thailand</a></h3>
-          <p class="meta"><b>Lertsakulbunlue S</b>, Mungthin M, Rangsin R, et al. <i>Scientific Reports</i> 13, 12960</p></div>
-          <span class="yr">2023</span>
-        </li>
-      </ol>
-      <p class="more">The full list of 45 papers is on <a href="https://scholar.google.com/citations?user=pJlQxuMAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> and <a href="https://www.researchgate.net/profile/Sethapong-Lertsakulbunlue" target="_blank" rel="noopener">ResearchGate</a>.</p>
+    <section id="papers" class="reveal">
+      <div class="sec-head"><h2>Publication explorer</h2><button class="btn" id="surprise" type="button">Surprise me</button></div>
+      <div class="tools" id="chips"></div>
+      <div class="tools">
+        <label class="search" for="q">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input id="q" type="search" placeholder="Search titles or journals, e.g. snake, empathy, diabetes" autocomplete="off">
+        </label>
+      </div>
+      <div class="status"><span id="status" aria-live="polite"></span><button id="clear" type="button" hidden>Clear filters</button></div>
+      <ol class="papers" id="list"></ol>
+      <div class="more-row"><button class="btn" id="more" type="button" hidden>Show all</button></div>
     </section>
 
-    <section id="path">
+    <section id="path" class="reveal">
       <div class="two">
         <div>
           <div class="sec-head"><h2>Experience &amp; training</h2></div>
@@ -356,33 +387,11 @@ footer { padding-block: 28px 8px; font-size: 13.5px; color: var(--muted); displa
       </div>
     </section>
 
-    <section id="channels">
-      <div class="sec-head"><h2>Find me online</h2><span class="label">Research &amp; social</span></div>
-      <div class="channels">
-        <a class="ch" href="https://www.youtube.com/@WanLaRok" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-3.2.5-4.8s-.1-3.2-.5-4.8ZM9.7 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg>
-          <strong>YouTube</strong><span>@WanLaRok</span>
-        </a>
-        <a class="ch" href="https://www.facebook.com/Earthyboy12/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12Z"/></svg>
-          <strong>Facebook</strong><span>Earthyboy12</span>
-        </a>
-        <a class="ch" href="https://scholar.google.com/citations?user=pJlQxuMAAAAJ&amp;hl=en" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 0 9.5l4.4 2.7A7.5 7.5 0 0 1 12 8a7.5 7.5 0 0 1 7.6 4.2L24 9.5 12 2Zm0 8a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/></svg>
-          <strong>Google Scholar</strong><span>Citations &amp; full list</span>
-        </a>
-        <a class="ch" href="https://www.researchgate.net/profile/Sethapong-Lertsakulbunlue" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2h20v20H2V2Zm12.8 4.2c-1.6 0-2.5 1-2.5 2.4v1.2c0 1.5.9 2.4 2.5 2.4 1.3 0 2.2-.6 2.4-1.8h-1.2c-.1.5-.5.8-1.2.8-.8 0-1.2-.5-1.2-1.4V9.6h2.5v-1h-2.5v-.1c0-.8.4-1.3 1.2-1.3.6 0 1 .3 1.1.8h1.2c-.2-1.2-1.1-1.8-2.3-1.8ZM6 8.6v9.2h1.6v-3.7h1.2l2 3.7h1.8l-2.2-4a2.6 2.6 0 0 0-1-5.2H6Zm1.6 1.2h1.6c.8 0 1.3.5 1.3 1.3s-.5 1.3-1.3 1.3H7.6V9.8Z"/></svg>
-          <strong>ResearchGate</strong><span>Papers &amp; preprints</span>
-        </a>
-      </div>
-    </section>
-
-    <section id="contact">
+    <section id="contact" class="reveal">
       <div class="contact">
         <div>
           <div class="label">Collaborations, talks, teaching</div>
-          <h2 style="margin-top:12px">Let's work on something together.</h2>
+          <h2>Let's work on something together.</h2>
         </div>
         <div class="emails">
           <div class="email"><code id="em1">Sethapong.ler@pcm.ac.th</code><button class="copy" type="button" data-copy="em1">Copy</button></div>
@@ -394,20 +403,181 @@ footer { padding-block: 28px 8px; font-size: 13.5px; color: var(--muted); displa
 
   <footer><span>© 2026 Sethapong Lertsakulbunlue</span><span>Phramongkutklao College of Medicine, Bangkok</span></footer>
 </div>
-
+<div class="toast" id="toast" role="status"></div>
 
 <script>
-  (function () {
-    document.querySelectorAll(".copy").forEach(function (b) {
-      b.addEventListener("click", function () {
-        var el = document.getElementById(b.dataset.copy), text = el.textContent;
-        function selectIt() { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Selected"; }
-        try {
-          navigator.clipboard.writeText(text).then(function () { b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy"; }, 1600); }, selectIt);
-        } catch (e) { selectIt(); }
-      });
+(function () {
+  // y: year, t: title, j: journal, u: link, k: topic, f: first or co-first author
+  var P = [
+    {y:2026,k:"epi",t:"Multisystem detection and molecular evidence linking dog-associated ticks to two fatal human SFTSV infections in Thailand",j:"Vector-Borne and Zoonotic Diseases",u:"https://doi.org/10.1177/15303667261457401"},
+    {y:2026,k:"epi",t:"An explanatory sequential mixed methods study of Opisthorchis viverrini infection incidence and behavioral determinants over twenty years in rural Thailand",j:"Discover Public Health",u:"https://doi.org/10.1186/s12982-026-02025-7"},
+    {y:2026,k:"cardio",f:1,t:"Role of nighttime lights on cardiovascular risk in Thailand: a preliminary ecological analysis, 2024",j:"OSIR Journal",u:"https://he02.tci-thaijo.org/index.php/OSIR/article/view/278867"},
+    {y:2026,k:"cardio",t:"Systemic inflammatory response index and its obesity-related derivatives as predictors of heart failure: NHANES 2017–2020",j:"JRSM Cardiovascular Disease",u:"https://doi.org/10.1177/20480040261419613"},
+    {y:2026,k:"tox",f:1,t:"Early clinical approach prevents severe neurotoxicity following cobra envenoming: an integrated experimental and multi-center clinical study in Thailand",j:"Biomedicines",u:"https://doi.org/10.3390/biomedicines14010144"},
+    {y:2025,k:"epi",t:"High usability but limited case capture: performance of Thailand's digital influenza surveillance system in a private hospital setting",j:"OSIR Journal",u:"https://doi.org/10.59096/osir.v18i4.275859"},
+    {y:2025,k:"clin",t:"Microbial ozone decontamination of N95 respirators: efficacy and material preservation",j:"Journal of Current Science and Technology",u:"https://doi.org/10.59796/jcst.V16N1.2026.165"},
+    {y:2025,k:"clin",t:"Prevalence and factors associated with foreign body associated ocular injury in four community hospitals, Central Thailand",j:"Journal of Southeast Asian Medical Research",u:"https://jseamed.org/index.php/jseamed/article/view/233"},
+    {y:2025,k:"epi",f:1,t:"Drunk driving, sleep deprivation, unsafe vehicle, and poor road design: converging hazards in a road traffic crash in Sukhothai Province, 2025",j:"OSIR Journal",u:"https://doi.org/10.59096/osir.v18i3.275901"},
+    {y:2025,k:"edu",f:1,t:"Student engagement in program evaluation: redesigning the premedical curriculum through instructor–learner co-creation",j:"Journal of Medical Education and Curricular Development",u:"https://doi.org/10.1177/23821205251374898"},
+    {y:2025,k:"edu",f:1,t:"Unveiling barriers of introverts to collaborative learning: an exploratory mixed-methods study across medical student personalities",j:"BMC Psychology",u:"https://doi.org/10.1186/s40359-025-03282-y"},
+    {y:2025,k:"epi",f:1,t:"Investigation of an MMR-related mumps cluster following immunization among practical nursing students, Bangkok, 2024",j:"Journal of Tropical Medicine",u:"https://doi.org/10.1155/jotm/9974081"},
+    {y:2025,k:"clin",f:1,t:"Pontocerebellar hypoplasia type 3 with two novel PCLO gene mutations: a case report",j:"Case Reports in Pediatrics"},
+    {y:2025,k:"cardio",f:1,t:"Experiences and perceptions of living with type 1 diabetes among youth patients, parents, and peers: a qualitative study",j:"Journal of Southeast Asian Medical Research",u:"https://jseamed.org/index.php/jseamed/article/view/215"},
+    {y:2025,k:"edu",f:1,t:"Assessing medication counseling skills from pre-clinical to clinical years: using generalizability theory to optimize reliable pharmacology exam design",j:"Pharmacy Practice",u:"https://www.pharmacypractice.org/index.php/pp/article/view/3147"},
+    {y:2025,k:"cardio",f:1,t:"Triglyceride to high-density lipoprotein ratio as a predictor for 10-year cardiovascular disease in individuals with diabetes in Thailand",j:"Journal of Health, Population and Nutrition",u:"https://doi.org/10.1186/s41043-025-00835-0"},
+    {y:2025,k:"edu",f:1,t:"Reliability and validity of simulation-based electrocardiogram assessment rubrics for cardiac life support skills using generalizability theory",j:"Medical Education Online",u:"https://doi.org/10.1080/10872981.2025.2479962"},
+    {y:2025,k:"clin",f:1,t:"Common alpha-globin gene abnormalities as genetic modifiers in Thai children with β-globin gene abnormalities",j:"Anemia",u:"https://doi.org/10.1155/anem/9933808"},
+    {y:2025,k:"clin",f:1,t:"Homozygous CHST14 mutation in an adolescent girl with musculocontractural Ehlers-Danlos syndrome: a first report in Thailand",j:"Journal of Southeast Asian Medical Research"},
+    {y:2025,k:"edu",f:1,t:"Evaluating the dependability of peer assessment in project-based learning for pre-clinical students: a generalizability theory approach",j:"BMC Medical Education",u:"https://doi.org/10.1186/s12909-025-06772-0"},
+    {y:2025,k:"tox",t:"Clinical management of snakebites in a community care unit: a single-center retrospective study in Lopburi, Central Thailand",j:"Journal of Southeast Asian Medical Research",u:"https://doi.org/10.55374/jseamed.v9.204"},
+    {y:2025,k:"tox",f:1,t:"Snake venom pharmacokinetics and acute toxic outcomes following Daboia siamensis envenoming: experimental and clinical correlations",j:"Toxins",u:"https://doi.org/10.3390/toxins17010010"},
+    {y:2024,k:"clin",t:"Incidence and risk factors of recurrent ocular injuries: a multicenter retrospective cohort study in four community hospitals",j:"Clinical Epidemiology and Global Health",u:"https://doi.org/10.1016/j.cegh.2024.101892"},
+    {y:2024,k:"edu",f:1,t:"Student engagement in medical research curriculum development: a mixed-methods study using SWOT-TOWS-AHP analysis",j:"Medical Science Educator"},
+    {y:2024,k:"clin",t:"Clinical characteristics and mortality of tuberculosis among adults living with HIV/AIDS: a retrospective cohort study in Thailand",j:"International Journal of STD & AIDS",u:"https://doi.org/10.1177/09564624241289986"},
+    {y:2024,k:"edu",f:1,t:"Immediate self-feedback very short answer questions: implementing testlet response theory in formative examinations across multiple occasions",j:"Medical Science Educator",u:"https://doi.org/10.1007/s40670-024-02167-w"},
+    {y:2024,k:"clin",f:1,t:"Recurrent rhabdomyolysis in a medical cadet during military training as a rare initial presentation of calpainopathy",j:"Case Reports in Neurological Medicine",u:"https://doi.org/10.1155/2024/2775517"},
+    {y:2024,k:"edu",f:1,t:"Declining empathy trends throughout the medical curriculum and factors associated with low empathy among medical students and residents",j:"BMC Medical Education",u:"https://doi.org/10.1186/s12909-024-05962-6"},
+    {y:2024,k:"edu",f:1,t:"Integrating basic ECG interpretation into acute cardiac life support stations through simulation-based learning: student and teacher perceptions",j:"Strides in Development of Medical Education",u:"https://doi.org/10.22062/sdme.2024.199478.1351"},
+    {y:2024,k:"edu",t:"Development and validation of comprehensive prescription writing rubrics for medical students",j:"Pharmacy Education",u:"https://pharmacyeducation.fip.org/pharmacyeducation/article/view/2695"},
+    {y:2024,k:"edu",f:1,t:"Development of peer assessment rubrics in simulation-based learning for advanced cardiac life support skills among medical students",j:"Advances in Simulation",u:"https://doi.org/10.1186/s41077-024-00301-7"},
+    {y:2024,k:"cardio",f:1,t:"The association between serum HDL and hemoglobin A1c in type 2 diabetes: a nationwide cross-sectional study",j:"Diabetes Epidemiology and Management",u:"https://doi.org/10.1016/j.deman.2024.100232"},
+    {y:2024,k:"edu",f:1,t:"Development and validation of immediate self-feedback very short answer questions for medical students using generalizability theory",j:"BMC Medical Education",u:"https://doi.org/10.1186/s12909-024-05569-x"},
+    {y:2024,k:"clin",t:"Increased risk for sleep-disordered breathing and its relationship with BMI among medical students, intern doctors, and residents",j:"Clinical Epidemiology and Global Health",u:"https://doi.org/10.1016/j.cegh.2024.101586"},
+    {y:2024,k:"cardio",f:1,t:"Associations of triglyceride-glucose index with hyperuricemia among Royal Thai Army personnel",j:"BMC Endocrine Disorders",u:"https://doi.org/10.1186/s12902-024-01542-3"},
+    {y:2023,k:"edu",f:1,t:"Practices, perceptions, attitudes, barriers and motivation and their impacts on research publication",j:"The Asia Pacific Scholar",u:"https://doi.org/10.29060/TAPS.2023-8-4/OA3006"},
+    {y:2023,k:"epi",f:1,t:"What sustains mask-wearing behavior among elders in a rural community in the post-COVID-19 era: an exploratory mixed-methods study",j:"Behavioral Sciences",u:"https://doi.org/10.3390/bs13080678"},
+    {y:2023,k:"cardio",f:1,t:"Trends in baseline triglyceride-glucose index and association with predicted 10-year cardiovascular disease risk among type 2 diabetes patients in Thailand",j:"Scientific Reports",u:"https://doi.org/10.1038/s41598-023-40299-y"},
+    {y:2023,k:"cardio",t:"Relationship between pulse pressure and body mass index in active-duty Royal Thai Army personnel",j:"BMC Cardiovascular Disorders",u:"https://doi.org/10.1186/s12872-023-03390-w"},
+    {y:2023,k:"tox",f:1,t:"Clinical profile and pharmacological management of snakebites in community care units: two military hospital databases in South Thailand",j:"Tropical Medicine and Infectious Disease",u:"https://doi.org/10.3390/tropicalmed8070346"},
+    {y:2023,k:"cardio",f:1,t:"Relationship between triglyceride-glucose index and aminotransferase among Royal Thai Army personnel 2017–2021",j:"Lipids in Health and Disease",u:"https://doi.org/10.1186/s12944-023-01811-5"},
+    {y:2023,k:"cardio",f:1,t:"Trends in predicted 10-year risk for cardiovascular diseases among patients with type 2 diabetes in Thailand, 2014–2018",j:"BMC Cardiovascular Disorders",u:"https://doi.org/10.1186/s12872-023-03217-8"},
+    {y:2023,k:"cardio",t:"Association between raised blood pressure and elevated serum liver enzymes among active-duty Royal Thai Army personnel",j:"BMC Cardiovascular Disorders",u:"https://doi.org/10.1186/s12872-023-03181-3"},
+    {y:2022,k:"tox",t:"Effects of performance-enhancing drugs in athletes",j:"Journal of Sports Science and Technology",u:"https://he01.tci-thaijo.org/index.php/JSST/article/view/257298"},
+    {y:2022,k:"clin",f:1,t:"Pulmonary tuberculosis mortality and its risk factors among patients with type 2 diabetes and pulmonary tuberculosis in four community hospitals",j:"Journal of Southeast Asian Medical Research",u:"https://www.jseamed.org/index.php/jseamed/article/view/120"}
+  ];
+  var TOPICS = { all: "All", edu: "Medical education", epi: "Field epidemiology", tox: "Toxinology & pharmacology", cardio: "Cardiometabolic", clin: "Clinical & genetics" };
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var state = { topic: "all", year: null, q: "", showAll: false };
+  var LIMIT = 8;
+  var $ = function (id) { return document.getElementById(id); };
+  var list = $("list"), chips = $("chips"), bars = $("bars");
+
+  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function link(p) { return p.u || "https://scholar.google.com/scholar?q=" + encodeURIComponent(p.t); }
+  function count(k) { return P.filter(function (p) { return k === "all" || p.k === k; }).length; }
+
+  // topic chips
+  Object.keys(TOPICS).forEach(function (k) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.dataset.topic = k;
+    b.innerHTML = esc(TOPICS[k]) + "<small>" + count(k) + "</small>";
+    b.addEventListener("click", function () { setTopic(k); });
+    chips.appendChild(b);
+  });
+  document.querySelectorAll("[data-count-topic]").forEach(function (el) { el.textContent = count(el.dataset.countTopic) + " papers →"; });
+
+  function filtered() {
+    var q = state.q.trim().toLowerCase();
+    return P.filter(function (p) {
+      return (state.topic === "all" || p.k === state.topic) && (!state.year || p.y === state.year) &&
+        (!q || (p.t + " " + p.j).toLowerCase().indexOf(q) > -1);
     });
-  })();
+  }
+
+  function render() {
+    var rows = filtered(), shown = state.showAll ? rows : rows.slice(0, LIMIT);
+    list.innerHTML = shown.length ? shown.map(function (p, i) {
+      return '<li class="paper" style="animation-delay:' + Math.min(i, 10) * 30 + 'ms" data-i="' + P.indexOf(p) + '">' +
+        '<span class="yr">' + p.y + '</span>' +
+        '<div><h3><a href="' + esc(link(p)) + '" target="_blank" rel="noopener">' + esc(p.t) + '</a></h3>' +
+        '<p class="meta"><i>' + esc(p.j) + '</i></p></div>' +
+        '<div class="tags"><span class="tag">' + esc(TOPICS[p.k]) + '</span>' + (p.f ? '<span class="tag first">First author</span>' : '') + '</div></li>';
+    }).join("") : '<li class="empty">No papers match that. Try another word or clear the filters.</li>';
+    var bits = [];
+    if (state.topic !== "all") bits.push(TOPICS[state.topic]);
+    if (state.year) bits.push(String(state.year));
+    if (state.q.trim()) bits.push("“" + state.q.trim() + "”");
+    $("status").textContent = rows.length + " of " + P.length + " papers" + (bits.length ? " · " + bits.join(" · ") : "");
+    $("clear").hidden = !bits.length;
+    $("more").hidden = rows.length <= LIMIT;
+    $("more").textContent = state.showAll ? "Show fewer" : "Show all " + rows.length;
+    chips.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", c.dataset.topic === state.topic); });
+    bars.querySelectorAll(".bar").forEach(function (b) { b.setAttribute("aria-pressed", +b.dataset.y === state.year); });
+    bars.classList.toggle("has-pick", !!state.year);
+  }
+
+  function setTopic(k) { state.topic = k; state.showAll = false; render(); }
+  function jump() { document.getElementById("papers").scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); }
+
+  bars.querySelectorAll(".bar").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var y = +b.dataset.y; state.year = state.year === y ? null : y; state.showAll = false; render();
+      if (state.year) toast(b.dataset.n + " papers in " + y + ". Showing them below.");
+    });
+  });
+  document.querySelectorAll(".focus").forEach(function (f) {
+    f.addEventListener("click", function () { state.topic = f.dataset.topic; state.year = null; state.q = ""; $("q").value = ""; state.showAll = false; render(); jump(); });
+  });
+  $("q").addEventListener("input", function (e) { state.q = e.target.value; state.showAll = false; render(); });
+  $("clear").addEventListener("click", function () { state = { topic: "all", year: null, q: "", showAll: false }; $("q").value = ""; render(); });
+  $("more").addEventListener("click", function () { state.showAll = !state.showAll; render(); });
+  $("surprise").addEventListener("click", function () {
+    var p = P[Math.floor(Math.random() * P.length)];
+    state = { topic: "all", year: null, q: "", showAll: true }; $("q").value = ""; render();
+    var el = list.querySelector('[data-i="' + P.indexOf(p) + '"]');
+    if (el) { el.classList.add("flash"); el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" }); setTimeout(function () { el.classList.remove("flash"); }, 2400); }
+  });
+  render();
+
+  // rotating role
+  var roles = ["physician", "epidemiologist", "pharmacology lecturer", "medical educator", "snakebite researcher", "YouTuber"], ri = 0, rot = $("rot");
+  if (!reduce) setInterval(function () { ri = (ri + 1) % roles.length; rot.textContent = roles[ri]; rot.classList.remove("swap"); void rot.offsetWidth; rot.classList.add("swap"); }, 2200);
+
+  // portrait tilt
+  var portrait = $("portrait"), frame = portrait.querySelector(".frame");
+  if (!reduce && window.matchMedia("(hover: hover)").matches) {
+    portrait.addEventListener("mousemove", function (e) {
+      var r = portrait.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      frame.style.setProperty("--ry", (x * 16) + "deg"); frame.style.setProperty("--rx", (-y * 16) + "deg");
+    });
+    portrait.addEventListener("mouseleave", function () { frame.style.setProperty("--ry", "0deg"); frame.style.setProperty("--rx", "0deg"); });
+  }
+
+  // count-up stats
+  if (!reduce) document.querySelectorAll("[data-count]").forEach(function (el) {
+    var end = +el.dataset.count, suf = el.dataset.suffix || "", t0 = null;
+    if (end < 3) return;
+    function step(t) { if (!t0) t0 = t; var k = Math.min((t - t0) / 1200, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))) + suf; if (k < 1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  });
+
+  // reveal on scroll
+  var revs = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && !reduce) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { rootMargin: "0px 0px -8% 0px" });
+    revs.forEach(function (r) { io.observe(r); });
+    setTimeout(function () { revs.forEach(function (r) { r.classList.add("in"); }); }, 4000);
+  } else revs.forEach(function (r) { r.classList.add("in"); });
+
+  // theme toggle
+  $("theme").addEventListener("click", function () {
+    var root = document.documentElement, cur = root.getAttribute("data-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    var next = cur === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("pf-theme", next); } catch (e) {}
+  });
+
+  // toast + copy
+  var tt = $("toast"), th;
+  function toast(msg) { tt.textContent = msg; tt.classList.add("on"); clearTimeout(th); th = setTimeout(function () { tt.classList.remove("on"); }, 2200); }
+  document.querySelectorAll(".copy").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var el = document.getElementById(b.dataset.copy), text = el.textContent;
+      function selectIt() { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); toast("Email selected. Press Ctrl+C to copy."); }
+      try { navigator.clipboard.writeText(text).then(function () { toast("Copied " + text); }, selectIt); } catch (e) { selectIt(); }
+    });
+  });
+})();
 </script>
 </body>
 </html>
