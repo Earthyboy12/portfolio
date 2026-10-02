@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en" data-style="studio">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sethapong Lertsakulbunlue, MD</title>
+<meta name="description" content="Physician, epidemiologist and medical educator at Phramongkutklao College of Medicine, Bangkok. Research in medical education, field epidemiology, snakebite toxinology and cardiometabolic risk.">
+<meta property="og:title" content="Sethapong Lertsakulbunlue, MD">
+<meta property="og:description" content="Physician, epidemiologist and medical educator. 45 peer-reviewed papers since 2022.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232B45E0'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='800' font-size='26' text-anchor='middle' fill='white'%3ESL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,500&family=Source+Sans+3:wght@400;600;700&family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Noto+Sans+Thai:wght@400;600&family=Noto+Serif+Thai:wght@400;600&display=swap">
+<style>
+/* Layout: one shared page (hero + chart, focus, papers, path, talks, channels, contact); each style re-skins and re-orders it. */
+:root {
+  /* A · Journal (default, light) */
+  --bg: #F5F7F9; --surface: #FFFFFF; --fg: #14233A; --muted: #55657A; --line: #D5DCE4;
+  --accent: #0D6B6E; --accent-2: #8A3B2E; --on-accent: #FFFFFF; --bar: #0D6B6E;
+  --f-display: "Newsreader", "Noto Serif Thai", Georgia, serif;
+  --f-body: "Source Sans 3", "Noto Sans Thai", system-ui, sans-serif;
+  --f-label: "Source Sans 3", "Noto Sans Thai", system-ui, sans-serif;
+  --f-thai: "Noto Serif Thai", serif;
+  --radius: 2px; --gutter: 20px;
+}
+/* C · Studio (light, with dark tokens) */
+:root[data-style="studio"] {
+  --bg: #FFFFFF; --surface: #EEF1FF; --fg: #111430; --muted: #545979; --line: #DADFF5;
+  --accent: #2B45E0; --accent-2: #FF6A4D; --on-accent: #FFFFFF; --bar: #2B45E0;
+  --f-display: "Bricolage Grotesque", "Noto Sans Thai", system-ui, sans-serif;
+  --f-body: "Bricolage Grotesque", "Noto Sans Thai", system-ui, sans-serif;
+  --f-label: "Bricolage Grotesque", "Noto Sans Thai", system-ui, sans-serif;
+  --f-thai: "Noto Sans Thai", sans-serif;
+  --radius: 22px;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-style="studio"]:not([data-theme="light"]) {
+    --bg: #0E1024; --surface: #1A1E3D; --fg: #F1F2FF; --muted: #A9AECF; --line: #2C3160;
+    --accent: #7E92FF; --accent-2: #FF8A70; --on-accent: #0E1024; --bar: #7E92FF; color-scheme: dark;
+  }
+}
+:root[data-style="studio"][data-theme="dark"] {
+  --bg: #0E1024; --surface: #1A1E3D; --fg: #F1F2FF; --muted: #A9AECF; --line: #2C3160;
+  --accent: #7E92FF; --accent-2: #FF8A70; --on-accent: #0E1024; --bar: #7E92FF; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 var(--f-body); padding-bottom: 24px; transition: background .3s, color .3s; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: var(--gutter); }
+.label { font: 600 12px/1.3 var(--f-label); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.thai { font-family: var(--f-thai); }
+
+/* ---------- nav ---------- */
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 12px; color: var(--fg); text-decoration: none; font-weight: 600; }
+.mono { width: 40px; height: 40px; display: grid; place-items: center; border: 1.5px solid var(--fg); font: 600 15px/1 var(--f-display); letter-spacing: .04em; border-radius: var(--radius); }
+.nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; flex-wrap: wrap; }
+.nav ul a { color: var(--muted); text-decoration: none; font-size: 15px; }
+.nav ul a:hover { color: var(--fg); }
+
+/* ---------- main column order (re-ordered per style) ---------- */
+main { display: flex; flex-direction: column; }
+section { padding-block: 56px; border-top: 1px solid var(--line); }
+section.hero { border-top: 0; padding-top: 32px; }
+.sec-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
+.sec-head h2 { font-size: clamp(26px, 3.4vw, 36px); font-weight: 600; line-height: 1.15; }
+
+/* ---------- hero ---------- */
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 48px; align-items: end; }
+.hero h1 { font-size: clamp(42px, 6.4vw, 78px); line-height: 1.02; font-weight: 400; letter-spacing: -.01em; margin-top: 14px; }
+.hero h1 em { font-style: italic; color: var(--accent); }
+.hero .thai-name { margin-top: 10px; font-size: 20px; color: var(--muted); }
+.hero .lede { margin-top: 22px; font-size: 20px; line-height: 1.55; max-width: 34em; }
+.cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; border: 1.5px solid var(--fg); color: var(--fg); text-decoration: none; font: 600 15px/1 var(--f-label); border-radius: var(--radius); transition: background .2s, color .2s; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn:hover { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; max-width: 560px; }
+.stat b { display: block; font: 600 36px/1 var(--f-display); font-variant-numeric: tabular-nums; }
+.stat span { display: block; margin-top: 6px; font-size: 14px; color: var(--muted); line-height: 1.35; }
+
+/* chart: publications per year */
+figure.chart { margin: 0; padding: 22px 22px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.bars { height: 200px; margin-top: 24px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; align-items: end; border-bottom: 1.5px solid var(--fg); position: relative; }
+.bar { height: calc(var(--v) / 17 * 100%); background: var(--bar); position: relative; border-radius: calc(var(--radius) / 2) calc(var(--radius) / 2) 0 0; transform-origin: bottom; animation: rise .9s cubic-bezier(.2,.8,.2,1) both; animation-delay: calc(var(--i) * 80ms); }
+.bar::after { content: attr(data-n); position: absolute; top: -22px; left: 0; right: 0; text-align: center; font: 600 13px/1 var(--f-label); color: var(--fg); font-variant-numeric: tabular-nums; }
+.bar.partial { background: repeating-linear-gradient(135deg, var(--bar) 0 6px, transparent 6px 10px); outline: 1.5px solid var(--bar); outline-offset: -1.5px; }
+@keyframes rise { from { transform: scaleY(.15); } to { transform: scaleY(1); } }
+.years { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 8px; font: 500 13px/1 var(--f-label); color: var(--muted); text-align: center; font-variant-numeric: tabular-nums; }
+figcaption { margin-top: 14px; font-size: 14px; color: var(--muted); line-height: 1.45; }
+figcaption b { color: var(--fg); }
+
+/* ---------- focus ---------- */
+.focus-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-left: 1px solid var(--line); }
+.focus { padding: 4px 22px 8px; border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.focus h3 { font-size: 22px; font-weight: 600; line-height: 1.2; }
+.focus p { font-size: 15.5px; color: var(--muted); }
+.focus .count { font: 600 13px/1.3 var(--f-label); color: var(--accent); letter-spacing: .04em; margin-top: auto; }
+
+/* ---------- papers ---------- */
+ol.papers { list-style: none; margin: 0; padding: 0; counter-reset: ref; display: grid; gap: 0; }
+.paper { counter-increment: ref; display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; gap: 18px; padding-block: 18px; border-bottom: 1px solid var(--line); align-items: baseline; }
+.paper::before { content: "[" counter(ref) "]"; font: 500 15px/1.4 var(--f-label); color: var(--accent); font-variant-numeric: tabular-nums; }
+.paper h3 { font-size: 20px; font-weight: 500; line-height: 1.3; }
+.paper h3 a { color: var(--fg); text-decoration: none; }
+.paper h3 a:hover { color: var(--accent); text-decoration: underline; }
+.paper .meta { margin-top: 6px; font-size: 14.5px; color: var(--muted); }
+.paper .meta i { color: var(--fg); }
+.paper .yr { font: 600 14px/1 var(--f-label); color: var(--muted); font-variant-numeric: tabular-nums; }
+.more { margin-top: 22px; font-size: 15px; color: var(--muted); }
+
+/* ---------- path & talks ---------- */
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; }
+.tl { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
+.tl li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 16px; }
+.tl .when { font: 600 14px/1.5 var(--f-label); color: var(--accent); font-variant-numeric: tabular-nums; }
+.tl strong { display: block; font-weight: 600; line-height: 1.35; }
+.tl span { display: block; font-size: 15px; color: var(--muted); line-height: 1.45; margin-top: 2px; }
+.award { display: inline-block; margin-top: 6px; padding: 3px 9px; font: 600 12px/1.4 var(--f-label); letter-spacing: .06em; text-transform: uppercase; color: var(--accent-2); border: 1px solid currentColor; border-radius: var(--radius); }
+
+/* ---------- channels ---------- */
+.channels { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.ch { display: flex; flex-direction: column; gap: 6px; padding: 20px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); text-decoration: none; border-radius: var(--radius); transition: border-color .2s, transform .2s; min-width: 0; }
+.ch:hover { border-color: var(--accent); transform: translateY(-2px); }
+.ch svg { width: 26px; height: 26px; fill: var(--accent); }
+.ch strong { font-size: 18px; margin-top: 8px; }
+.ch span { font-size: 14px; color: var(--muted); overflow-wrap: anywhere; }
+
+/* ---------- contact ---------- */
+.contact { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; align-items: end; }
+.contact h2 { font-size: clamp(30px, 4.4vw, 48px); font-weight: 400; line-height: 1.1; }
+.emails { display: grid; gap: 10px; }
+.email { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); min-width: 0; }
+.email code { font: 500 15px/1.3 var(--f-label); overflow-wrap: anywhere; user-select: all; min-width: 0; }
+.copy { font: 600 13px/1 var(--f-label); padding: 8px 12px; background: transparent; color: var(--fg); border: 1px solid var(--line); border-radius: var(--radius); cursor: pointer; flex: none; }
+.copy:hover { border-color: var(--accent); color: var(--accent); }
+footer { padding-block: 28px 8px; font-size: 13.5px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+/* =========================================================
+   C · STUDIO — bold personal brand, channels up front
+   ========================================================= */
+[data-style="studio"] .label { color: var(--accent); letter-spacing: .06em; font-weight: 800; }
+[data-style="studio"] .mono { background: var(--accent); color: var(--on-accent); border: 0; border-radius: 14px; font-weight: 800; }
+[data-style="studio"] .hero { padding-top: 12px; }
+[data-style="studio"] .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; background: var(--surface); border-radius: 36px; padding: clamp(24px, 5vw, 56px); position: relative; overflow: hidden; }
+[data-style="studio"] .hero-grid::before { content: ""; position: absolute; width: 360px; height: 360px; border-radius: 50%; background: var(--accent-2); right: -110px; top: -140px; opacity: .9; }
+[data-style="studio"] .hero-grid > * { position: relative; }
+[data-style="studio"] .hero h1 { font-weight: 800; font-size: clamp(44px, 8vw, 104px); line-height: .95; letter-spacing: -.035em; }
+[data-style="studio"] .hero h1 em { font-style: normal; color: var(--accent); }
+[data-style="studio"] .hero .intro { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 36px; align-items: end; }
+[data-style="studio"] .btn { border-radius: 999px; padding: 14px 22px; }
+[data-style="studio"] .btn.primary { background: var(--fg); border-color: var(--fg); color: var(--bg); }
+[data-style="studio"] .btn.primary:hover { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+[data-style="studio"] .stats { margin-top: 0; gap: 12px; }
+[data-style="studio"] .stat { background: var(--bg); border-radius: 20px; padding: 16px; }
+[data-style="studio"] .stat b { font-weight: 800; font-size: 34px; color: var(--accent); }
+[data-style="studio"] figure.chart { background: var(--bg); border: 0; border-radius: 26px; }
+[data-style="studio"] .bars { border-bottom: 0; gap: 10px; }
+[data-style="studio"] .bar { border-radius: 14px; }
+[data-style="studio"] .bar:nth-child(odd) { background: var(--accent-2); }
+[data-style="studio"] .bar.partial { background: repeating-linear-gradient(135deg, var(--accent-2) 0 6px, transparent 6px 10px); outline-color: var(--accent-2); }
+[data-style="studio"] section { border-top: 0; padding-block: 40px; }
+[data-style="studio"] .sec-head h2 { font-weight: 800; letter-spacing: -.02em; font-size: clamp(30px, 4.4vw, 46px); }
+[data-style="studio"] #channels { order: 1; }
+[data-style="studio"] #focus { order: 2; }
+[data-style="studio"] #papers { order: 3; }
+[data-style="studio"] #path { order: 4; }
+[data-style="studio"] #contact { order: 5; }
+[data-style="studio"] .ch { border: 0; border-radius: 26px; padding: 26px; min-height: 170px; }
+[data-style="studio"] .ch:nth-child(1) { background: var(--accent-2); color: #1A0D08; }
+[data-style="studio"] .ch:nth-child(1) svg { fill: #1A0D08; }
+[data-style="studio"] .ch:nth-child(1) span { color: #3D1E14; }
+[data-style="studio"] .ch:nth-child(2) { background: var(--accent); color: var(--on-accent); }
+[data-style="studio"] .ch:nth-child(2) svg { fill: var(--on-accent); }
+[data-style="studio"] .ch:nth-child(2) span { color: var(--on-accent); opacity: .8; }
+[data-style="studio"] .ch strong { font-size: 22px; font-weight: 800; margin-top: auto; }
+[data-style="studio"] .focus-grid { border: 0; gap: 14px; }
+[data-style="studio"] .focus { background: var(--surface); border: 0; border-radius: 26px; padding: 24px; }
+[data-style="studio"] .focus h3 { font-weight: 800; letter-spacing: -.01em; }
+[data-style="studio"] .paper { border-bottom: 0; background: var(--surface); border-radius: 20px; padding: 18px 22px; margin-bottom: 10px; }
+[data-style="studio"] .paper::before { content: counter(ref); display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: var(--on-accent); font-weight: 800; align-self: start; }
+[data-style="studio"] .paper h3 { font-weight: 800; font-size: 19px; }
+[data-style="studio"] .award { border-radius: 999px; background: var(--accent-2); color: #1A0D08; border-color: var(--accent-2); }
+[data-style="studio"] .contact { background: var(--fg); color: var(--bg); border-radius: 36px; padding: clamp(24px, 5vw, 48px); }
+[data-style="studio"] .contact .label, [data-style="studio"] .contact p { color: var(--bg); opacity: .8; }
+[data-style="studio"] .contact h2 { font-weight: 800; letter-spacing: -.02em; }
+[data-style="studio"] .email { background: transparent; border-color: rgba(127,127,160,.45); border-radius: 18px; }
+[data-style="studio"] .copy { color: var(--bg); border-color: rgba(127,127,160,.45); border-radius: 999px; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  .hero-grid, [data-style="studio"] .hero .intro, .two, .contact { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .focus-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; }
+  .channels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .hero h1, [data-style="studio"] .hero h1 { font-size: clamp(30px, 9vw, 44px); }
+  [data-style="studio"] .hero-grid::before { width: 150px; height: 150px; right: -60px; top: -70px; }
+  [data-style="studio"] .hero .label { padding-right: 70px; }
+  [data-style="studio"] .hero-grid { padding: 22px; border-radius: 28px; }
+  [data-style="studio"] .ch { padding: 18px; min-height: 140px; }
+  [data-style="studio"] .ch strong, .ch strong { font-size: 17px; }
+  .nav ul { display: none; }
+  .focus-grid { grid-template-columns: minmax(0, 1fr); }
+  .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .stat b { font-size: 28px !important; }
+  .paper { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .paper .yr { order: -1; }
+  .tl li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+}
+</style>
+
+
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="brand" href="#top"><span class="mono">SL</span><span>Sethapong Lertsakulbunlue</span></a>
+    <ul>
+      <li><a href="#focus">Research</a></li>
+      <li><a href="#papers">Publications</a></li>
+      <li><a href="#path">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="intro">
+          <div>
+            <div class="label">Physician · Epidemiologist · Medical educator</div>
+            <h1>Sethapong <em>Lertsakulbunlue</em>, MD</h1>
+            <p class="thai-name thai">ร.ท. เสฏฐพงศ์ เลิศสกุลบรรลือ</p>
+            <p class="lede">Lecturer in Pharmacology at Phramongkutklao College of Medicine, Bangkok, and resident in Preventive Medicine (Epidemiology). I study how medical students learn and are assessed, how outbreaks unfold in the field, and what snake venom does to the people it reaches.</p>
+            <div class="cta">
+              <a class="btn primary" href="https://scholar.google.com/citations?user=pJlQxuMAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+              <a class="btn" href="https://www.researchgate.net/profile/Sethapong-Lertsakulbunlue" target="_blank" rel="noopener">ResearchGate</a>
+              <a class="btn" href="#contact">Get in touch</a>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat"><b>45</b><span>peer-reviewed papers since 2022</span></div>
+            <div class="stat"><b>6</b><span>conference presentations</span></div>
+            <div class="stat"><b>1st</b><span>class honours MD, gold medal</span></div>
+          </div>
+        </div>
+        <figure class="chart" aria-label="Publications per year: 2022, 2; 2023, 8; 2024, 13; 2025, 17; 2026 so far, 5">
+          <div class="bars">
+            <div class="bar" style="--v:2;--i:0" data-n="2"></div>
+            <div class="bar" style="--v:8;--i:1" data-n="8"></div>
+            <div class="bar" style="--v:13;--i:2" data-n="13"></div>
+            <div class="bar" style="--v:17;--i:3" data-n="17"></div>
+            <div class="bar partial" style="--v:5;--i:4" data-n="5"></div>
+          </div>
+          <div class="years"><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026*</span></div>
+          <figcaption><b>Fig. 1</b> Publications per year, n = 45. *2026 to date.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="focus">
+      <div class="sec-head"><h2>Research focus</h2><span class="label">Four lines of work</span></div>
+      <div class="focus-grid">
+        <div class="focus">
+          <h3>Medical education &amp; assessment</h3>
+          <p>Generalizability theory for exam reliability, peer-assessment rubrics for ACLS and ECG skills, very short answer questions, and student co-designed curricula.</p>
+          <span class="count">BMC Med Educ · Med Educ Online · Adv Simul</span>
+        </div>
+        <div class="focus">
+          <h3>Field epidemiology</h3>
+          <p>Outbreak and death investigations across Thailand: a vaccine-related mumps cluster, an infant pertussis death, a road traffic crash, and digital influenza surveillance.</p>
+          <span class="count">OSIR Journal · J Trop Med</span>
+        </div>
+        <div class="focus">
+          <h3>Toxinology &amp; snakebite</h3>
+          <p>Russell's viper and cobra envenoming, linking venom pharmacokinetics in the lab with clinical outcomes and community-hospital snakebite care.</p>
+          <span class="count">Toxins · Biomedicines · Trop Med Infect Dis</span>
+        </div>
+        <div class="focus">
+          <h3>Cardiometabolic risk</h3>
+          <p>Triglyceride-glucose index, HDL and predicted cardiovascular risk in people with type 2 diabetes and in Royal Thai Army personnel.</p>
+          <span class="count">Sci Rep · BMC Cardiovasc Disord · Lipids Health Dis</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="papers">
+      <div class="sec-head"><h2>Selected publications</h2><span class="label">6 of 45</span></div>
+      <ol class="papers">
+        <li class="paper">
+          <div><h3><a href="https://doi.org/10.3390/biomedicines14010144" target="_blank" rel="noopener">Early clinical approach prevents severe neurotoxicity following cobra envenoming: an integrated experimental and multi-center clinical study in Thailand</a></h3>
+          <p class="meta"><b>Lertsakulbunlue S</b>, Chesor M, Promsorn P, et al. <i>Biomedicines</i> 14, 144</p></div>
+          <span class="yr">2026</span>
+        </li>
+        <li class="paper">
+          <div><h3><a href="https://doi.org/10.3390/toxins17010010" target="_blank" rel="noopener">Snake venom pharmacokinetics and acute toxic outcomes following <i>Daboia siamensis</i> envenoming</a></h3>
+          <p class="meta"><b>Lertsakulbunlue S</b>, Khimmaktong W, Khow O, et al. <i>Toxins</i> 17(1), 10</p></div>
+          <span class="yr">2025</span>
+        </li>
+        <li class="paper">
+          <div><h3><a href="https://doi.org/10.1155/jotm/9974081" target="_blank" rel="noopener">Investigation of an MMR-related mumps cluster following immunization among practical nursing students, Bangkok, 2024</a></h3>
+          <p class="meta"><b>Lertsakulbunlue S</b>, Srithammavong D, Tepsittha K, et al. <i>Journal of Tropical Medicine</i></p></div>
+          <span class="yr">2025</span>
+        </li>
+        <li class="paper">
+          <div><h3><a href="https://doi.org/10.1186/s12909-024-05569-x" target="_blank" rel="noopener">Development and validation of immediate self-feedback very short answer questions for medical students</a></h3>
+          <p class="meta"><b>Lertsakulbunlue S</b>, Kantiwong A. <i>BMC Medical Education</i> 24, 572</p></div>
+          <span class="yr">2024</span>
+        </li>
+        <li class="paper">
+          <div><h3><a href="https://doi.org/10.1186/s12909-024-05962-6" target="_blank" rel="noopener">Declining empathy trends throughout the medical curriculum and factors associated with low empathy among medical students and residents</a></h3>
+          <p class="meta"><b>Lertsakulbunlue S</b>, Kiatsrithanakorn C, Kittisarapong P, et al. <i>BMC Medical Education</i> 24, 951</p></div>
+          <span class="yr">2024</span>
+        </li>
+        <li class="paper">
+          <div><h3><a href="https://doi.org/10.1038/s41598-023-40299-y" target="_blank" rel="noopener">Trends in baseline triglyceride-glucose index and association with predicted 10-year cardiovascular disease risk among type 2 diabetes patients in Thailand</a></h3>
+          <p class="meta"><b>Lertsakulbunlue S</b>, Mungthin M, Rangsin R, et al. <i>Scientific Reports</i> 13, 12960</p></div>
+          <span class="yr">2023</span>
+        </li>
+      </ol>
+      <p class="more">The full list of 45 papers is on <a href="https://scholar.google.com/citations?user=pJlQxuMAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> and <a href="https://www.researchgate.net/profile/Sethapong-Lertsakulbunlue" target="_blank" rel="noopener">ResearchGate</a>.</p>
+    </section>
+
+    <section id="path">
+      <div class="two">
+        <div>
+          <div class="sec-head"><h2>Experience &amp; training</h2></div>
+          <ul class="tl">
+            <li><span class="when">2024 – now</span><div><strong>Resident, Preventive Medicine (Epidemiology)</strong><span>Thai board residency training</span></div></li>
+            <li><span class="when">2022 – now</span><div><strong>Lecturer, Department of Pharmacology</strong><span>Phramongkutklao College of Medicine, Bangkok</span></div></li>
+            <li><span class="when">2021</span><div><strong>Medical intern</strong><span>Fort Wachirawut Hospital, Nakhon Si Thammarat</span></div></li>
+            <li><span class="when">2015 – 2020</span><div><strong>Doctor of Medicine</strong><span>Phramongkutklao College of Medicine. First-class honours with gold medal.</span></div></li>
+            <li><span class="when">2008 – 2014</span><div><strong>Secondary school</strong><span>Samsenwittayalai School, Bangkok</span></div></li>
+          </ul>
+        </div>
+        <div>
+          <div class="sec-head"><h2>Talks &amp; awards</h2></div>
+          <ul class="tl">
+            <li><span class="when">2025 · Oral</span><div><strong>China FETP Annual Conference</strong><span>Pertussis amid ongoing conflict and missed maternal vaccination: an infant death investigation in Tak Province</span></div></li>
+            <li><span class="when">2025 · Oral</span><div><strong>SAFETYNET Conference</strong><span>An MMR-related mumps cluster among practical nursing students, Bangkok</span></div></li>
+            <li><span class="when">2024 · Oral</span><div><strong>Thai Medical Education Conference</strong><span>Peer assessment of ECG interpretation in simulation-based ACLS stations</span></div></li>
+            <li><span class="when">2024 · Poster</span><div><strong>Ottawa Conference</strong><span>Evaluating an undergraduate medical research module with the CIPP model</span></div></li>
+            <li><span class="when">2023 · Oral</span><div><strong>Japan Society for Medical Education</strong><span>Beliefs about medical research and their impact on publication: a structural equation model</span><em class="award">Young Investigator Award</em></div></li>
+            <li><span class="when">2023 · Poster</span><div><strong>AMEE Conference</strong><span>Association for Medical Education in Europe</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="channels">
+      <div class="sec-head"><h2>Find me online</h2><span class="label">Research &amp; social</span></div>
+      <div class="channels">
+        <a class="ch" href="https://www.youtube.com/@WanLaRok" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-3.2.5-4.8s-.1-3.2-.5-4.8ZM9.7 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg>
+          <strong>YouTube</strong><span>@WanLaRok</span>
+        </a>
+        <a class="ch" href="https://www.facebook.com/Earthyboy12/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12Z"/></svg>
+          <strong>Facebook</strong><span>Earthyboy12</span>
+        </a>
+        <a class="ch" href="https://scholar.google.com/citations?user=pJlQxuMAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 0 9.5l4.4 2.7A7.5 7.5 0 0 1 12 8a7.5 7.5 0 0 1 7.6 4.2L24 9.5 12 2Zm0 8a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/></svg>
+          <strong>Google Scholar</strong><span>Citations &amp; full list</span>
+        </a>
+        <a class="ch" href="https://www.researchgate.net/profile/Sethapong-Lertsakulbunlue" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2h20v20H2V2Zm12.8 4.2c-1.6 0-2.5 1-2.5 2.4v1.2c0 1.5.9 2.4 2.5 2.4 1.3 0 2.2-.6 2.4-1.8h-1.2c-.1.5-.5.8-1.2.8-.8 0-1.2-.5-1.2-1.4V9.6h2.5v-1h-2.5v-.1c0-.8.4-1.3 1.2-1.3.6 0 1 .3 1.1.8h1.2c-.2-1.2-1.1-1.8-2.3-1.8ZM6 8.6v9.2h1.6v-3.7h1.2l2 3.7h1.8l-2.2-4a2.6 2.6 0 0 0-1-5.2H6Zm1.6 1.2h1.6c.8 0 1.3.5 1.3 1.3s-.5 1.3-1.3 1.3H7.6V9.8Z"/></svg>
+          <strong>ResearchGate</strong><span>Papers &amp; preprints</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <div>
+          <div class="label">Collaborations, talks, teaching</div>
+          <h2 style="margin-top:12px">Let's work on something together.</h2>
+        </div>
+        <div class="emails">
+          <div class="email"><code id="em1">Sethapong.ler@pcm.ac.th</code><button class="copy" type="button" data-copy="em1">Copy</button></div>
+          <div class="email"><code id="em2">Earthyboy12@gmail.com</code><button class="copy" type="button" data-copy="em2">Copy</button></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 Sethapong Lertsakulbunlue</span><span>Phramongkutklao College of Medicine, Bangkok</span></footer>
+</div>
+
+
+<script>
+  (function () {
+    document.querySelectorAll(".copy").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var el = document.getElementById(b.dataset.copy), text = el.textContent;
+        function selectIt() { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Selected"; }
+        try {
+          navigator.clipboard.writeText(text).then(function () { b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy"; }, 1600); }, selectIt);
+        } catch (e) { selectIt(); }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
